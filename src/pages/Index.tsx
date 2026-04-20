@@ -1,26 +1,32 @@
-import Hero from "@/components/landing/Hero";
-import Problem from "@/components/landing/Problem";
-import Solution from "@/components/landing/Solution";
-import Pillars from "@/components/landing/Pillars";
-import Proof from "@/components/landing/Proof";
-import OfferForm from "@/components/landing/OfferForm";
-import FAQ from "@/components/landing/FAQ";
-import FinalCTA from "@/components/landing/FinalCTA";
-import Footer from "@/components/landing/Footer";
+import Header from "@/components/raise/Header";
+import Hero from "@/components/raise/Hero";
+import Problem from "@/components/raise/Problem";
+import Pillars from "@/components/raise/Pillars";
+import Services from "@/components/raise/Services";
+import DeliveryModel from "@/components/raise/DeliveryModel";
+import CaseStudy from "@/components/raise/CaseStudy";
+import Differentiation from "@/components/raise/Differentiation";
+import FinalCTA from "@/components/raise/FinalCTA";
+import Footer from "@/components/raise/Footer";
+import WhatsAppFloat from "@/components/raise/WhatsAppFloat";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Hero />
-      <Problem />
-      <Solution />
-      <Pillars />
-      <Proof />
-      <OfferForm />
-      <FAQ />
-      <FinalCTA />
+    <>
+      <Header />
+      <main className="min-h-screen bg-background">
+        <Hero />
+        <Problem />
+        <Pillars />
+        <Services />
+        <DeliveryModel />
+        <CaseStudy />
+        <Differentiation />
+        <FinalCTA />
+      </main>
       <Footer />
-    </main>
+      <WhatsAppFloat />
+    </>
   );
 };
 

@@ -2,60 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design System — Dental Clinic Landing
-   Identidade: Vermelho · Preto · Branco
-   All colors HSL.
+/* Design System — Raise (Angola)
+   Identidade: Preto · Branco · Vermelho · Roxo (accent)
+   Inspiração: V4 Company. All colors HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 8%;
+    /* Primary = vermelho (CTA dominante) */
+    --primary: 0 100% 59%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 0 0% 18%;
+    --primary-glow: 0 100% 65%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 38%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 84% 50%;
+    /* Accent = roxo neon */
+    --accent: 263 85% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 0 90% 58%;
+    --accent-glow: 263 90% 70%;
 
-    --destructive: 0 84% 50%;
+    --destructive: 0 100% 59%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 152 60% 38%;
+    --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 92%;
-    --ring: 0 84% 50%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 100% 59%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(0 84% 50%) 0%, hsl(0 90% 42%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 96%) 100%);
-    --gradient-red-glow: radial-gradient(circle at 30% 50%, hsl(0 84% 50% / 0.15) 0%, transparent 60%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(0 100% 59% / 0.18) 0%, hsl(0 0% 4%) 55%);
+    --gradient-red: linear-gradient(135deg, hsl(0 100% 59%) 0%, hsl(0 100% 48%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(263 85% 60%) 0%, hsl(280 90% 55%) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 20%, hsl(0 100% 59% / 0.25), transparent 50%),
+                     radial-gradient(circle at 80% 80%, hsl(263 85% 60% / 0.20), transparent 50%);
+    --gradient-fade-b: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 100%);
 
     /* Shadows */
-    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.3);
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
-    --shadow-glow: 0 0 50px hsl(0 84% 50% / 0.45);
-    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.12);
-    --shadow-red: 0 12px 40px -12px hsl(0 84% 50% / 0.4);
+    --shadow-elegant: 0 30px 80px -20px hsl(0 0% 0% / 0.7);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --shadow-glow-red: 0 0 60px hsl(0 100% 59% / 0.55);
+    --shadow-glow-purple: 0 0 60px hsl(263 85% 60% / 0.45);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.6);
 
     /* Transitions */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,6 +80,11 @@
   h1, h2, h3, h4 {
     @apply font-display tracking-tight;
   }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
 }
 
 @layer utilities {
@@ -87,16 +96,20 @@
     background: var(--gradient-hero);
   }
 
-  .bg-gradient-accent {
-    background: var(--gradient-accent);
+  .bg-gradient-red {
+    background: var(--gradient-red);
   }
 
-  .bg-gradient-soft {
-    background: var(--gradient-soft);
+  .bg-gradient-purple {
+    background: var(--gradient-purple);
   }
 
-  .bg-red-glow {
-    background: var(--gradient-red-glow);
+  .bg-gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .bg-gradient-fade-b {
+    background: var(--gradient-fade-b);
   }
 
   .shadow-elegant {
@@ -107,21 +120,37 @@
     box-shadow: var(--shadow-card);
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
+  .shadow-glow-red {
+    box-shadow: var(--shadow-glow-red);
   }
 
-  .shadow-red {
-    box-shadow: var(--shadow-red);
+  .shadow-glow-purple {
+    box-shadow: var(--shadow-glow-purple);
   }
 
   .transition-smooth {
     transition: all 0.3s var(--transition-smooth);
   }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(0 0% 100% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1.5px hsl(var(--foreground));
+    color: transparent;
+  }
 }
 
 @layer components {
   .container-tight {
-    @apply max-w-5xl mx-auto px-6;
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm font-medium text-foreground/80;
   }
 }
