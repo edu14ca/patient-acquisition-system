@@ -1,4 +1,5 @@
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import raiseLogo from "@/assets/raise-logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,7 @@ const Footer = () => {
       <div className="container-tight grid md:grid-cols-3 gap-8 items-start">
         <div>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-gradient-red flex items-center justify-center font-display font-bold text-primary-foreground">
-              R
-            </div>
+            <img src={raiseLogo} alt="Raise" className="w-9 h-9 object-contain" />
             <span className="font-display font-bold text-lg">Raise</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
