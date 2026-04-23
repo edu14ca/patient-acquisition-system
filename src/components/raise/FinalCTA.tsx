@@ -15,19 +15,19 @@ const FinalCTA = () => {
         </h2>
 
         <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-          A análise é gratuita. Em 20 minutos saberá exactamente onde está a perder dinheiro.
+          A análise é gratuita. Em 20 minutos a nossa equipa mostra exactamente onde está a perder dinheiro — e como podemos crescer juntos.
         </p>
 
         <Button asChild variant="hero" size="xl" className="group text-lg h-16 px-12">
-          <a href={buildWhatsAppLink("Olá Raise! Quero crescer. Quando podemos falar?")} target="_blank" rel="noopener noreferrer">
+          <a href={buildWhatsAppLink("Olá Raise! Quero crescer o meu negócio. Quando podemos falar?")} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5" />
-            Falar no WhatsApp agora
+            Quero crescer o meu negócio
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
         </Button>
 
         <p className="mt-6 text-muted-foreground text-sm">
-          +244 939 636 042 · Resposta em minutos
+          +244 939 636 042 · Resposta rápida · Sem compromisso
         </p>
       </div>
     </section>

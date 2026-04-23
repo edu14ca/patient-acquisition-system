@@ -1,30 +1,30 @@
-import { Check } from "lucide-react";
+import { Check, Compass, Wrench, BarChart3, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
-const principles = [
-  "Time externo de marketing dedicado à sua empresa",
-  "Foco em facturamento real, não em vaidade",
-  "Decisões 100% baseadas em dados",
-  "Acompanhamento contínuo, semana a semana",
+const cycle = [
+  { icon: Compass, title: "Planeamos", desc: "Estratégia clara, com metas mensais." },
+  { icon: Wrench, title: "Executamos", desc: "Tráfego, criativos, funil e vendas." },
+  { icon: BarChart3, title: "Medimos", desc: "Cada métrica acompanhada em tempo real." },
+  { icon: Sparkles, title: "Optimizamos", desc: "Ajustes semanais para escalar o que funciona." },
 ];
 
 const options = [
   {
     title: "Assessoria Completa",
-    desc: "Time Raise integrado à sua operação. Tráfego, criativos, CRM, vendas — tudo num só lugar.",
+    desc: "Time Raise integrado à sua operação. Estratégia, execução e acompanhamento contínuo — tudo num só lugar.",
     badge: "Mais escolhida",
     highlighted: true,
   },
   {
     title: "Projectos Específicos",
-    desc: "Resolvemos uma frente concreta: lançamento, landing page, estrutura comercial.",
+    desc: "Resolvemos uma frente concreta com execução completa: lançamento, landing page, estrutura comercial.",
     badge: "Pontual",
     highlighted: false,
   },
   {
     title: "Consultoria Estratégica",
-    desc: "Acesso ao método Raise para a sua equipa interna executar com clareza.",
+    desc: "Acesso ao método Raise para a sua equipa interna executar com clareza e direcção.",
     badge: "Estratégico",
     highlighted: false,
   },
@@ -37,25 +37,33 @@ const DeliveryModel = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="text-primary font-semibold uppercase tracking-wider text-sm">Como trabalhamos</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-balance leading-tight mb-8">
-              Não somos uma agência.<br />
-              Somos o seu <span className="text-primary">time de crescimento</span>.
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-balance leading-tight mb-6">
+              Somos o seu <span className="text-primary">time externo</span> de marketing e vendas.
             </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Não entregamos relatórios e desaparecemos. Entramos na operação, assumimos as métricas e respondemos pelo crescimento.
+            </p>
 
-            <ul className="space-y-4">
-              {principles.map((p, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-0.5">
-                    <Check className="w-4 h-4 text-primary-foreground" />
-                  </div>
-                  <span className="text-lg text-foreground/90">{p}</span>
-                </li>
-              ))}
+            <ul className="space-y-3 mb-10">
+              {cycle.map((c) => {
+                const Icon = c.icon;
+                return (
+                  <li key={c.title} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="font-display font-bold text-lg leading-tight">{c.title}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{c.desc}</p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
 
-            <Button asChild variant="hero" size="lg" className="mt-10">
-              <a href={buildWhatsAppLink("Olá Raise! Quero entender qual modelo faz mais sentido para a minha empresa.")} target="_blank" rel="noopener noreferrer">
-                Quero uma conversa
+            <Button asChild variant="hero" size="lg">
+              <a href={buildWhatsAppLink("Olá Raise! Quero entender qual modelo de assessoria faz mais sentido para a minha empresa.")} target="_blank" rel="noopener noreferrer">
+                Falar com a equipa no WhatsApp
               </a>
             </Button>
           </div>
