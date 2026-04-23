@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import raiseLogo from "@/assets/raise-logo.png";
 
 const Header = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/70 border-b border-border">
       <div className="container-tight h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-md bg-gradient-red shadow-glow-red flex items-center justify-center font-display font-bold text-primary-foreground">
-            R
-          </div>
+          <img
+            src={raiseLogo}
+            alt="Raise"
+            className="w-9 h-9 object-contain transition-smooth group-hover:scale-105"
+          />
           <span className="font-display font-bold text-lg tracking-tight">Raise</span>
         </a>
 
