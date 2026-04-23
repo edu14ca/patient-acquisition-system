@@ -13,10 +13,13 @@ const CaseStudy = () => {
 
       <div className="container-tight relative">
         <div className="max-w-3xl mb-12">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">Caso real</span>
+          <span className="text-primary font-semibold uppercase tracking-wider text-sm">Prova real</span>
           <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
-            Clínica em Luanda dobrou o facturamento em <span className="text-primary">6 meses</span>.
+            Empresas em Angola já estão a sair da estagnação com a <span className="text-primary">Raise</span>.
           </h2>
+          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+            Caso real: clínica em Luanda dobrou o facturamento em 6 meses com a nossa assessoria.
+          </p>
         </div>
 
         <div className="rounded-3xl border border-border bg-card overflow-hidden">
@@ -28,7 +31,7 @@ const CaseStudy = () => {
                   Sector: Saúde · Luanda
                 </div>
                 <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed max-w-2xl">
-                  "A Raise montou um sistema completo. Hoje sabemos exactamente quanto custa cada paciente novo — e quanto ele vale para a clínica."
+                  "A Raise não veio dar palpites. Entrou na operação e montou o sistema completo. Hoje sabemos exactamente quanto custa cada paciente novo — e quanto ele vale para a clínica."
                 </p>
                 <p className="mt-4 text-muted-foreground">— Director Clínico</p>
               </div>

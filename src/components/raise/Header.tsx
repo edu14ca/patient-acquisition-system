@@ -21,7 +21,7 @@ const Header = () => {
 
         <Button asChild variant="hero" size="sm" className="h-10 px-5">
           <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-            Falar no WhatsApp
+            Falar com a equipa
           </a>
         </Button>
       </div>

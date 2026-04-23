@@ -12,7 +12,7 @@ const Footer = () => {
             <span className="font-display font-bold text-lg">Raise</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-            Consultoria de crescimento para empresas em Angola. Aquisição, Engajamento, Monetização, Retenção.
+            Assessoria de marketing e crescimento em Angola. Estratégia, execução e responsabilidade pelo facturamento.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
 
       <div className="container-tight mt-10 pt-6 border-t border-border text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-2">
         <p>© {new Date().getFullYear()} Raise · Todos os direitos reservados</p>
-        <p>Feito com foco em facturamento.</p>
+        <p>Responsáveis pelo seu crescimento.</p>
       </div>
     </footer>
   );

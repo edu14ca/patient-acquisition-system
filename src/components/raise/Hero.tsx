@@ -4,7 +4,7 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const stats = [
   { icon: TrendingUp, value: "+312%", label: "Crescimento médio em 6 meses" },
-  { icon: Target, value: "4 Pilares", label: "Metodologia validada" },
+  { icon: Target, value: "4 Pilares", label: "Estratégia + execução" },
   { icon: BarChart3, value: "100%", label: "Decisões baseadas em dados" },
 ];
 
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="chip animate-fade-up mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Consultoria de crescimento · Angola
+            Assessoria de marketing e crescimento · Angola
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance mb-8 animate-fade-up" style={{ animationDelay: "80ms" }}>
@@ -34,7 +34,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "180ms" }}>
-            Implementamos um <span className="text-foreground font-semibold">sistema completo</span> para fazer a sua empresa crescer de forma <span className="text-foreground font-semibold">previsível e mensurável</span>.
+            Somos uma <span className="text-foreground font-semibold">assessoria</span> que implementa um sistema completo para fazer a sua empresa crescer de forma <span className="text-foreground font-semibold">previsível e mensurável</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-fade-up" style={{ animationDelay: "260ms" }}>
@@ -45,9 +45,13 @@ const Hero = () => {
               </a>
             </Button>
             <p className="text-sm text-muted-foreground">
-              Resposta em minutos · Sem compromisso
+              Sem compromisso · Resposta rápida
             </p>
           </div>
+
+          <p className="mt-10 font-display text-lg md:text-xl text-foreground/80 max-w-2xl animate-fade-up" style={{ animationDelay: "320ms" }}>
+            <span className="text-primary">"</span>Não somos consultores. Somos <span className="italic">responsáveis</span> pelo crescimento.<span className="text-primary">"</span>
+          </p>
         </div>
 
         {/* Stats */}
