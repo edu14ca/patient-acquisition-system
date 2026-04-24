@@ -18,6 +18,7 @@ const buttonVariants = cva(
         hero: "bg-gradient-red text-primary-foreground shadow-glow-red hover:shadow-glow-red hover:-translate-y-0.5 transition-smooth",
         cta: "bg-primary text-primary-foreground shadow-glow-red hover:bg-primary/95 hover:-translate-y-0.5 transition-smooth",
         whatsapp: "bg-success text-success-foreground hover:bg-success/90 hover:-translate-y-0.5 transition-smooth",
+        neon: "bg-neon text-neon-foreground shadow-glow-neon hover:bg-neon-glow hover:-translate-y-0.5 transition-smooth font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",
