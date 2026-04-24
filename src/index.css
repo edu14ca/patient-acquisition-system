@@ -64,6 +64,7 @@
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
     --shadow-glow-red: 0 0 60px hsl(0 100% 59% / 0.55);
     --shadow-glow-purple: 0 0 60px hsl(263 85% 60% / 0.45);
+    --shadow-glow-neon: 0 0 60px hsl(142 100% 50% / 0.55);
     --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.6);
 
     /* Transitions */
