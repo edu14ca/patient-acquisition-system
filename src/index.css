@@ -40,6 +40,11 @@
     --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
 
+    /* Neon green = CTA accent for clinic landing */
+    --neon: 142 100% 50%;
+    --neon-foreground: 0 0% 4%;
+    --neon-glow: 142 100% 60%;
+
     --border: 0 0% 14%;
     --input: 0 0% 14%;
     --ring: 0 100% 59%;
