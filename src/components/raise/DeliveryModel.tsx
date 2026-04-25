@@ -23,8 +23,8 @@ const options = [
     highlighted: false,
   },
   {
-    title: "Consultoria Estratégica",
-    desc: "Acesso ao método Raise para a sua equipa interna executar com clareza e direcção.",
+    title: "Mentoria de Execução",
+    desc: "Acesso ao método Raise para a sua equipa interna executar com clareza, ritmo e métricas claras.",
     badge: "Estratégico",
     highlighted: false,
   },

@@ -19,9 +19,9 @@ const FinalCTA = () => {
         </p>
 
         <Button asChild variant="hero" size="xl" className="group text-lg h-16 px-12">
-          <a href={buildWhatsAppLink("Olá Raise! Quero crescer o meu negócio. Quando podemos falar?")} target="_blank" rel="noopener noreferrer">
+          <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5" />
-            Quero crescer o meu negócio
+            Falar com a equipa no WhatsApp
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
         </Button>
