@@ -110,34 +110,34 @@ const SocialProof = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {brands.map((b, i) => (
             <button
               key={b.id}
               onClick={() => setActive(b)}
-              className="group rounded-2xl border border-border bg-card hover:border-primary/40 hover:bg-card/80 transition-smooth p-6 flex flex-col items-center justify-between text-center min-h-[260px] animate-fade-up"
+              className="group rounded-2xl border border-border bg-card hover:border-primary/40 hover:bg-card/80 transition-smooth p-6 sm:p-8 flex flex-col items-center justify-between text-center min-h-[240px] animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}
               aria-label={`Ver case de ${b.name}`}
             >
               <div
-                className={`w-full aspect-square rounded-xl border border-border flex items-center justify-center overflow-hidden transition-smooth group-hover:border-primary/40 ${
+                className={`flex items-center justify-center rounded-xl overflow-hidden transition-smooth ${
                   b.logoBg === "light" ? "bg-white" : "bg-secondary"
-                }`}
+                } w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px]`}
               >
                 <img
                   src={b.logo}
                   alt={`Logótipo ${b.name}`}
                   loading="lazy"
-                  className={`w-full h-full ${
-                    b.logoFit === "cover" ? "object-cover" : "object-contain p-4"
+                  className={`max-w-full max-h-full ${
+                    b.logoFit === "cover" ? "w-full h-full object-cover" : "object-contain p-3"
                   } group-hover:scale-105 transition-smooth`}
                 />
               </div>
               <div className="mt-5">
-                <p className="font-display font-semibold text-lg leading-tight">
+                <p className="font-display font-semibold text-base sm:text-lg leading-tight">
                   {b.name}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+                <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground">
                   {b.category}
                 </p>
               </div>
@@ -190,12 +190,14 @@ const SocialProof = () => {
                         key={idx}
                         className="rounded-lg border border-border overflow-hidden bg-secondary/40"
                       >
-                        <img
-                          src={p.src}
-                          alt={p.caption}
-                          loading="lazy"
-                          className="w-full h-48 object-cover object-top"
-                        />
+                        <div className="relative w-full h-48 overflow-hidden bg-secondary">
+                          <img
+                            src={p.src}
+                            alt={p.caption}
+                            loading="lazy"
+                            className="absolute inset-x-0 w-full h-[125%] -top-[12%] object-cover object-center"
+                          />
+                        </div>
                         <figcaption className="p-2 text-xs text-muted-foreground leading-snug">
                           {p.caption}
                         </figcaption>

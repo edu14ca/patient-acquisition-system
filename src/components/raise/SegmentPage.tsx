@@ -291,9 +291,9 @@ const SegmentPage = ({
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12">
               Diagnóstico gratuito em 20 minutos. Sem compromisso.
             </p>
-            <Button asChild variant="hero" size="xl" className="group h-16 px-12">
+            <Button asChild variant="hero" size="xl" className="group h-16 px-8 sm:px-12 mx-auto w-full sm:w-auto max-w-sm justify-center">
               <a href={link} target="_blank" rel="noopener noreferrer">
-                Falar com a equipa no WhatsApp
+                <span>Falar com a equipa no WhatsApp</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
