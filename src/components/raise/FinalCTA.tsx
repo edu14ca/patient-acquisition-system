@@ -18,10 +18,10 @@ const FinalCTA = () => {
           A análise é gratuita. Em 20 minutos a nossa equipa mostra exactamente onde está a perder dinheiro — e como podemos crescer juntos.
         </p>
 
-        <Button asChild variant="hero" size="xl" className="group text-lg h-16 px-12">
+        <Button asChild variant="hero" size="xl" className="group text-base sm:text-lg h-16 px-8 sm:px-12 mx-auto w-full sm:w-auto max-w-sm justify-center">
           <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-5 h-5" />
-            Falar com a equipa no WhatsApp
+            <span>Falar com a equipa no WhatsApp</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
         </Button>
