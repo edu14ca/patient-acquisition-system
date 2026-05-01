@@ -276,6 +276,9 @@ const SegmentPage = ({
           </div>
         </section>
 
+        {/* QUALIFY FORM */}
+        <QualifyForm />
+
         {/* FAQ */}
         <FAQ items={faqs} />
 
@@ -284,19 +287,19 @@ const SegmentPage = ({
           <div className="absolute inset-0 bg-gradient-mesh opacity-80" />
           <div className="container-tight relative text-center max-w-4xl">
             <h2 className="font-display text-5xl md:text-7xl font-bold leading-[0.95] text-balance mb-8">
-              Ou cresce agora… <span className="block text-primary italic">ou continua no mesmo lugar.</span>
+              Continuar como está… <span className="block text-primary italic">é mais caro do que agir.</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12">
-              Diagnóstico gratuito em 20 minutos. Sem compromisso.
+              Diagnóstico em 20 minutos. Apenas para negócios que querem crescer com processo.
             </p>
             <Button asChild variant="hero" size="xl" className="group h-16 px-8 sm:px-12 mx-auto w-full sm:w-auto max-w-sm justify-center">
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <span>Falar com a equipa no WhatsApp</span>
+              <a href="#diagnostico-form">
+                <span>Quero o meu diagnóstico</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <p className="mt-6 text-muted-foreground text-sm">
-              +244 939 636 042 · Resposta rápida · Sem compromisso
+              Apenas 4 diagnósticos por semana · Sem compromisso
             </p>
           </div>
         </section>
