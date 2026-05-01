@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import raiseLogo from "@/assets/raise-logo.png";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -40,8 +39,8 @@ const Header = () => {
 
         <div className="flex items-center gap-3">
           <Button asChild variant="hero" size="sm" className="h-10 px-5 hidden sm:inline-flex">
-            <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-              Falar com a equipa no WhatsApp
+            <a href="/#diagnostico-form">
+              Fazer diagnóstico
             </a>
           </Button>
           <button
@@ -67,8 +66,8 @@ const Header = () => {
               </a>
             ))}
             <Button asChild variant="hero" size="sm" className="mt-3">
-              <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                Falar com a equipa no WhatsApp
+              <a href="/#diagnostico-form">
+                Fazer diagnóstico
               </a>
             </Button>
           </div>

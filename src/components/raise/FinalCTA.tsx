@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -10,24 +9,23 @@ const FinalCTA = () => {
 
       <div className="container-tight relative text-center max-w-4xl">
         <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance mb-8">
-          Quer crescer{" "}
-          <span className="block text-primary italic">ou continuar no mesmo lugar?</span>
+          Continuar como está{" "}
+          <span className="block text-primary italic">é mais caro do que agir.</span>
         </h2>
 
         <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-          A análise é gratuita. Em 20 minutos a nossa equipa mostra exactamente onde está a perder dinheiro — e como podemos crescer juntos.
+          Cada semana sem processo é dinheiro a sair pela porta. Em 20 minutos, mostramos onde está a perda — e como fechar a torneira.
         </p>
 
         <Button asChild variant="hero" size="xl" className="group text-base sm:text-lg h-16 px-8 sm:px-12 mx-auto w-full sm:w-auto max-w-sm justify-center">
-          <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-5 h-5" />
-            <span>Falar com a equipa no WhatsApp</span>
+          <a href="#diagnostico-form">
+            <span>Quero o meu diagnóstico</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
         </Button>
 
         <p className="mt-6 text-muted-foreground text-sm">
-          +244 939 636 042 · Resposta rápida · Sem compromisso
+          Apenas 4 diagnósticos por semana · Sem compromisso
         </p>
       </div>
     </section>

@@ -1,10 +1,10 @@
 import { X } from "lucide-react";
 
 const issues = [
-  { title: "Falta de estratégia", desc: "Investimento sem direcção, sem plano de longo prazo." },
-  { title: "Falta de dados", desc: "Decisões tomadas no \"achismo\", sem métricas reais." },
-  { title: "Falta de processo", desc: "Cada campanha é improvisada. Nada se repete, nada escala." },
-  { title: "Dependência de posts e design", desc: "Bonito não vende. Marketing precisa gerar facturamento." },
+  { title: "Investes sem saber o retorno", desc: "Pagas anúncios, posts e influenciadores — e no fim do mês não sabes o que gerou venda." },
+  { title: "Leads que não viram cliente", desc: "Mensagens chegam, ninguém faz follow-up. Cada lead perdido é dinheiro que entrou pela porta e saiu pela janela." },
+  { title: "Vendas que oscilam todos os meses", desc: "Mês bom, mês mau. Sem previsibilidade não há contratação, expansão, nem tranquilidade." },
+  { title: "Dependência de posts e design", desc: "Bonito não paga salários. Marketing existe para gerar facturamento — não para premiar criatividade." },
 ];
 
 const Problem = () => {
@@ -14,10 +14,10 @@ const Problem = () => {
         <div className="max-w-3xl mb-16">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">O Problema</span>
           <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
-            O problema <span className="italic text-muted-foreground">não é</span> o seu negócio.
+            Estás a perder dinheiro <span className="italic text-muted-foreground">todos os dias</span> e nem sabes onde.
           </h2>
           <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-            A maioria das empresas em Angola não cresce porque está a apostar tudo no canal errado, com a equipa errada, a medir as coisas erradas.
+            A maioria das empresas em Angola não cresce porque investe no canal errado, com a equipa errada, a medir a coisa errada. O resultado é sempre o mesmo: <span className="text-foreground font-semibold">facturamento que não escala</span>.
           </p>
         </div>
 
