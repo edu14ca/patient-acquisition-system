@@ -1,6 +1,5 @@
-import { Check, Compass, Wrench, BarChart3, Sparkles } from "lucide-react";
+import { Compass, Wrench, BarChart3, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const cycle = [
   { icon: Compass, title: "Planeamos", desc: "Estratégia clara, com metas mensais." },
