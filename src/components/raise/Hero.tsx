@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Target, BarChart3 } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const stats = [
   { icon: TrendingUp, value: "+312%", label: "Crescimento médio em 6 meses" },
-  { icon: Target, value: "4 Pilares", label: "Estratégia + execução" },
-  { icon: BarChart3, value: "100%", label: "Decisões baseadas em dados" },
+  { icon: Target, value: "4 Pilares", label: "Aquisição, conversão, ticket, retenção" },
+  { icon: BarChart3, value: "0%", label: "Decisões no achismo" },
 ];
 
 const Hero = () => {
@@ -19,13 +18,13 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="chip animate-fade-up mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Assessoria de marketing e growth em Angola
+            Assessoria de Marketing e Growth em Angola
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance mb-8 animate-fade-up" style={{ animationDelay: "80ms" }}>
-            Agências de marketing{" "}
+            Cada semana sem processo é{" "}
             <span className="relative inline-block">
-              <span className="text-primary">não funcionam.</span>
+              <span className="text-primary">dinheiro perdido.</span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
                 <path d="M2 9C50 3 150 3 298 9" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" />
               </svg>
@@ -33,18 +32,18 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "180ms" }}>
-            Somos uma <span className="text-foreground font-semibold">assessoria</span> que executa estratégia, tráfego, dados e vendas para transformar marketing em <span className="text-foreground font-semibold">crescimento previsível</span>.
+            A Raise é a <span className="text-foreground font-semibold">assessoria</span> que assume tráfego, funil, dados e vendas — e responde por <span className="text-foreground font-semibold">facturamento previsível</span>. Não somos agência. Não vendemos posts.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-fade-up" style={{ animationDelay: "260ms" }}>
             <Button asChild variant="hero" size="xl" className="group">
-              <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                Falar com a equipa no WhatsApp
+              <a href="#diagnostico-form">
+                Quero parar de perder clientes
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <p className="text-sm text-muted-foreground">
-              Sem compromisso · Resposta rápida
+              Diagnóstico gratuito · Vagas limitadas por semana
             </p>
           </div>
 

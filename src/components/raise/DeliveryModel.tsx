@@ -1,6 +1,5 @@
-import { Check, Compass, Wrench, BarChart3, Sparkles } from "lucide-react";
+import { Compass, Wrench, BarChart3, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const cycle = [
   { icon: Compass, title: "Planeamos", desc: "Estratégia clara, com metas mensais." },
@@ -62,8 +61,8 @@ const DeliveryModel = () => {
             </ul>
 
             <Button asChild variant="hero" size="lg">
-              <a href={buildWhatsAppLink("Olá Raise! Quero entender qual modelo de assessoria faz mais sentido para a minha empresa.")} target="_blank" rel="noopener noreferrer">
-                Falar com a equipa no WhatsApp
+              <a href="#diagnostico-form">
+                Quero o meu diagnóstico
               </a>
             </Button>
           </div>
