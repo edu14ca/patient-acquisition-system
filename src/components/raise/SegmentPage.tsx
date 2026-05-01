@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import Header from "@/components/raise/Header";
 import Footer from "@/components/raise/Footer";
 import WhatsAppFloat from "@/components/raise/WhatsAppFloat";
 import Diagnostico from "@/components/raise/Diagnostico";
 import SocialProof from "@/components/raise/SocialProof";
 import FAQ from "@/components/raise/FAQ";
+import QualifyForm from "@/components/raise/QualifyForm";
 import {
   ArrowRight,
   CheckCircle2,
