@@ -50,12 +50,10 @@ const SegmentPage = ({
   services,
   caseStudy,
   faqs,
-  whatsappMessage,
+  whatsappMessage: _whatsappMessage,
   seoTitle,
   seoDescription,
 }: SegmentPageProps) => {
-  const link = buildWhatsAppLink(whatsappMessage);
-
   useEffect(() => {
     document.title = seoTitle;
     const meta = document.querySelector('meta[name="description"]');
@@ -88,13 +86,13 @@ const SegmentPage = ({
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-start sm:items-center animate-fade-up" style={{ animationDelay: "200ms" }}>
               <Button asChild variant="hero" size="xl" className="group">
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  Falar com a equipa no WhatsApp
+                <a href="#diagnostico-form">
+                  Quero o meu diagnóstico
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground">
-                Diagnóstico gratuito · Resposta rápida
+                Diagnóstico gratuito · Vagas limitadas por semana
               </p>
             </div>
           </div>
