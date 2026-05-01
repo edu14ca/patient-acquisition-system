@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Target, BarChart3 } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const stats = [
   { icon: TrendingUp, value: "+312%", label: "Crescimento médio em 6 meses" },
-  { icon: Target, value: "4 Pilares", label: "Estratégia + execução" },
-  { icon: BarChart3, value: "100%", label: "Decisões baseadas em dados" },
+  { icon: Target, value: "4 Pilares", label: "Aquisição, conversão, ticket, retenção" },
+  { icon: BarChart3, value: "0%", label: "Decisões no achismo" },
 ];
 
 const Hero = () => {
