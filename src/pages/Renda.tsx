@@ -51,13 +51,13 @@ const Renda = () => {
           <p className="text-center text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-[#d4145a] mb-4">
             Método R.E.N.D.A. · Estética · Angola
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-[1.05] tracking-tight mb-4">
+          <h1 className="font-serif text-2xl md:text-5xl lg:text-6xl font-bold text-center leading-[1.1] tracking-tight mb-4">
             Você já sabe fazer.{" "}
             <span className="block text-[#d4145a]">
               Mas ainda não sabe transformar isso em dinheiro.
             </span>
           </h1>
-          <p className="text-center text-base md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-center text-sm md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
             Assista o vídeo abaixo até ao fim. Vais perceber porque é que algumas profissionais lotam a agenda — e outras continuam a recomeçar do zero todas as semanas.
           </p>
 
@@ -76,6 +76,20 @@ const Renda = () => {
           <p className="text-center text-sm text-neutral-500 mt-4">
             ▶ Vê o vídeo com som. A oferta aparece em baixo após alguns minutos.
           </p>
+
+          {revealed && (
+            <div className="mt-8 flex flex-col items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full max-w-[400px] px-6 py-4 bg-[#d4145a] hover:bg-[#b01049] text-white font-bold text-base md:text-lg rounded-xl shadow-lg transition-all hover:scale-[1.02]"
+              >
+                Quero garantir o meu acesso agora →
+              </a>
+              <p className="text-xs text-neutral-500">Acesso imediato · Pagamento único</p>
+            </div>
+          )}
         </div>
       </section>
 
