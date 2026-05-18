@@ -51,13 +51,13 @@ const Renda = () => {
           <p className="text-center text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-[#d4145a] mb-4">
             Método R.E.N.D.A. · Estética · Angola
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-[1.05] tracking-tight mb-4">
+          <h1 className="font-serif text-2xl md:text-5xl lg:text-6xl font-bold text-center leading-[1.1] tracking-tight mb-4">
             Você já sabe fazer.{" "}
             <span className="block text-[#d4145a]">
               Mas ainda não sabe transformar isso em dinheiro.
             </span>
           </h1>
-          <p className="text-center text-base md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-center text-sm md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
             Assista o vídeo abaixo até ao fim. Vais perceber porque é que algumas profissionais lotam a agenda — e outras continuam a recomeçar do zero todas as semanas.
           </p>
 
