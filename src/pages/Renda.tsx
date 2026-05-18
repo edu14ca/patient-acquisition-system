@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import VSLPlayer from "@/components/raise/VSLPlayer";
 
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a04dbae59995e700cb427c0";
 const VSL_URL =
@@ -61,17 +62,7 @@ const Renda = () => {
             Assista o vídeo abaixo até ao fim. Vais perceber porque é que algumas profissionais lotam a agenda — e outras continuam a recomeçar do zero todas as semanas.
           </p>
 
-          <div className="relative rounded-2xl overflow-hidden bg-black shadow-2xl mx-auto aspect-[9/16] max-w-[400px]">
-            <video
-              src={VSL_URL}
-              autoPlay
-              controls
-              playsInline
-              loop={false}
-              preload="auto"
-              className="w-full h-full object-cover bg-black"
-            />
-          </div>
+          <VSLPlayer src={VSL_URL} />
 
           <p className="text-center text-sm text-neutral-500 mt-4">
             ▶ Vê o vídeo com som. A oferta aparece em baixo após alguns minutos.
