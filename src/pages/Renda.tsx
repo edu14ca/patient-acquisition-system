@@ -61,13 +61,15 @@ const Renda = () => {
             Assista o vídeo abaixo até ao fim. Vais perceber porque é que algumas profissionais lotam a agenda — e outras continuam a recomeçar do zero todas as semanas.
           </p>
 
-          <div className="relative rounded-2xl overflow-hidden bg-black shadow-2xl aspect-video">
+          <div className="relative rounded-2xl overflow-hidden bg-black shadow-2xl mx-auto aspect-[9/16] max-w-[400px]">
             <video
               src={VSL_URL}
+              autoPlay
               controls
               playsInline
-              preload="metadata"
-              className="w-full h-full object-contain bg-black"
+              loop={false}
+              preload="auto"
+              className="w-full h-full object-cover bg-black"
             />
           </div>
 
