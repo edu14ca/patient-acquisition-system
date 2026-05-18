@@ -76,6 +76,20 @@ const Renda = () => {
           <p className="text-center text-sm text-neutral-500 mt-4">
             ▶ Vê o vídeo com som. A oferta aparece em baixo após alguns minutos.
           </p>
+
+          {revealed && (
+            <div className="mt-8 flex flex-col items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full max-w-[400px] px-6 py-4 bg-[#d4145a] hover:bg-[#b01049] text-white font-bold text-base md:text-lg rounded-xl shadow-lg transition-all hover:scale-[1.02]"
+              >
+                Quero garantir o meu acesso agora →
+              </a>
+              <p className="text-xs text-neutral-500">Acesso imediato · Pagamento único</p>
+            </div>
+          )}
         </div>
       </section>
 
