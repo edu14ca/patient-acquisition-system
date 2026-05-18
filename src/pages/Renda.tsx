@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import VSLPlayer from "@/components/raise/VSLPlayer";
 
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a04dbae59995e700cb427c0";
 const VSL_URL =
