@@ -28,11 +28,10 @@ const VSLPlayer = ({ src, poster }: Props) => {
     const v = videoRef.current;
     if (!v) return;
     v.muted = false;
+    v.currentTime = 0;
     setMuted(false);
     setShowOverlay(false);
-    if (v.paused) {
-      v.play().then(() => setPlaying(true)).catch(() => {});
-    }
+    v.play().then(() => setPlaying(true)).catch(() => {});
   };
 
   const handleTimeUpdate = () => {
