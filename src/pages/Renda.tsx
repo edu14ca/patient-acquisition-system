@@ -11,7 +11,7 @@ import VSLPlayer from "@/components/raise/VSLPlayer";
 const CHECKOUT_URL = "https://pay.kursinha.com/c/6a04dbae59995e700cb427c0";
 const VSL_URL =
   "https://lrrgcweneerjnfdczfim.supabase.co/storage/v1/object/sign/VSL/IMG_0312vsl.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mNzU5ZWVmYy1lMmJiLTQ3ZWEtYWU0Ni0wMjZmOTgxMzkxZGUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJWU0wvSU1HXzAzMTJ2c2wubXA0IiwiaWF0IjoxNzc5MDYxMDE3LCJleHAiOjE4MTA1OTcwMTd9.vIDa-UYA6qnSUfWxHUotj7YN4Qs2QNiYoCJD5xzDnhM";
-const REVEAL_DELAY_MS = 30_000;
+const REVEAL_DELAY_MS = 60_000;
 
 const CTA = ({
   label = "Quero começar o Método R.E.N.D.A.",
