@@ -53,13 +53,13 @@ const Renda = () => {
             Método R.E.N.D.A. · Estética · Angola
           </p>
           <h1 className="font-serif text-2xl md:text-5xl lg:text-6xl font-bold text-center leading-[1.1] tracking-tight mb-4">
-            Você já sabe fazer.{" "}
+            Aumente sua renda em 30 dias{" "}
             <span className="block text-[#d4145a]">
-              Mas ainda não sabe transformar isso em dinheiro.
+              com um método simples para profissionais da estética
             </span>
           </h1>
           <p className="text-center text-sm md:text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Assista o vídeo abaixo até ao fim. Vais perceber porque é que algumas profissionais lotam a agenda — e outras continuam a recomeçar do zero todas as semanas.
+            Aprenda a organizar, divulgar e valorizar o seu trabalho para transformar os serviços que já faz numa fonte de renda mais clara, mais profissional e menos dependente de indicação.
           </p>
 
           <VSLPlayer src={VSL_URL} />
@@ -76,9 +76,9 @@ const Renda = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full max-w-[400px] px-6 py-4 bg-[#d4145a] hover:bg-[#b01049] text-white font-bold text-base md:text-lg rounded-xl shadow-lg transition-all hover:scale-[1.02]"
               >
-                Quero garantir o meu acesso agora →
+                Quero começar o Método R.E.N.D.A. →
               </a>
-              <p className="text-xs text-neutral-500">Acesso imediato · Pagamento único</p>
+              <p className="text-xs text-neutral-500">Ebook + Mentoria · 10.000 Kz · Acesso imediato</p>
             </div>
           )}
         </div>
@@ -98,160 +98,168 @@ const Renda = () => {
           </div>
         )}
 
-        {/* PARE DE TRABALHAR NO VAZIO */}
+        {/* PROVA SOCIAL */}
         <section className="bg-neutral-900 text-white py-20 md:py-28">
-          <div className="max-w-3xl mx-auto px-4 text-center">
-            <p className="text-[#ff3d7f] text-sm font-bold uppercase tracking-wider mb-4">
-              ❌ Pare agora
+          <div className="max-w-3xl mx-auto px-4">
+            <p className="text-[#ff3d7f] text-sm font-bold uppercase tracking-wider mb-4 text-center">
+              Prova social
             </p>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8">
-              Pare de trabalhar no vazio.
+            <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8 text-center">
+              Outras profissionais também sentiam que trabalhavam muito e viam pouco dinheiro
             </h2>
-            <div className="space-y-4 text-lg md:text-xl text-neutral-200 leading-relaxed">
-              <p>Pare de fazer maquilhagem, cabelo, unhas ou estética…</p>
-              <p>e no fim do mês continuar sem dinheiro previsível.</p>
-              <p>Pare de depender de indicação.</p>
-              <p>Pare de baixar preço para não perder cliente.</p>
-              <p>Pare de postar no Instagram e esperar milagres.</p>
+            <p className="text-lg md:text-xl text-neutral-200 leading-relaxed mb-12 text-center">
+              Muitas chegam ao Método R.E.N.D.A. com a mesma sensação: atendem, respondem clientes, compram material, postam no Instagram, fazem orçamento, cobram — mas no fim do mês não sabem quanto realmente sobrou. O método existe para organizar essa confusão.
+            </p>
+
+            <div className="space-y-5">
+              {[
+                "Eu achava que o meu problema era só falta de clientes. Depois percebi que não tinha controlo da agenda, não sabia responder bem no WhatsApp e cobrava com medo. O método ajudou-me a ver onde o dinheiro estava a fugir.",
+                "Já tinha feito cursos de estética, mas nenhum me ensinou a tratar o meu trabalho como negócio. Com o Método R.E.N.D.A., comecei a olhar para preço, retorno, divulgação e organização com mais clareza.",
+                "Eu tinha vergonha de cobrar melhor. Quando entendi que a cliente não paga só pelo procedimento, mas também pela confiança, comecei a apresentar melhor o meu serviço.",
+              ].map((t, i) => (
+                <div key={i} className="bg-neutral-800/60 rounded-2xl p-6 border border-neutral-700">
+                  <p className="font-serif italic text-neutral-100 leading-relaxed">“{t}”</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-3 mt-10 text-sm text-neutral-300">
+              {[
+                "Criado para profissionais da estética",
+                "Funciona em casa ou a domicílio",
+                "Linguagem simples, sem termos complicados",
+                "Ebook + Mentoria para ajudar na aplicação",
+              ].map((s) => (
+                <div key={s} className="flex gap-2 items-start">
+                  <Check className="w-5 h-5 text-[#ff3d7f] shrink-0 mt-0.5" />
+                  <span>{s}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* O ERRO Nº1 */}
+        {/* DOR */}
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-4">
             <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4">
-              O erro nº1
+              A dor
             </p>
             <SectionTitle>
-              A diferença não é talento. É estrutura.
+              Você trabalha muito, mas sente que o dinheiro nunca sobra?
             </SectionTitle>
-            <div className="space-y-5 text-lg text-neutral-700 leading-relaxed">
-              <p>Enquanto algumas conseguem lotar a agenda…</p>
-              <p>outras estão sempre a recomeçar do zero.</p>
-              <p className="font-bold text-neutral-900">
-                A diferença não é talento. Não é sorte. E não é o curso que fizeram.
-              </p>
-              <p className="text-2xl md:text-3xl font-serif font-bold text-[#d4145a]">
-                É estrutura.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* RECONHECIMENTO */}
-        <section className="py-20 md:py-28 bg-neutral-50">
-          <div className="max-w-3xl mx-auto px-4">
-            <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4">
-              Identificação
-            </p>
-            <SectionTitle>Se isto é a tua realidade, presta atenção</SectionTitle>
-
-            <div className="bg-white rounded-2xl p-8 md:p-10 mb-6 border border-neutral-200">
-              <p className="text-lg text-neutral-700 leading-relaxed">
-                Você sabe fazer. Já praticou. Já treinou. Mas clientes reais — que pagam, voltam e indicam — ainda não são consistentes.
-              </p>
-              <p className="text-xl font-serif italic mt-4 text-neutral-900">
-                E você começa a pensar: <span className="text-[#d4145a]">“Será que o problema sou eu?”</span>
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 md:p-10 border border-neutral-200">
-              <p className="text-lg text-neutral-700 leading-relaxed mb-3">
-                Você até trabalha. Mas o dinheiro não acompanha o esforço.
-              </p>
-              <ul className="space-y-2 text-neutral-700 text-lg">
-                <li>· Baixas preço para não perder cliente.</li>
-                <li>· Dependes de indicação.</li>
-                <li>· Postas no Instagram sem resultado.</li>
-                <li>· Sentes que recomeças do zero toda semana.</li>
-              </ul>
-              <p className="mt-6 text-xl font-bold text-neutral-900">
-                O problema não é esforço. <span className="text-[#d4145a]">É falta de estrutura.</span>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* MESMO QUE - QUALIFICAÇÃO */}
-        <section className="py-20 md:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4">
-            <SectionTitle>
-              Este método foi criado para o teu ponto de partida
-            </SectionTitle>
-            <p className="text-lg text-neutral-700 mb-8">Mesmo que:</p>
-            <ul className="space-y-4 text-lg text-neutral-700">
+            <ul className="space-y-3 text-lg text-neutral-700 mb-8">
               {[
-                "tenhas poucos seguidores nas redes sociais",
-                "nunca tenhas tido nenhum cliente",
-                "aches que ainda não estás pronta para atender mais clientes",
-                "aches que o mercado está demasiado competitivo",
-                "acredites que aumentar o preço vai te fazer perder os poucos clientes",
-                "sintas que não há mercado para os teus serviços",
-              ].map((item) => (
-                <li key={item} className="flex gap-3">
-                  <Check className="w-6 h-6 text-[#d4145a] shrink-0 mt-1" />
-                  <span>{item}</span>
+                "Tens clientes, mas não sabes quanto lucraste.",
+                "Dependes muito de indicação.",
+                "Tens medo de cobrar melhor.",
+                "Postas no Instagram, mas quase ninguém chama.",
+                "Respondes WhatsApp, mas as conversas não viram marcação.",
+                "Compras material, atendes, recebes — e não sabes onde o dinheiro foi parar.",
+                "Aceitas descontos por medo de perder clientes.",
+                "Vês concorrentes a cobrar mais, enquanto continuas insegura.",
+              ].map((d) => (
+                <li key={d} className="flex gap-3">
+                  <span className="text-[#d4145a] font-bold">·</span>
+                  <span>{d}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-10 text-2xl md:text-3xl font-serif font-bold text-neutral-900">
-              O problema não és tu. <span className="text-[#d4145a]">É o sistema que nunca te ensinaram.</span>
+            <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+              Muitas profissionais foram ensinadas a fazer o procedimento, mas não foram ensinadas a vender, organizar, divulgar, cobrar e fazer a cliente voltar. Isso não significa que não tens talento. Significa que o teu negócio precisa de método.
+            </p>
+            <p className="text-2xl md:text-3xl font-serif font-bold text-neutral-900">
+              Renda nasce quando o teu trabalho tem{" "}
+              <span className="text-[#d4145a]">organização, valor percebido, divulgação e retorno.</span>
             </p>
           </div>
         </section>
 
-        {/* DOR + VERDADE */}
+        {/* DIAGNÓSTICO */}
         <section className="py-20 md:py-28 bg-neutral-50">
           <div className="max-w-3xl mx-auto px-4">
             <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4">
-              A verdade
+              Diagnóstico
             </p>
             <SectionTitle>
-              Não precisas de mais técnica. Precisas de um sistema.
+              É falta de clientes, preço baixo ou falta de organização?
             </SectionTitle>
-            <p className="text-lg text-neutral-700 mb-6">
-              Deixa-me mostrar-te o que ninguém te explicou:
+            <p className="text-lg text-neutral-700 mb-8">
+              Na maioria das vezes, não é apenas uma coisa. É a soma de pequenos problemas que fazem a renda ficar instável.
             </p>
-            <ul className="space-y-4 mb-10">
+
+            <div className="space-y-5">
               {[
-                "Como conseguir clientes sem depender de sorte",
-                "Como fazer uma cliente voltar sem implorar",
-                "Como cobrar sem medo de perder pessoas",
-                "Como transformar WhatsApp em agenda cheia",
-                "Como usar Instagram para gerar procura real",
-                "Como saber quanto realmente estás a ganhar no mês",
-              ].map((b) => (
-                <li key={b} className="flex gap-3 text-lg text-neutral-800">
-                  <Check className="w-6 h-6 text-[#d4145a] shrink-0 mt-1" />
-                  {b}
-                </li>
+                {
+                  t: "Se tens clientes, mas não vês dinheiro",
+                  d: "O problema pode estar na falta de controlo. Entra dinheiro, mas não separas custos, material, transporte, lucro e dinheiro pessoal.",
+                },
+                {
+                  t: "Se as clientes acham caro",
+                  d: "O problema pode estar na percepção de valor. A cliente olha para o preço porque ainda não entendeu claramente o resultado, o cuidado e a diferença do teu serviço.",
+                },
+                {
+                  t: "Se dependes só de indicação",
+                  d: "O problema pode estar na divulgação. Indicação é boa, mas quando é a única fonte de clientes, a tua renda fica na mão dos outros.",
+                },
+                {
+                  t: "Se as clientes fazem uma vez e somem",
+                  d: "O problema pode estar na falta de retorno. Manutenção, pacote, sequência e acompanhamento criam o caminho para a cliente voltar.",
+                },
+                {
+                  t: "Se já tentaste antes e nada mudou",
+                  d: "Pode não ser falta de informação. Pode ser falta de uma ordem simples para aplicar. Dica solta não organiza negócio. Método sim.",
+                },
+              ].map((it) => (
+                <div key={it.t} className="bg-white rounded-2xl p-6 md:p-8 border border-neutral-200">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-neutral-900 mb-2">{it.t}</h3>
+                  <p className="text-neutral-700 leading-relaxed">{it.d}</p>
+                </div>
               ))}
-            </ul>
-            <p className="text-2xl font-serif font-bold text-neutral-900">
-              Não é falta de talento. <span className="text-[#d4145a]">É falta de sistema.</span>
-            </p>
+            </div>
           </div>
         </section>
 
         {/* BENEFÍCIOS */}
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <SectionTitle>O que muda quando tens um método</SectionTitle>
+            <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4">
+              Benefícios
+            </p>
+            <SectionTitle>O que aprendes no Método R.E.N.D.A.</SectionTitle>
             <div className="grid md:grid-cols-2 gap-6 mt-10">
               {[
-                "Sais da dependência de indicação e passas a ter clientes consistentes",
-                "Cobras com segurança sem medo de perder clientes",
-                "Crias clientes que voltam com frequência",
-                "Transformas WhatsApp num sistema de agendamento",
-                "Sabes exactamente quanto entrou e quanto saiu no mês",
-                "Passas a tratar o teu trabalho como um negócio real",
+                {
+                  t: "Clareza para organizar a tua renda",
+                  d: "Olhar para o dinheiro que entra e entender o que sobra, o que sai e o que precisa de ser controlado.",
+                },
+                {
+                  t: "Segurança para cobrar melhor",
+                  d: "Apresentar o teu serviço, explicar o resultado e fazer a cliente perceber valor antes de comparar preço.",
+                },
+                {
+                  t: "Divulgação com intenção",
+                  d: "Parar de postar por postar. Saber o que mostrar no Instagram e no WhatsApp para gerar marcações.",
+                },
+                {
+                  t: "Controlo de agenda e clientes",
+                  d: "Sair da bagunça de mensagens soltas e encaixes confusos, criando uma rotina mais simples.",
+                },
+                {
+                  t: "Mais oportunidades de retorno",
+                  d: "Pensar em manutenção, pacotes, clientes antigas e lembretes para a cliente voltar.",
+                },
+                {
+                  t: "Postura de negócio",
+                  d: "Deixar de olhar para o teu trabalho como “biscato” e enxergar a estética como negócio.",
+                },
               ].map((b) => (
                 <div
-                  key={b}
+                  key={b.t}
                   className="bg-neutral-50 rounded-xl p-6 border-l-4 border-[#d4145a]"
                 >
-                  <p className="text-base md:text-lg text-neutral-800 leading-relaxed">{b}</p>
+                  <h3 className="font-serif text-xl font-bold text-neutral-900 mb-2">{b.t}</h3>
+                  <p className="text-base text-neutral-700 leading-relaxed">{b.d}</p>
                 </div>
               ))}
             </div>
@@ -265,10 +273,10 @@ const Renda = () => {
               O método
             </p>
             <h2 className="font-serif text-4xl md:text-6xl font-bold text-center mb-6 leading-tight">
-              Método R.E.N.D.A.
+              Ebook + Mentoria<br/>Método R.E.N.D.A.
             </h2>
             <p className="text-center text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-14 leading-relaxed">
-              Um sistema simples para profissionais da estética em Angola saírem do improviso e começarem a organizar, atrair e monetizar os seus serviços.
+              Um plano prático para profissionais independentes da estética que querem organizar, divulgar e valorizar o seu trabalho para aumentar as oportunidades de renda em 30 dias.
             </p>
 
             <div className="space-y-6">
@@ -276,27 +284,27 @@ const Renda = () => {
                 {
                   letter: "R",
                   title: "Reconhecimento",
-                  desc: "Deixas de ser “mais uma” e passas a ser percebida como profissional de valor.",
+                  desc: "Deixa de parecer “mais uma” e começa a construir uma imagem mais profissional, mesmo atendendo em casa ou a domicílio.",
                 },
                 {
                   letter: "E",
                   title: "Estrutura",
-                  desc: "Organizas clientes, agenda, dinheiro e rotina para parar de perder vendas sem perceber.",
+                  desc: "Organiza agenda, clientes, dinheiro e WhatsApp para parar de viver no improviso.",
                 },
                 {
                   letter: "N",
                   title: "Nome",
-                  desc: "Constróis autoridade e reputação mesmo sem salão ou grande estrutura.",
+                  desc: "Fortalece a tua reputação para ser lembrada, indicada e escolhida com mais confiança.",
                 },
                 {
                   letter: "D",
                   title: "Divulgação",
-                  desc: "Transformas Instagram e WhatsApp em ferramentas reais de atracção de clientes.",
+                  desc: "Divulga com intenção, mostrando o teu trabalho de forma simples e mais estratégica.",
                 },
                 {
                   letter: "A",
                   title: "Aumento",
-                  desc: "Aprendes a cobrar melhor e aumentar o valor por cliente sem depender de volume.",
+                  desc: "Cria oportunidades de aumento com pacotes, retorno, clientes antigas e valorização do atendimento.",
                 },
               ].map((it) => (
                 <div
@@ -320,16 +328,16 @@ const Renda = () => {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <SectionTitle>
-              Feito para quem já sabe fazer — mas ainda não sabe ganhar com isso
+              Não é mais uma técnica. É o que falta para ganhares com a técnica que já tens.
             </SectionTitle>
             <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-4">
-              O Método R.E.N.D.A. não ensina técnica.
+              Um curso técnico ensina-te a fazer melhor um procedimento.
             </p>
             <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8">
-              Ele organiza a parte que transforma talento em dinheiro.
+              O Método R.E.N.D.A. ensina-te a organizar, divulgar, vender e fazer o procedimento gerar mais renda.
             </p>
             <p className="text-2xl md:text-3xl font-serif font-bold text-neutral-900">
-              Não precisas de mais informação. <span className="text-[#d4145a]">Precisas de direcção.</span>
+              Não precisas de mais informação. <span className="text-[#d4145a]">Precisas de uma ordem clara.</span>
             </p>
           </div>
         </section>
@@ -341,16 +349,19 @@ const Renda = () => {
               <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4 text-center">
                 A oferta
               </p>
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-center mb-8 leading-tight">
-                Tudo o que está incluído
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-center mb-4 leading-tight">
+                Ebook + Mentoria por 10.000 Kz
               </h2>
+              <p className="text-center text-neutral-600 mb-8">
+                Tudo o que está incluído:
+              </p>
               <ul className="space-y-4 mb-10">
                 {[
-                  "Ebook prático do Método R.E.N.D.A.",
-                  "Estrutura de negócio para estética",
-                  "Sistema de captação e fidelização de clientes",
-                  "Organização de agenda e gestão de dinheiro",
+                  "Ebook prático do Método R.E.N.D.A. (5 pilares)",
+                  "Mentoria para ajudar na aplicação passo a passo",
+                  "Organização de agenda, clientes e dinheiro",
                   "Estratégias práticas de WhatsApp e Instagram",
+                  "Como cobrar com segurança e criar valor percebido",
                   "Plano de acção simples para os primeiros 30 dias",
                 ].map((b) => (
                   <li key={b} className="flex gap-3 text-lg text-neutral-800">
@@ -360,11 +371,35 @@ const Renda = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <CTA className="w-full md:w-auto" />
+                <CTA label="Quero entrar no Método R.E.N.D.A." className="w-full md:w-auto" />
                 <p className="mt-4 text-sm text-neutral-500">
-                  Acesso imediato após pagamento
+                  Acesso imediato após pagamento · 10.000 Kz
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AUTORIDADE / GARANTIA */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-3xl mx-auto px-4">
+            <p className="text-[#d4145a] text-sm font-bold uppercase tracking-wider mb-4">
+              Autoridade
+            </p>
+            <SectionTitle>
+              Um método simples para quem quer parar de improvisar
+            </SectionTitle>
+            <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+              O Método R.E.N.D.A. nasceu para ajudar profissionais da estética em Angola que já trabalham, já atendem e já se esforçam, mas ainda sentem que o dinheiro não acompanha o esforço.
+            </p>
+            <p className="text-lg text-neutral-700 leading-relaxed mb-8">
+              A proposta é educativa e prática: explicar de forma simples o que precisa mudar para organizar melhor o negócio, comunicar valor, atrair clientes e criar mais oportunidades de renda.
+            </p>
+            <div className="bg-neutral-50 rounded-2xl p-6 md:p-8 border border-neutral-200">
+              <p className="font-bold text-neutral-900 mb-3">Sem promessas mágicas.</p>
+              <p className="text-neutral-700 leading-relaxed">
+                Os resultados dependem da tua aplicação, rotina, serviço, região e consistência. O método não garante um valor fixo de facturamento, mas entrega uma direcção clara para aumentar as tuas oportunidades de renda.
+              </p>
             </div>
           </div>
         </section>
@@ -373,37 +408,37 @@ const Renda = () => {
         <section className="py-20 md:py-28 bg-neutral-900 text-white">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
-              Daqui a 30 dias, vais estar no mesmo lugar…{" "}
-              <span className="text-[#ff3d7f]">ou num lugar diferente.</span>
+              Daqui a 30 dias podes continuar no improviso…{" "}
+              <span className="text-[#ff3d7f]">ou seguir um método.</span>
             </h2>
             <p className="text-lg md:text-xl text-neutral-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-              O tempo vai passar de qualquer forma. A diferença não é talento. É método.
+              O teu talento já existe. Agora ele precisa de método.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12 text-left">
               <div className="bg-neutral-800/60 rounded-xl p-6 border border-neutral-700">
                 <p className="font-bold text-[#ff3d7f] mb-3">Com método</p>
                 <ul className="space-y-1 text-neutral-200 text-sm">
-                  <li>· Clientes previsíveis</li>
+                  <li>· Agenda organizada</li>
                   <li>· Cobras com segurança</li>
                   <li>· Sabes quanto ganhas</li>
-                  <li>· Não recomeças toda semana</li>
+                  <li>· Clientes voltam</li>
                 </ul>
               </div>
               <div className="bg-neutral-800/30 rounded-xl p-6 border border-neutral-800">
                 <p className="font-bold text-neutral-400 mb-3">Sem método</p>
                 <ul className="space-y-1 text-neutral-400 text-sm">
-                  <li>· Continuas no improviso</li>
-                  <li>· Dependes de sorte</li>
-                  <li>· Baixas preço por medo</li>
-                  <li>· Recomeças do zero</li>
+                  <li>· Mensagens sem ordem</li>
+                  <li>· Aceitas descontos por medo</li>
+                  <li>· Dependes de indicação</li>
+                  <li>· Mês começa do zero</li>
                 </ul>
               </div>
             </div>
 
-            <CTA label="Quero começar o meu Método R.E.N.D.A. agora" />
+            <CTA label="Quero começar o Método R.E.N.D.A. agora" />
             <p className="mt-6 text-sm text-neutral-400">
-              Não é sobre trabalhar mais. É sobre ganhar melhor com o que já sabes fazer.
+              Ebook + Mentoria · 10.000 Kz · Acesso imediato
             </p>
           </div>
         </section>
@@ -415,24 +450,40 @@ const Renda = () => {
             <Accordion type="single" collapsible className="space-y-3 mt-8">
               {[
                 {
-                  q: "Isto serve para quem nunca teve clientes?",
-                  a: "Sim. O método foi criado exactamente para isso: sair do zero e começar a criar procura real.",
+                  q: "Para quem é o Método R.E.N.D.A.?",
+                  a: "Para profissionais independentes da estética que já atendem ou já têm alguma experiência, mas sentem falta de organização, clientes constantes, segurança para cobrar e clareza para transformar atendimento em renda.",
                 },
                 {
-                  q: "Preciso de salão?",
-                  a: "Não. Funciona para quem atende em casa, a domicílio ou em espaço próprio.",
+                  q: "Serve para quem atende em casa?",
+                  a: "Sim. Serve para quem atende em casa, a domicílio, em espaço alugado, pequeno studio ou espaço próprio.",
                 },
                 {
-                  q: "Vou aprender técnica?",
-                  a: "Não. Tu já precisas de saber fazer. Aqui aprendes a ganhar com isso.",
+                  q: "Preciso de ter muitos clientes?",
+                  a: "Não. Precisas de vontade de organizar e aplicar. O método ajuda tanto quem já tem clientes mas vive sem controlo, quanto quem tem poucos e precisa melhorar divulgação e retorno.",
                 },
                 {
-                  q: "E se eu tiver medo de aumentar preços?",
-                  a: "O método inclui exactamente como cobrar com segurança e sem perder clientes.",
+                  q: "Preciso de saber marketing?",
+                  a: "Não. A linguagem é simples e feita para leigos. O foco é explicar o que fazer na prática, usando situações reais da rotina da estética.",
                 },
                 {
-                  q: "Resultados em 30 dias são garantidos?",
-                  a: "Não existe garantia de resultado individual. Mas existe um sistema claro que te mostra o caminho certo a seguir.",
+                  q: "Vou aprender a fazer anúncios pagos?",
+                  a: "Esse não é o foco principal. Antes de pensar em anúncios, o método ajuda-te a organizar a base: oferta, preço, agenda, WhatsApp, divulgação e retorno.",
+                },
+                {
+                  q: "Vou precisar de aparecer todos os dias?",
+                  a: "Não. O método mostra formas simples de divulgar com conteúdos, resultados, explicações e atendimento melhor conduzido. Aparecer pode ajudar, mas não é a única forma de criar confiança.",
+                },
+                {
+                  q: "O resultado é garantido?",
+                  a: "Não existe garantia de facturamento fixo. O método entrega um plano prático para criar mais oportunidades de renda. O resultado depende da aplicação.",
+                },
+                {
+                  q: "Por que custa 10.000 Kz?",
+                  a: "Porque não recebes apenas um ebook. Recebes um método organizado e uma mentoria para ajudar na aplicação. É uma opção mais acessível do que contratar agência, social media, tráfego pago ou consultoria individual.",
+                },
+                {
+                  q: "Como faço para comprar?",
+                  a: "Clica no botão da página e segue as instruções de pagamento. Depois recebes o acesso ao material e às orientações da mentoria.",
                 },
               ].map((f, i) => (
                 <AccordionItem
@@ -458,7 +509,7 @@ const Renda = () => {
             <p>
               Os resultados dependem da aplicação individual, consistência, mercado e rotina.
             </p>
-            <p>Método educacional para profissionais da estética.</p>
+            <p>Método educacional para profissionais da estética em Angola.</p>
             <p className="pt-4 text-neutral-500">
               © {new Date().getFullYear()} Método R.E.N.D.A. · Todos os direitos reservados.
             </p>
