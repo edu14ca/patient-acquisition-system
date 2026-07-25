@@ -94,57 +94,57 @@ const SocialProof = () => {
   return (
     <section
       id="resultados"
-      className="py-24 md:py-32 relative overflow-hidden border-y border-border"
+      className="py-16 md:py-24 relative overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="container-tight relative">
-        <div className="max-w-3xl mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-primary font-semibold uppercase tracking-wider text-xs">
             Prova social
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
-            Marcas que já <span className="text-primary italic">confiaram na Raise</span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 leading-[1.08] text-balance">
+            Marcas que já confiaram na Raise
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-            Resultados reais, construídos com estratégia, execução e acompanhamento próximo.
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            Toca em cada marca para ver a prova real.
           </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="relative">
+        <div className="flex gap-3 md:gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {brands.map((b, i) => (
             <button
               key={b.id}
               onClick={() => setActive(b)}
-              className="group rounded-2xl border border-border bg-card hover:border-primary/40 hover:bg-card/80 transition-smooth p-6 sm:p-8 flex flex-col items-center justify-between text-center min-h-[240px] animate-fade-up"
-              style={{ animationDelay: `${i * 100}ms` }}
+              className="group shrink-0 snap-center w-[150px] md:w-[190px] rounded-xl border border-border bg-card hover:border-primary/40 transition-smooth p-4 md:p-6 flex flex-col items-center text-center animate-fade-up"
+              style={{ animationDelay: `${i * 80}ms` }}
               aria-label={`Ver case de ${b.name}`}
             >
               <div
-                className={`flex items-center justify-center rounded-xl overflow-hidden transition-smooth ${
+                className={`flex items-center justify-center rounded-lg overflow-hidden transition-smooth ${
                   b.logoBg === "light" ? "bg-white" : "bg-secondary"
-                } w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px]`}
+                } w-16 h-16 md:w-20 md:h-20`}
               >
                 <img
                   src={b.logo}
                   alt={`Logótipo ${b.name}`}
                   loading="lazy"
                   className={`max-w-full max-h-full ${
-                    b.logoFit === "cover" ? "w-full h-full object-cover" : "object-contain p-3"
+                    b.logoFit === "cover" ? "w-full h-full object-cover" : "object-contain p-2"
                   } group-hover:scale-105 transition-smooth`}
                 />
               </div>
-              <div className="mt-5">
-                <p className="font-display font-semibold text-base sm:text-lg leading-tight">
-                  {b.name}
-                </p>
-                <p className="mt-1 text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground">
-                  {b.category}
-                </p>
-              </div>
+              <p className="mt-4 font-display font-semibold text-sm md:text-base leading-tight">
+                {b.name}
+              </p>
+              <p className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+                {b.category}
+              </p>
             </button>
           ))}
         </div>
       </div>
+
 
       <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
         <DialogContent className="bg-card border-border max-w-2xl max-h-[90vh] overflow-y-auto">
