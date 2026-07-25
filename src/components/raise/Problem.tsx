@@ -1,50 +1,56 @@
-import { X } from "lucide-react";
+import { Filter, UserX, Activity, LayoutTemplate } from "lucide-react";
 
 const issues = [
-  { title: "Investes sem saber o retorno", desc: "Pagas anúncios, posts e influenciadores — e no fim do mês não sabes o que gerou venda." },
-  { title: "Leads que não viram cliente", desc: "Mensagens chegam, ninguém faz follow-up. Cada lead perdido é dinheiro que entrou pela porta e saiu pela janela." },
-  { title: "Vendas que oscilam todos os meses", desc: "Mês bom, mês mau. Sem previsibilidade não há contratação, expansão, nem tranquilidade." },
-  { title: "Dependência de posts e design", desc: "Bonito não paga salários. Marketing existe para gerar facturamento — não para premiar criatividade." },
+  {
+    icon: Filter,
+    title: "Investimento sem retorno",
+    desc: "Pagas anúncios e posts e no fim do mês não sabes o que gerou venda.",
+  },
+  {
+    icon: UserX,
+    title: "Leads que não viram cliente",
+    desc: "Mensagens chegam, ninguém faz follow-up. Cada lead perdido é dinheiro perdido.",
+  },
+  {
+    icon: Activity,
+    title: "Vendas que oscilam",
+    desc: "Mês bom, mês mau. Sem previsibilidade não há expansão nem tranquilidade.",
+  },
+  {
+    icon: LayoutTemplate,
+    title: "Dependência de posts e design",
+    desc: "Bonito não paga salários. Marketing existe para gerar facturamento.",
+  },
 ];
 
 const Problem = () => {
   return (
-    <section id="problema" className="py-24 md:py-32 relative">
+    <section id="problema" className="py-16 md:py-24 relative">
       <div className="container-tight">
-        <div className="max-w-3xl mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">O Problema</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
-            Estás a perder dinheiro <span className="italic text-muted-foreground">todos os dias</span> e nem sabes onde.
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
+          <span className="text-primary font-semibold uppercase tracking-wider text-xs">O Problema</span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 text-balance leading-[1.08]">
+            Estás a perder dinheiro todos os dias e nem sabes onde.
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-            A maioria das empresas em Angola não cresce porque investe no canal errado, com a equipa errada, a medir a coisa errada. O resultado é sempre o mesmo: <span className="text-foreground font-semibold">facturamento que não escala</span>.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
-          {issues.map((issue, i) => (
-            <div
-              key={i}
-              className="group p-7 rounded-2xl bg-card border border-border hover:border-primary/40 hover:bg-card/80 transition-smooth animate-fade-up"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
-                  <X className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+          {issues.map((issue, i) => {
+            const Icon = issue.icon;
+            return (
+              <div
+                key={i}
+                className="group p-4 md:p-5 rounded-xl bg-card border border-border hover:border-primary/40 transition-smooth animate-fade-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <div className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center group-hover:bg-primary transition-smooth">
+                  <Icon className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-smooth" />
                 </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold mb-2">{issue.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{issue.desc}</p>
-                </div>
+                <h3 className="font-display text-sm md:text-base font-bold mt-4 leading-snug">{issue.title}</h3>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-relaxed">{issue.desc}</p>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 p-8 md:p-10 rounded-3xl border border-primary/30 bg-gradient-red text-primary-foreground shadow-glow-red">
-          <p className="font-display text-2xl md:text-4xl font-bold leading-tight text-balance">
-            Não falta cliente. Falta <span className="italic">processo</span>.
-          </p>
+            );
+          })}
         </div>
       </div>
     </section>
