@@ -20,9 +20,9 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><a href="/#problema" className="hover:text-foreground transition-smooth">Problema</a></li>
             <li><a href="/#pilares" className="hover:text-foreground transition-smooth">Pilares</a></li>
-            <li><a href="/#solucoes" className="hover:text-foreground transition-smooth">Soluções</a></li>
             <li><a href="/#resultados" className="hover:text-foreground transition-smooth">Resultados</a></li>
-            <li><a href="/#faq" className="hover:text-foreground transition-smooth">FAQ</a></li>
+            <li><a href="/#diagnostico-form" className="hover:text-foreground transition-smooth">Diagnóstico</a></li>
+
           </ul>
         </div>
 
