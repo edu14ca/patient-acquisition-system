@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Dialog,
   DialogContent,
@@ -6,6 +6,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
@@ -13,6 +21,9 @@ import logoMichael from "@/assets/logo-michael-machado.jpg";
 import logoLinhas from "@/assets/logo-linhas-douro.jpg";
 import logoHappy from "@/assets/logo-happy-kitchen.jpg";
 import logoFercal from "@/assets/logo-fercal.jpg";
+import logoWamiAsset from "@/assets/logo-wamikixima.jpg.asset.json";
+import logoSesalinAsset from "@/assets/logo-sesalin.webp.asset.json";
+import logoMavisherAsset from "@/assets/logo-mavisher.jpg.asset.json";
 
 import proofMichael1 from "@/assets/proof-michael-1.jpg";
 import proofMichael2 from "@/assets/proof-michael-2.jpg";
@@ -29,8 +40,11 @@ type Brand = {
   logoFit?: "contain" | "cover";
   logoBg?: "light" | "dark";
   summary: string;
+  caseUrl?: string;
+  testimonial?: string;
   proofs: { src: string; caption: string }[];
 };
+
 
 const brands: Brand[] = [
   {
