@@ -6,8 +6,9 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Problema", href: "/#problema" },
   { label: "Pilares", href: "/#pilares" },
-  { label: "Soluções", href: "/#solucoes" },
   { label: "Resultados", href: "/#resultados" },
+  { label: "Diagnóstico", href: "/#diagnostico-form" },
+
 ];
 
 const Header = () => {
