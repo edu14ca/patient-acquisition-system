@@ -100,10 +100,62 @@ const brands: Brand[] = [
       "A Raise apoia o Complexo Escolar Privado Fercal, no Lubango, com estratégia de comunicação e captação de novos alunos, reforçando a presença institucional e a confiança das famílias.",
     proofs: [],
   },
+  {
+    id: "wamikixima",
+    name: "Clínica WamiKixima Dental",
+    category: "Clínica odontológica / Luanda",
+    logo: logoWamiAsset.url,
+    logoFit: "contain",
+    logoBg: "light",
+    summary:
+      "A Raise trabalha com a Clínica WamiKixima Dental, em Luanda, na estruturação da aquisição de pacientes e da comunicação da clínica.",
+    caseUrl: "",
+    proofs: [],
+  },
+  {
+    id: "sesalin",
+    name: "Sesalin",
+    category: "Marketplace / Comércio digital",
+    logo: logoSesalinAsset.url,
+    logoFit: "contain",
+    logoBg: "dark",
+    summary:
+      "A Raise acompanha a Sesalin na estruturação do crescimento do marketplace e da sua operação de comércio digital.",
+    caseUrl: "",
+    proofs: [],
+  },
+  {
+    id: "mavisher",
+    name: "Mavisher",
+    category: "Logística / E-commerce",
+    logo: logoMavisherAsset.url,
+    logoFit: "contain",
+    logoBg: "dark",
+    summary:
+      "A Raise acompanha a Mavisher na estruturação de crescimento na área de logística e e-commerce.",
+    caseUrl: "",
+    proofs: [],
+  },
 ];
+
+const AUTOPLAY_MS = 3500;
 
 const SocialProof = () => {
   const [active, setActive] = useState<Brand | null>(null);
+  const [api, setApi] = useState<CarouselApi>();
+  const [paused, setPaused] = useState(false);
+
+  const reduceMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
+  useEffect(() => {
+    if (!api || paused || reduceMotion) return;
+    const id = setInterval(() => api.scrollNext(), AUTOPLAY_MS);
+    return () => clearInterval(id);
+  }, [api, paused, reduceMotion]);
+
+  const open = useCallback((b: Brand) => setActive(b), []);
 
   return (
     <section
@@ -124,40 +176,58 @@ const SocialProof = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="flex gap-3 md:gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {brands.map((b, i) => (
-            <button
-              key={b.id}
-              onClick={() => setActive(b)}
-              className="group shrink-0 snap-center w-[150px] md:w-[190px] rounded-xl border border-border bg-card hover:border-primary/40 transition-smooth p-4 md:p-6 flex flex-col items-center text-center animate-fade-up"
-              style={{ animationDelay: `${i * 80}ms` }}
-              aria-label={`Ver case de ${b.name}`}
-            >
-              <div
-                className={`flex items-center justify-center rounded-lg overflow-hidden transition-smooth ${
-                  b.logoBg === "light" ? "bg-white" : "bg-secondary"
-                } w-16 h-16 md:w-20 md:h-20`}
+      <div
+        className="relative px-6 md:px-12"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <Carousel
+          setApi={setApi}
+          opts={{ loop: true, align: "start", dragFree: false }}
+          className="container-tight"
+        >
+          <CarouselContent className="-ml-3 md:-ml-4">
+            {brands.map((b) => (
+              <CarouselItem
+                key={b.id}
+                className="pl-3 md:pl-4 basis-[80%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <img
-                  src={b.logo}
-                  alt={`Logótipo ${b.name}`}
-                  loading="lazy"
-                  className={`max-w-full max-h-full ${
-                    b.logoFit === "cover" ? "w-full h-full object-cover" : "object-contain p-2"
-                  } group-hover:scale-105 transition-smooth`}
-                />
-              </div>
-              <p className="mt-4 font-display font-semibold text-sm md:text-base leading-tight">
-                {b.name}
-              </p>
-              <p className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-                {b.category}
-              </p>
-            </button>
-          ))}
-        </div>
+                <button
+                  onClick={() => open(b)}
+                  className="group w-full h-full rounded-xl border border-border bg-card hover:border-primary/40 hover:-translate-y-1 transition-smooth p-4 md:p-6 flex flex-col items-center text-center"
+                  aria-label={`Ver case de ${b.name}`}
+                >
+                  <div
+                    className={`flex items-center justify-center rounded-lg overflow-hidden transition-smooth shrink-0 ${
+                      b.logoBg === "light" ? "bg-white" : "bg-secondary"
+                    } w-16 h-16 md:w-20 md:h-20`}
+                  >
+                    <img
+                      src={b.logo}
+                      alt={`Logótipo ${b.name}`}
+                      loading="lazy"
+                      width={80}
+                      height={80}
+                      className={`max-w-full max-h-full ${
+                        b.logoFit === "cover" ? "w-full h-full object-cover" : "object-contain p-2"
+                      } group-hover:scale-105 transition-smooth`}
+                    />
+                  </div>
+                  <p className="mt-4 font-display font-semibold text-sm md:text-base leading-tight">
+                    {b.name}
+                  </p>
+                  <p className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+                    {b.category}
+                  </p>
+                </button>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-2 bg-card/80 border-border" />
+          <CarouselNext className="hidden md:flex -right-2 bg-card/80 border-border" />
+        </Carousel>
       </div>
+
 
 
       <Dialog open={!!active} onOpenChange={(o) => !o && setActive(null)}>
