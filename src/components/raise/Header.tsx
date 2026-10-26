@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Como funciona", href: "/#como-funciona" },
-  { label: "Serviços", href: "/#servicos" },
-  { label: "Casos", href: "/#resultados" },
+  { label: "Soluções", href: "/#solucoes" },
+  { label: "Modelos", href: "/#modelos" },
+  { label: "Clientes", href: "/#resultados" },
   { label: "Clínicas", href: "/clinicas" },
   { label: "FAQ", href: "/#faq" },
 ];

@@ -29,9 +29,14 @@ const Hero = () => {
         </p>
 
         <div className="mt-9 flex flex-col items-center gap-4 animate-fade-up" style={{ animationDelay: "240ms" }}>
-          <Button asChild variant="hero" size="lg" className="w-full sm:w-auto max-w-xs justify-center">
-            <a href="#diagnostico-form">Agende um diagnóstico agora</a>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto max-w-xs justify-center">
+              <a href="#diagnostico-form">Agende um diagnóstico agora</a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto max-w-xs justify-center bg-transparent">
+              <a href="#solucoes">Ver soluções</a>
+            </Button>
+          </div>
           <p className="text-xs md:text-sm text-muted-foreground">
             Diagnóstico gratuito · Apenas 4 vagas por semana
           </p>
