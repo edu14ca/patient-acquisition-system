@@ -41,7 +41,7 @@ const VSLPlayer = ({ src, poster }: Props) => {
   };
 
   return (
-    <div className="relative rounded-2xl overflow-hidden bg-black shadow-2xl mx-auto aspect-[9/16] max-w-[400px] group">
+    <div className="relative rounded-lg overflow-hidden bg-black shadow-2xl mx-auto aspect-[9/16] max-w-[400px] group">
       <video
         ref={videoRef}
         src={src}

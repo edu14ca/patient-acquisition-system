@@ -22,7 +22,7 @@ const defaultFaqs: FaqItem[] = [
   },
   {
     q: "Preciso ter equipa interna?",
-    a: "Não é obrigatório. Funcionamos como o seu time externo de marketing e vendas. Se já tem equipa, integramo-nos e elevamos o nível de execução.",
+    a: "Não é obrigatório. Funcionamos como a sua equipa externa de marketing e vendas. Se já tem equipa, integramo-nos e elevamos o nível de execução.",
   },
   {
     q: "Funciona em Angola?",
@@ -36,12 +36,12 @@ const defaultFaqs: FaqItem[] = [
 
 const FAQ = ({ items = defaultFaqs }: { items?: FaqItem[] }) => {
   return (
-    <section id="faq" className="py-24 md:py-32 relative">
-      <div className="container-tight max-w-4xl">
-        <div className="mb-14">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">FAQ</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
-            Perguntas que ouvimos <span className="text-primary">todos os dias</span>.
+    <section id="faq" className="py-20 md:py-24 relative">
+      <div className="container-tight">
+        <div className="mb-10 md:mb-14">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+            Perguntas que ouvimos todos os dias.
           </h2>
         </div>
 
@@ -50,9 +50,9 @@ const FAQ = ({ items = defaultFaqs }: { items?: FaqItem[] }) => {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-2xl border border-border bg-card px-6 data-[state=open]:border-primary/40 transition-smooth"
+              className="rounded-lg border border-border bg-card px-6 data-[state=open]:border-primary/40 transition-smooth"
             >
-              <AccordionTrigger className="font-display text-lg md:text-xl font-bold text-left hover:no-underline">
+              <AccordionTrigger className="font-display text-lg md:text-xl font-medium text-left hover:no-underline">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-base">
