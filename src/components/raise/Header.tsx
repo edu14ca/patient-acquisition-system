@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Problema", href: "/#problema" },
-  { label: "Pilares", href: "/#pilares" },
-  { label: "Resultados", href: "/#resultados" },
-  { label: "Diagnóstico", href: "/#diagnostico-form" },
-
+  { label: "Como funciona", href: "/#como-funciona" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Casos", href: "/#resultados" },
+  { label: "Clínicas", href: "/clinicas" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
             alt="Raise"
             className="w-9 h-9 object-contain transition-smooth group-hover:scale-105"
           />
-          <span className="font-display font-bold text-lg tracking-tight">Raise</span>
+          <span className="font-display font-semibold text-lg tracking-tight">Raise</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">

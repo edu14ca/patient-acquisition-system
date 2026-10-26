@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2">
             <img src={raiseLogo} alt="Raise" className="w-9 h-9 object-contain" />
-            <span className="font-display font-bold text-lg">Raise</span>
+            <span className="font-display font-semibold text-lg">Raise</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
             Raise — Assessoria de Marketing e Growth em Angola. Estratégia, execução e responsabilidade pelo facturamento.
@@ -16,11 +16,12 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="font-display font-semibold mb-3">Navegar</p>
+          <p className="eyebrow mb-3">Navegar</p>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="/#problema" className="hover:text-foreground transition-smooth">Problema</a></li>
-            <li><a href="/#pilares" className="hover:text-foreground transition-smooth">Pilares</a></li>
-            <li><a href="/#resultados" className="hover:text-foreground transition-smooth">Resultados</a></li>
+            <li><a href="/#como-funciona" className="hover:text-foreground transition-smooth">Como funciona</a></li>
+            <li><a href="/#servicos" className="hover:text-foreground transition-smooth">Serviços</a></li>
+            <li><a href="/#resultados" className="hover:text-foreground transition-smooth">Casos</a></li>
+            <li><a href="/clinicas" className="hover:text-foreground transition-smooth">Para clínicas</a></li>
             <li><a href="/#diagnostico-form" className="hover:text-foreground transition-smooth">Diagnóstico</a></li>
             <li><a href="/politica-de-privacidade/" className="hover:text-foreground transition-smooth">Política de Privacidade</a></li>
 
@@ -28,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="font-display font-semibold mb-3">Contacto</p>
+          <p className="eyebrow mb-3">Contacto</p>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
               <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-smooth">

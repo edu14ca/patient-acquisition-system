@@ -28,8 +28,8 @@ const Problem = () => {
     <section id="problema" className="py-16 md:py-24 relative">
       <div className="container-tight">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-          <span className="text-primary font-semibold uppercase tracking-wider text-xs">O Problema</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 text-balance leading-[1.08]">
+          <span className="eyebrow">O Problema</span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-[1.08]">
             Estás a perder dinheiro todos os dias e nem sabes onde.
           </h2>
         </div>
@@ -40,13 +40,13 @@ const Problem = () => {
             return (
               <div
                 key={i}
-                className="group p-4 md:p-5 rounded-xl bg-card border border-border hover:border-primary/40 transition-smooth animate-fade-up"
+                className="group p-4 md:p-5 rounded-lg bg-card border border-border hover:border-primary/40 transition-smooth animate-fade-up"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center group-hover:bg-primary transition-smooth">
                   <Icon className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-smooth" />
                 </div>
-                <h3 className="font-display text-sm md:text-base font-bold mt-4 leading-snug">{issue.title}</h3>
+                <h3 className="font-display text-sm md:text-base font-semibold mt-4 leading-snug">{issue.title}</h3>
                 <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-relaxed">{issue.desc}</p>
               </div>
             );

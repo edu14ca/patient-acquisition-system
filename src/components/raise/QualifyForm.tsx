@@ -68,7 +68,7 @@ const Pill = ({
   <button
     type="button"
     onClick={onClick}
-    className={`text-left p-4 rounded-xl border transition-smooth font-medium ${
+    className={`text-left p-4 rounded-lg border transition-smooth font-medium ${
       active
         ? "border-primary bg-primary/10 text-foreground shadow-glow-red"
         : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -140,10 +140,10 @@ const QualifyForm = () => {
 
       <div className="container-tight relative">
         <div className="max-w-2xl mx-auto text-center mb-10">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
+          <span className="eyebrow">
             Diagnóstico de crescimento
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
             Isto <span className="text-primary italic">não é</span> para todos.
           </h2>
           <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -155,7 +155,7 @@ const QualifyForm = () => {
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto rounded-3xl border border-border bg-card/80 backdrop-blur-md p-6 md:p-10 shadow-elegant">
+        <div className="max-w-2xl mx-auto rounded-lg border border-border bg-card/80 backdrop-blur-md p-6 md:p-10 shadow-elegant">
           {/* Progress */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -173,7 +173,7 @@ const QualifyForm = () => {
           <div className="min-h-[320px]">
             {step === 0 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold mb-6 leading-tight">
                   Qual é o teu sector?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -188,7 +188,7 @@ const QualifyForm = () => {
 
             {step === 1 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold mb-2 leading-tight">
                   Quanto o teu negócio fatura por mês?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -206,7 +206,7 @@ const QualifyForm = () => {
 
             {step === 2 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold mb-2 leading-tight">
                   Quantos clientes novos tens por semana?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -224,7 +224,7 @@ const QualifyForm = () => {
 
             {step === 3 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold mb-6 leading-tight">
                   Qual é o teu maior problema hoje?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -239,7 +239,7 @@ const QualifyForm = () => {
 
             {step === 4 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold mb-2 leading-tight">
                   Estás disposto a investir para estruturar crescimento?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -257,7 +257,7 @@ const QualifyForm = () => {
 
             {step === 5 && (
               <div className="animate-fade-up space-y-5">
-                <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-semibold leading-tight">
                   Para onde enviamos o teu diagnóstico?
                 </h3>
                 <div className="space-y-2">

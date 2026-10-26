@@ -13,8 +13,8 @@ const CaseStudy = () => {
 
       <div className="container-tight relative">
         <div className="max-w-3xl mb-12">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">Prova real</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
+          <span className="eyebrow">Prova real</span>
+          <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 text-balance leading-[1.05]">
             Empresas em Angola já estão a sair da estagnação com a <span className="text-primary">Raise</span>.
           </h2>
           <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
@@ -22,7 +22,7 @@ const CaseStudy = () => {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-border bg-card overflow-hidden">
+        <div className="rounded-lg border border-border bg-card overflow-hidden">
           <div className="p-8 md:p-12 border-b border-border">
             <div className="flex items-start justify-between gap-6 flex-wrap">
               <div>
@@ -46,7 +46,7 @@ const CaseStudy = () => {
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="text-muted-foreground line-through text-lg">{m.before}</span>
                   <ArrowUpRight className="w-4 h-4 text-primary" />
-                  <span className="font-display text-3xl font-bold text-foreground">{m.after}</span>
+                  <span className="font-display text-3xl font-semibold text-foreground">{m.after}</span>
                 </div>
                 <span className="inline-block text-sm font-semibold text-success">{m.delta}</span>
               </div>

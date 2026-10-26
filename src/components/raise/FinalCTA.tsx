@@ -8,7 +8,7 @@ const FinalCTA = () => {
       <div className="absolute inset-0 grid-bg opacity-40" />
 
       <div className="container-tight relative text-center max-w-4xl">
-        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance mb-8">
+        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-balance mb-8">
           Continuar como está{" "}
           <span className="block text-primary italic">é mais caro do que agir.</span>
         </h2>

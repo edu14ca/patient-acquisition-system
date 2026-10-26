@@ -164,10 +164,10 @@ const SocialProof = () => {
     >
       <div className="container-tight relative">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-primary font-semibold uppercase tracking-wider text-xs">
+          <span className="eyebrow">
             Prova social
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 leading-[1.08] text-balance">
             Marcas que já confiaram na Raise
           </h2>
           <p className="mt-4 text-sm md:text-base text-muted-foreground">
@@ -194,7 +194,7 @@ const SocialProof = () => {
               >
                 <button
                   onClick={() => open(b)}
-                  className="group w-full h-full rounded-xl border border-border bg-card hover:border-primary/40 hover:-translate-y-1 transition-smooth p-4 md:p-6 flex flex-col items-center text-center"
+                  className="group w-full h-full rounded-lg border border-border bg-card hover:border-primary/40 hover:-translate-y-1 transition-smooth p-4 md:p-6 flex flex-col items-center text-center"
                   aria-label={`Ver case de ${b.name}`}
                 >
                   <div
@@ -237,7 +237,7 @@ const SocialProof = () => {
               <DialogHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <div
-                    className={`w-16 h-16 rounded-xl border border-border flex items-center justify-center overflow-hidden shrink-0 ${
+                    className={`w-16 h-16 rounded-lg border border-border flex items-center justify-center overflow-hidden shrink-0 ${
                       active.logoBg === "light" ? "bg-white" : "bg-secondary"
                     }`}
                   >

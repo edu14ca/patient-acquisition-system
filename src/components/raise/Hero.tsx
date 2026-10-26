@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.02] tracking-tight text-balance max-w-4xl mx-auto animate-fade-up"
+          className="font-display text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] text-balance max-w-4xl mx-auto animate-fade-up"
           style={{ animationDelay: "80ms" }}
         >
           Cada semana sem processo

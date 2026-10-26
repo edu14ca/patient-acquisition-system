@@ -11,7 +11,7 @@ const cycle = [
 const options = [
   {
     title: "Assessoria Completa",
-    desc: "Time Raise integrado à sua operação. Estratégia, execução e acompanhamento contínuo — tudo num só lugar.",
+    desc: "Equipa Raise integrada na sua operação. Estratégia, execução e acompanhamento contínuo — tudo num só lugar.",
     badge: "Mais escolhida",
     highlighted: true,
   },
@@ -31,13 +31,13 @@ const options = [
 
 const DeliveryModel = () => {
   return (
-    <section className="py-24 md:py-32 bg-gradient-fade-b border-y border-border">
+    <section id="formas-de-trabalhar" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border">
       <div className="container-tight">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <span className="text-primary font-semibold uppercase tracking-wider text-sm">Como trabalhamos</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 text-balance leading-tight mb-6">
-              Somos o seu <span className="text-primary">time externo</span> de marketing e vendas.
+            <span className="eyebrow">Formas de trabalhar</span>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-tight mb-6">
+              Somos a sua <span className="text-primary">equipa externa</span> de marketing e vendas.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Não entregamos relatórios e desaparecemos. Entramos na operação, assumimos as métricas e respondemos pelo crescimento.
@@ -47,12 +47,12 @@ const DeliveryModel = () => {
               {cycle.map((c) => {
                 const Icon = c.icon;
                 return (
-                  <li key={c.title} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
+                  <li key={c.title} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border">
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="font-display font-bold text-lg leading-tight">{c.title}</p>
+                      <p className="font-display font-semibold text-lg leading-tight">{c.title}</p>
                       <p className="text-sm text-muted-foreground mt-1">{c.desc}</p>
                     </div>
                   </li>
@@ -71,7 +71,7 @@ const DeliveryModel = () => {
             {options.map((o, i) => (
               <article
                 key={o.title}
-                className={`p-7 rounded-2xl border transition-smooth animate-fade-up ${
+                className={`p-7 rounded-lg border transition-smooth animate-fade-up ${
                   o.highlighted
                     ? "bg-card border-primary shadow-glow-red"
                     : "bg-card border-border hover:border-primary/40"
@@ -79,7 +79,7 @@ const DeliveryModel = () => {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-display text-2xl font-bold">{o.title}</h3>
+                  <h3 className="font-display text-2xl font-semibold">{o.title}</h3>
                   <span className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
                     o.highlighted ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground border border-border"
                   }`}>

@@ -76,7 +76,7 @@ const SegmentPage = ({
               {badge}
             </div>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-balance max-w-5xl animate-fade-up">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-balance max-w-5xl animate-fade-up">
               {headline}
             </h1>
 
@@ -102,8 +102,8 @@ const SegmentPage = ({
         <section className="py-24 md:py-32">
           <div className="container-tight">
             <div className="max-w-3xl mb-14">
-              <span className="text-primary font-semibold uppercase tracking-wider text-sm">O Problema</span>
-              <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
+              <span className="eyebrow">O Problema</span>
+              <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
                 A maioria dos negócios de {segment.toLowerCase()} não cresce porque{" "}
                 <span className="text-primary italic">faltam-lhes processos</span>.
               </h2>
@@ -113,7 +113,7 @@ const SegmentPage = ({
               {pains.map((p, i) => (
                 <div
                   key={p.title}
-                  className="group p-7 rounded-2xl bg-card border border-border hover:border-primary/40 transition-smooth animate-fade-up"
+                  className="group p-7 rounded-lg bg-card border border-border hover:border-primary/40 transition-smooth animate-fade-up"
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   <div className="flex items-start gap-4">
@@ -121,7 +121,7 @@ const SegmentPage = ({
                       <XCircle className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-display text-xl font-bold mb-2">{p.title}</h3>
+                      <h3 className="font-display text-xl font-semibold mb-2">{p.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
@@ -139,8 +139,8 @@ const SegmentPage = ({
           <div className="absolute inset-0 grid-bg opacity-40" />
           <div className="container-tight relative">
             <div className="max-w-3xl mb-16">
-              <span className="text-primary font-semibold uppercase tracking-wider text-sm">A Solução</span>
-              <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
+              <span className="eyebrow">A Solução</span>
+              <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
                 Sistema completo construído em <span className="text-primary">4 pilares</span>.
               </h2>
             </div>
@@ -151,17 +151,17 @@ const SegmentPage = ({
                 return (
                   <article
                     key={p.title}
-                    className="group relative p-7 rounded-2xl bg-card border border-border hover:border-primary transition-smooth overflow-hidden animate-fade-up"
+                    className="group relative p-7 rounded-lg bg-card border border-border hover:border-primary transition-smooth overflow-hidden animate-fade-up"
                     style={{ animationDelay: `${i * 100}ms` }}
                   >
-                    <div className="absolute -top-4 -right-2 text-7xl font-display font-bold text-stroke opacity-30 select-none">
+                    <div className="absolute -top-4 -right-2 text-7xl font-display font-semibold text-stroke opacity-30 select-none">
                       0{i + 1}
                     </div>
                     <div className="relative">
-                      <div className="inline-flex p-3 rounded-xl bg-primary text-primary-foreground mb-6 group-hover:shadow-glow-red transition-smooth">
+                      <div className="inline-flex p-3 rounded-lg bg-primary text-primary-foreground mb-6 group-hover:shadow-glow-red transition-smooth">
                         <Icon className="w-6 h-6" />
                       </div>
-                      <h3 className="font-display text-2xl font-bold mb-3">{p.title}</h3>
+                      <h3 className="font-display text-2xl font-semibold mb-3">{p.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
                     </div>
                   </article>
@@ -175,8 +175,8 @@ const SegmentPage = ({
         <section className="py-24 md:py-32">
           <div className="container-tight">
             <div className="max-w-3xl mb-14">
-              <span className="text-primary font-semibold uppercase tracking-wider text-sm">Soluções Raise</span>
-              <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
+              <span className="eyebrow">Soluções Raise</span>
+              <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
                 Não vendemos serviços. <span className="text-primary">Vendemos crescimento.</span>
               </h2>
             </div>
@@ -185,13 +185,13 @@ const SegmentPage = ({
               {services.map((s, i) => (
                 <article
                   key={s.title}
-                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-smooth animate-fade-up"
+                  className="group p-8 rounded-lg bg-card border border-border hover:border-primary/50 transition-smooth animate-fade-up"
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-display text-xl md:text-2xl font-bold mb-2 leading-tight">{s.title}</h3>
+                      <h3 className="font-display text-xl md:text-2xl font-semibold mb-2 leading-tight">{s.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
@@ -205,9 +205,9 @@ const SegmentPage = ({
         <section className="py-24 md:py-32 bg-gradient-fade-b border-y border-border">
           <div className="container-tight">
             <div className="max-w-3xl mb-12">
-              <span className="text-primary font-semibold uppercase tracking-wider text-sm">Modelo de entrega</span>
-              <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
-                Somos o seu <span className="text-primary">time externo</span> de marketing e vendas.
+              <span className="eyebrow">Modelo de entrega</span>
+              <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
+                Somos a sua <span className="text-primary">equipa externa</span> de marketing e vendas.
               </h2>
               <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
                 Planeamos, executamos, medimos e optimizamos. Toda a semana. Sem desculpas.
@@ -218,11 +218,11 @@ const SegmentPage = ({
               {["Planeamos", "Executamos", "Medimos", "Optimizamos"].map((t, i) => (
                 <div
                   key={t}
-                  className="p-6 rounded-2xl bg-card border border-border animate-fade-up"
+                  className="p-6 rounded-lg bg-card border border-border animate-fade-up"
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
                   <p className="text-sm text-muted-foreground mb-2">0{i + 1}</p>
-                  <p className="font-display text-xl font-bold">{t}</p>
+                  <p className="font-display text-xl font-semibold">{t}</p>
                 </div>
               ))}
             </div>
@@ -236,14 +236,14 @@ const SegmentPage = ({
         <section className="py-24 md:py-32">
           <div className="container-tight">
             <div className="max-w-3xl mb-12">
-              <span className="text-primary font-semibold uppercase tracking-wider text-sm">Caso real</span>
-              <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
+              <span className="eyebrow">Caso real</span>
+              <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-[1.05] text-balance">
                 {caseStudy.title}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="p-8 rounded-lg bg-card border border-border">
                 <div className="chip mb-5">
                   <TrendingDown className="w-4 h-4 text-primary" />
                   ANTES da Raise
@@ -258,7 +258,7 @@ const SegmentPage = ({
                 </ul>
               </div>
 
-              <div className="p-8 rounded-2xl bg-gradient-red text-primary-foreground border border-primary shadow-glow-red">
+              <div className="p-8 rounded-lg bg-gradient-red text-primary-foreground border border-primary shadow-glow-red">
                 <div className="chip mb-5 bg-background/20 border-background/30 text-primary-foreground">
                   <TrendingUp className="w-4 h-4" />
                   DEPOIS da Raise
@@ -286,7 +286,7 @@ const SegmentPage = ({
         <section className="py-24 md:py-32 relative overflow-hidden border-t border-border">
           <div className="absolute inset-0 bg-gradient-mesh opacity-80" />
           <div className="container-tight relative text-center max-w-4xl">
-            <h2 className="font-display text-5xl md:text-7xl font-bold leading-[0.95] text-balance mb-8">
+            <h2 className="font-display text-5xl md:text-7xl font-semibold leading-[0.95] text-balance mb-8">
               Continuar como está… <span className="block text-primary italic">é mais caro do que agir.</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12">

@@ -37,7 +37,7 @@ const services = [
   {
     icon: Briefcase,
     title: "Estruturamos a sua equipa comercial",
-    outcome: "Time, scripts e processos que vendem todos os dias, com previsibilidade.",
+    outcome: "Equipa, scripts e processos que vendem todos os dias, com previsibilidade.",
   },
   {
     icon: Rocket,
@@ -48,15 +48,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="solucoes" className="py-24 md:py-32">
+    <section id="servicos" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border">
       <div className="container-tight">
-        <div className="max-w-3xl mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">O que executamos</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
+        <div className="max-w-3xl mb-10 md:mb-14">
+          <span className="eyebrow">O que executamos</span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-[1.08]">
             Tudo o que a sua empresa precisa para{" "}
             <span className="italic text-primary">crescer</span>.
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
             Não vendemos serviços soltos. Implementamos e operamos um motor de crescimento integrado, do primeiro clique até à recompra.
           </p>
         </div>
@@ -68,20 +68,20 @@ const Services = () => {
             return (
               <article
                 key={s.title}
-                className={`group p-7 rounded-2xl border transition-smooth animate-fade-up ${
+                className={`group p-7 rounded-lg border transition-smooth animate-fade-up ${
                   isLast
-                    ? "bg-gradient-purple text-accent-foreground border-accent shadow-glow-purple"
+                    ? "bg-card text-foreground border-primary/60"
                     : "bg-card border-border hover:border-primary/40"
                 }`}
                 style={{ animationDelay: `${i * 70}ms` }}
               >
-                <div className={`inline-flex p-3 rounded-xl mb-5 ${
-                  isLast ? "bg-background/20 text-accent-foreground" : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                <div className={`inline-flex p-3 rounded-lg mb-5 ${
+                  isLast ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 } transition-smooth`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display text-xl font-bold mb-2 leading-tight">{s.title}</h3>
-                <p className={`leading-relaxed ${isLast ? "text-accent-foreground/85" : "text-muted-foreground"}`}>
+                <h3 className="font-display text-xl font-semibold mb-2 leading-tight">{s.title}</h3>
+                <p className={`leading-relaxed ${isLast ? "text-muted-foreground" : "text-muted-foreground"}`}>
                   {s.outcome}
                 </p>
               </article>
