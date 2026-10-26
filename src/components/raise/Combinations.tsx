@@ -12,7 +12,7 @@ const Combinations = () => {
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">03 · Assessoria modular</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
             Monte a combinação certa para a sua empresa
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -34,7 +34,7 @@ const Combinations = () => {
                     selected ? "border-primary bg-secondary" : "border-transparent hover:bg-secondary/50"
                   }`}
                 >
-                  <span className="block font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground">Exemplo</span>
+                  <span className="block font-mono text-[11px] uppercase tracking-[0.071em] text-muted-foreground">Exemplo</span>
                   <span className={`block font-medium mt-1 ${selected ? "text-foreground" : "text-muted-foreground"}`}>{e.client}</span>
                   <span className="block text-xs text-muted-foreground mt-0.5">{e.segment}</span>
                 </button>

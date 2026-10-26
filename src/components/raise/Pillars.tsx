@@ -31,7 +31,7 @@ const Pillars = () => {
       <div className="container-tight relative">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
           <span className="eyebrow">A Solução</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
             Crescimento real é construído sobre 4 pilares
           </h2>
         </div>

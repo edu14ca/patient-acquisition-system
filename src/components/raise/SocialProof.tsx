@@ -167,7 +167,7 @@ const SocialProof = () => {
           <span className="eyebrow">
             04 · Clientes
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
             Marcas que já confiaram na Raise
           </h2>
           <p className="mt-4 text-sm md:text-base text-muted-foreground">

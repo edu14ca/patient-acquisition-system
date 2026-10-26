@@ -29,7 +29,7 @@ const Diagnostico = () => {
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">Como funciona</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
             Antes de vender, diagnosticamos.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">

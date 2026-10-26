@@ -13,7 +13,7 @@ const Solutions = () => {
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">01 · Soluções</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
             Conheça as soluções da Raise
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -32,7 +32,7 @@ const Solutions = () => {
                   role="tab"
                   aria-selected={selected}
                   onClick={() => setActive(s.id)}
-                  className={`flex-1 min-w-[96px] flex flex-col items-center gap-2 px-3 py-4 font-mono text-xs uppercase tracking-[0.12em] border-b-2 transition-smooth ${
+                  className={`flex-1 min-w-[96px] flex flex-col items-center gap-2 px-3 py-4 font-mono text-xs uppercase tracking-[0.071em] border-b-2 transition-smooth ${
                     selected
                       ? "border-primary text-foreground bg-secondary"
                       : "border-transparent text-muted-foreground hover:text-foreground"

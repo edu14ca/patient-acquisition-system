@@ -52,7 +52,7 @@ const Services = () => {
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">O que executamos</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
             Tudo o que a sua empresa precisa para{" "}
             <span className="italic text-primary">crescer</span>.
           </h2>

@@ -29,7 +29,7 @@ const Problem = () => {
       <div className="container-tight">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
           <span className="eyebrow">O Problema</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
             Estás a perder dinheiro todos os dias e nem sabes onde.
           </h2>
         </div>

@@ -36,7 +36,7 @@ const DeliveryModel = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Formas de trabalhar</span>
-            <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-tight mb-6">
+            <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-tight mb-6">
               Somos a sua equipa externa de marketing e vendas.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">

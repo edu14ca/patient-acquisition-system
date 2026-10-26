@@ -141,7 +141,7 @@ const QualifyForm = () => {
           <span className="eyebrow">
             Diagnóstico de crescimento
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
             Isto não é para todos.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">

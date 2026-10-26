@@ -42,7 +42,7 @@ const Differentiation = () => {
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">Diferenciação</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
             Assessoria <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> Consultoria.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">

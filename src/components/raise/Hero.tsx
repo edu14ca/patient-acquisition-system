@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import DashboardPreview from "@/components/raise/DashboardPreview";
-
-const clients = ["WamiKixima Dental", "Mavisher", "Sesalin", "Linhas D'Ouro", "Happy Kitchen", "Fercal", "Michael Machado"];
+import LogoMarquee from "@/components/raise/LogoMarquee";
 
 const Hero = () => {
   return (
@@ -33,13 +32,9 @@ const Hero = () => {
       </div>
 
       <div className="container-tight mt-16 md:mt-20">
-        <p className="eyebrow mb-5">Empresas que já trabalharam com a Raise</p>
-        <div className="flex flex-wrap gap-x-8 gap-y-3 text-muted-foreground">
-          {clients.map((c) => (
-            <span key={c} className="font-display text-base md:text-lg font-medium tracking-[-0.01em]">{c}</span>
-          ))}
-        </div>
+        <p className="text-sm text-foreground mb-6">Empresas que já cresceram com a Raise:</p>
       </div>
+      <LogoMarquee />
     </section>
   );
 };
