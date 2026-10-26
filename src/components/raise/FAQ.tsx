@@ -36,12 +36,12 @@ const defaultFaqs: FaqItem[] = [
 
 const FAQ = ({ items = defaultFaqs }: { items?: FaqItem[] }) => {
   return (
-    <section id="faq" className="py-16 md:py-24 relative">
-      <div className="container-tight max-w-4xl">
+    <section id="faq" className="py-20 md:py-24 relative">
+      <div className="container-tight">
         <div className="mb-10 md:mb-14">
           <span className="eyebrow">FAQ</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 leading-[1.08] text-balance">
-            Perguntas que ouvimos <span className="text-primary">todos os dias</span>.
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
+            Perguntas que ouvimos todos os dias.
           </h2>
         </div>
 
@@ -52,7 +52,7 @@ const FAQ = ({ items = defaultFaqs }: { items?: FaqItem[] }) => {
               value={`item-${i}`}
               className="rounded-lg border border-border bg-card px-6 data-[state=open]:border-primary/40 transition-smooth"
             >
-              <AccordionTrigger className="font-display text-lg md:text-xl font-semibold text-left hover:no-underline">
+              <AccordionTrigger className="font-display text-lg md:text-xl font-medium text-left hover:no-underline">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-base">

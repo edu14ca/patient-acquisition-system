@@ -8,13 +8,12 @@ const metrics = [
 
 const CaseStudy = () => {
   return (
-    <section id="caso" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+    <section id="caso" className="py-20 md:py-24 relative overflow-hidden">
 
       <div className="container-tight relative">
         <div className="max-w-3xl mb-12">
           <span className="eyebrow">Prova real</span>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold mt-4 text-balance leading-[1.05]">
+          <h2 className="font-display text-4xl md:text-6xl font-medium mt-4 text-balance leading-[1.05]">
             Empresas em Angola já estão a sair da estagnação com a <span className="text-primary">Raise</span>.
           </h2>
           <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
@@ -46,7 +45,7 @@ const CaseStudy = () => {
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="text-muted-foreground line-through text-lg">{m.before}</span>
                   <ArrowUpRight className="w-4 h-4 text-primary" />
-                  <span className="font-display text-3xl font-semibold text-foreground">{m.after}</span>
+                  <span className="font-display text-3xl font-medium text-foreground">{m.after}</span>
                 </div>
                 <span className="inline-block text-sm font-semibold text-success">{m.delta}</span>
               </div>

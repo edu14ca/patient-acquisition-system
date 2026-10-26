@@ -1,5 +1,6 @@
 import Header from "@/components/raise/Header";
 import Hero from "@/components/raise/Hero";
+import StatsBand from "@/components/raise/StatsBand";
 import Solutions from "@/components/raise/Solutions";
 import DeliveryModels from "@/components/raise/DeliveryModels";
 import Combinations from "@/components/raise/Combinations";
@@ -17,6 +18,7 @@ const Index = () => {
       <Header />
       <main className="min-h-screen bg-background">
         <Hero />
+        <StatsBand />
         <Solutions />
         <DeliveryModels />
         <Combinations />

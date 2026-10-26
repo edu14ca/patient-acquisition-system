@@ -38,12 +38,12 @@ const columns = [
 
 const Differentiation = () => {
   return (
-    <section id="porque-raise" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border">
+    <section id="porque-raise" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">Diferenciação</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-[1.08]">
-            <span className="text-primary">Assessoria</span> <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> Consultoria.
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
+            Assessoria <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> Consultoria.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
             A diferença não está no nome. Está em quem assume responsabilidade pelo crescimento da sua empresa.
@@ -59,7 +59,7 @@ const Differentiation = () => {
                 key={c.label}
                 className={`p-7 rounded-lg border transition-smooth animate-fade-up ${
                   isPrimary
-                    ? "bg-card border-primary shadow-glow-red"
+                    ? "bg-card border-primary"
                     : "bg-card/60 border-border"
                 }`}
                 style={{ animationDelay: `${i * 100}ms` }}
@@ -71,7 +71,7 @@ const Differentiation = () => {
                 }`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className={`font-display text-2xl font-semibold mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
+                <h3 className={`font-display text-2xl font-medium mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
                   {c.label}
                 </h3>
                 <ul className="space-y-3">
@@ -89,9 +89,9 @@ const Differentiation = () => {
           })}
         </div>
 
-        <div className="mt-12 p-8 md:p-10 rounded-lg border border-border bg-card text-center">
-          <p className="font-display text-2xl md:text-4xl font-semibold leading-tight text-balance">
-            Não somos consultores. Somos <span className="italic">responsáveis</span> pelo crescimento.
+        <div className="mt-10 p-6 md:p-8 rounded-lg border border-border bg-card">
+          <p className="font-display text-2xl md:text-4xl font-medium leading-tight text-balance">
+            Não somos consultores. Somos responsáveis pelo crescimento.
           </p>
         </div>
       </div>

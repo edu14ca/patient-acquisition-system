@@ -8,11 +8,11 @@ const Combinations = () => {
   const example = combinationExamples.find((e) => e.id === active) ?? combinationExamples[0];
 
   return (
-    <section id="combinacoes" className="py-16 md:py-24 border-t border-border">
+    <section id="combinacoes" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">03 · Assessoria modular</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
             Monte a combinação certa para a sua empresa
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">

@@ -31,13 +31,13 @@ const options = [
 
 const DeliveryModel = () => {
   return (
-    <section id="formas-de-trabalhar" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border">
+    <section id="formas-de-trabalhar" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Formas de trabalhar</span>
-            <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-tight mb-6">
-              Somos a sua <span className="text-primary">equipa externa</span> de marketing e vendas.
+            <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-tight mb-6">
+              Somos a sua equipa externa de marketing e vendas.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Não entregamos relatórios e desaparecemos. Entramos na operação, assumimos as métricas e respondemos pelo crescimento.
@@ -52,7 +52,7 @@ const DeliveryModel = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="font-display font-semibold text-lg leading-tight">{c.title}</p>
+                      <p className="font-display font-medium text-lg leading-tight">{c.title}</p>
                       <p className="text-sm text-muted-foreground mt-1">{c.desc}</p>
                     </div>
                   </li>
@@ -79,7 +79,7 @@ const DeliveryModel = () => {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-display text-2xl font-semibold">{o.title}</h3>
+                  <h3 className="font-display text-2xl font-medium">{o.title}</h3>
                   <span className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${
                     o.highlighted ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground border border-border"
                   }`}>

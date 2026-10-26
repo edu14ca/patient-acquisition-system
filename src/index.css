@@ -19,22 +19,22 @@
     --popover-foreground: 0 0% 98%;
 
     /* Primary = vermelho (CTA dominante) */
-    --primary: 0 100% 59%;
+    --primary: 357 91% 48%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 0 100% 59%;
+    --primary-glow: 357 91% 48%;
 
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 65.5%;
 
     /* Accent = roxo neon */
     --accent: 0 0% 12%;
     --accent-foreground: 0 0% 100%;
     --accent-glow: 0 0% 12%;
 
-    --destructive: 0 100% 59%;
+    --destructive: 357 91% 48%;
     --destructive-foreground: 0 0% 100%;
 
     --success: 142 70% 45%;
@@ -47,13 +47,13 @@
 
     --border: 0 0% 12%;
     --input: 0 0% 27%;
-    --ring: 0 100% 59%;
+    --ring: 0 0% 100%;
 
     --radius: 0.5rem;
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 4%) 100%);
-    --gradient-red: linear-gradient(hsl(0 100% 59%), hsl(0 100% 59%));
+    --gradient-red: linear-gradient(hsl(357 91% 48%), hsl(357 91% 48%));
     --gradient-purple: linear-gradient(hsl(0 0% 8%), hsl(0 0% 8%));
     --gradient-mesh: none;
     --gradient-fade-b: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 4%) 100%);
@@ -83,7 +83,8 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-display tracking-tight;
+    @apply font-display font-medium;
+    letter-spacing: -0.02em;
   }
 
   ::selection {
@@ -142,10 +143,7 @@
   }
 
   .grid-bg {
-    background-image:
-      linear-gradient(hsl(0 0% 12%) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(0 0% 12%) 1px, transparent 1px);
-    background-size: 48px 48px;
+    background-image: none;
   }
 
   .eyebrow {
@@ -160,7 +158,7 @@
 
 @layer components {
   .container-tight {
-    @apply max-w-6xl mx-auto px-6;
+    @apply max-w-[1200px] mx-auto px-6;
   }
 
   .chip {

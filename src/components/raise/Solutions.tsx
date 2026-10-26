@@ -9,11 +9,11 @@ const Solutions = () => {
   const Icon = current.icon;
 
   return (
-    <section id="solucoes" className="py-16 md:py-24 border-t border-border">
+    <section id="solucoes" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">01 · Soluções</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
             Conheça as soluções da Raise
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -49,7 +49,7 @@ const Solutions = () => {
             <div className="max-w-2xl">
               <div className="flex items-center gap-3">
                 <Icon className="w-6 h-6 text-primary" />
-                <h3 className="font-display text-2xl md:text-3xl font-semibold">{current.title}</h3>
+                <h3 className="font-display text-2xl md:text-3xl font-medium">{current.title}</h3>
               </div>
               <p className="mt-4 text-muted-foreground leading-relaxed md:text-lg">{current.desc}</p>
               <ul className="mt-6 space-y-3">

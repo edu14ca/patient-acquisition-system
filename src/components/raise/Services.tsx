@@ -48,11 +48,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border">
+    <section id="servicos" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">O que executamos</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 text-balance leading-[1.08]">
             Tudo o que a sua empresa precisa para{" "}
             <span className="italic text-primary">crescer</span>.
           </h2>
@@ -80,7 +80,7 @@ const Services = () => {
                 } transition-smooth`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-2 leading-tight">{s.title}</h3>
+                <h3 className="font-display text-xl font-medium mb-2 leading-tight">{s.title}</h3>
                 <p className={`leading-relaxed ${isLast ? "text-muted-foreground" : "text-muted-foreground"}`}>
                   {s.outcome}
                 </p>

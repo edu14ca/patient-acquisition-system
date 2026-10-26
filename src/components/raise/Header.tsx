@@ -8,14 +8,14 @@ const navLinks = [
   { label: "Modelos", href: "/#modelos" },
   { label: "Clientes", href: "/#resultados" },
   { label: "Clínicas", href: "/clinicas" },
-  { label: "FAQ", href: "/#faq" },
+
 ];
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/70 border-b border-border">
+    <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="container-tight h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
           <img
@@ -23,15 +23,15 @@ const Header = () => {
             alt="Raise"
             className="w-9 h-9 object-contain transition-smooth group-hover:scale-105"
           />
-          <span className="font-display font-semibold text-lg tracking-tight">Raise</span>
+          <span className="font-display font-medium text-lg tracking-tight">Raise</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+        <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="hover:text-foreground transition-smooth"
+              className="px-3 py-1.5 rounded-full text-foreground/90 hover:bg-secondary transition-smooth"
             >
               {l.label}
             </a>
@@ -39,7 +39,8 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild variant="hero" size="sm" className="h-10 px-5 hidden sm:inline-flex">
+          <a href="/#faq" className="hidden lg:inline text-sm font-medium text-foreground/90 hover:text-foreground">FAQ</a>
+          <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
             <a href="/#diagnostico-form">
               Fazer diagnóstico
             </a>

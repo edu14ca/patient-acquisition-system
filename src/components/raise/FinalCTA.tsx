@@ -3,12 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-mesh opacity-80" />
-      <div className="absolute inset-0 grid-bg opacity-40" />
+    <section className="py-20 md:py-24 relative overflow-hidden">
 
       <div className="container-tight relative text-center max-w-4xl">
-        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-balance mb-8">
+        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-medium leading-[0.95] tracking-tight text-balance mb-8">
           Continuar como está{" "}
           <span className="block text-primary italic">é mais caro do que agir.</span>
         </h2>

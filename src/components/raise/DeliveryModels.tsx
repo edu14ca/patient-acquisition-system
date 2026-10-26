@@ -6,11 +6,11 @@ const DeliveryModels = () => {
   const current = models.find((m) => m.id === active) ?? models[0];
 
   return (
-    <section id="modelos" className="py-16 md:py-24 border-t border-border">
+    <section id="modelos" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">02 · Modelos de entrega</span>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-5xl font-medium mt-4 leading-[1.08] text-balance">
             Escolha como quer trabalhar connosco
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -42,7 +42,7 @@ const DeliveryModels = () => {
           </div>
 
           <div key={current.id} role="tabpanel" className="rounded-lg border border-border bg-card p-6 md:p-10 animate-fade-up">
-            <h3 className="font-display text-2xl md:text-3xl font-semibold">{current.label}</h3>
+            <h3 className="font-display text-2xl md:text-3xl font-medium">{current.label}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed md:text-lg max-w-2xl">{current.desc}</p>
             <div className="mt-8 pt-6 border-t border-border">
               <p className="eyebrow mb-2">Ideal para</p>
