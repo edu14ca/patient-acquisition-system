@@ -59,7 +59,7 @@ const garantias = [
 
 const faq = [
   { q: "O que é o teste de atendimento?", a: "É uma avaliação, explicada pela nossa equipa no primeiro contacto, que mostra onde o atendimento da clínica pode estar a perder marcações." },
-  { q: "O teste é gratuito?", a: "As condições são apresentadas no contacto inicial, antes de qualquer compromisso." },
+  { q: "O teste é gratuito?", a: "Sim. O teste de atendimento é gratuito e sem compromisso." },
   { q: "Preciso de contratar a Assessoria Modular?", a: "Não. Pedir o teste não significa contratar a assessoria." },
   { q: "Serve para clínicas pequenas?", a: "A adequação é avaliada de acordo com a estrutura e as necessidades de cada clínica." },
   { q: "O que acontece depois de preencher o formulário?", a: "A equipa recebe o pedido e entra em contacto consigo para explicar os próximos passos." },

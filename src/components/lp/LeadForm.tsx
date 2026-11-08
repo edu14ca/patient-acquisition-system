@@ -92,7 +92,7 @@ const LeadForm = ({ id, titulo, texto, compacto = false }: Props) => {
             <ArrowRight className="arrow h-4 w-4" aria-hidden />
           </button>
           <p className="text-xs text-muted-foreground">
-            O envio do formulário não representa uma contratação. As condições do teste são esclarecidas antes da realização.
+            Teste gratuito e sem compromisso. O envio do formulário não representa uma contratação.
           </p>
         </form>
       )}
