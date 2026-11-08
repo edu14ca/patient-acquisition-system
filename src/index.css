@@ -219,8 +219,10 @@
     transition: background-color 0.3s ease;
   }
   .lp-btn:hover { background-color: hsl(357 91% 42%); }
-  .lp-btn .roll { display: inline-grid; overflow: hidden; height: 1.25em; line-height: 1.25em; }
-  .lp-btn .roll > span { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .lp-btn { @apply py-3 h-auto min-h-12 text-center leading-tight; }
+  .lp-btn .roll { position: relative; display: inline-block; overflow: hidden; }
+  .lp-btn .roll > span { display: block; transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .lp-btn .roll > span + span { position: absolute; left: 0; right: 0; top: 100%; }
   .lp-btn:hover .roll > span { transform: translateY(-100%); }
   .lp-btn .arrow { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .lp-btn:hover .arrow { transform: translateX(4px); }

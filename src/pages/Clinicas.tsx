@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { Check, Plus } from "lucide-react";
 import raiseLogo from "@/assets/raise-logo.png";
+import balde480 from "@/assets/balde-480.webp";
+import balde900 from "@/assets/balde-900.webp";
 import { useReveal } from "@/hooks/useReveal";
-import { Balde, Eyebrow, RollButton, Tapes, Words } from "@/components/lp/primitives";
+import { Eyebrow, RollButton, Tapes, Words } from "@/components/lp/primitives";
 import LeadForm from "@/components/lp/LeadForm";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
@@ -125,8 +127,17 @@ const Clinicas = () => {
                 Todos os dias, potenciais pacientes contactam clínicas para marcar consultas. Uma mensagem sem resposta,
                 uma chamada perdida ou uma marcação sem acompanhamento chega para os levar à concorrência.
               </p>
-              <div className="mt-8 grid sm:grid-cols-[180px_1fr] gap-6 items-center" data-reveal style={{ ["--d" as string]: "650ms" }}>
-                <Balde className="w-40 sm:w-full max-w-[180px]" />
+              <div className="mt-8 grid sm:grid-cols-[260px_1fr] gap-6 items-center" data-reveal style={{ ["--d" as string]: "650ms" }}>
+                <img
+                  src={balde480}
+                  srcSet={`${balde480} 480w, ${balde900} 900w`}
+                  sizes="(min-width: 640px) 260px, 100vw"
+                  width={480}
+                  height={600}
+                  {...{ fetchpriority: "high" }}
+                  alt="Balde furado a deixar escapar notas e moedas de kwanza"
+                  className="w-full max-w-[340px] sm:max-w-none rounded-xl border border-border"
+                />
                 <p className="text-foreground/90 border-l-2 border-primary pl-4">
                   Antes de investir mais dinheiro para atrair novos pacientes, descubra se o atendimento da sua clínica está
                   preparado para aproveitar os pedidos que já recebe.
