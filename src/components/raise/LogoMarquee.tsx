@@ -3,16 +3,16 @@ import fercal from "@/assets/logos-mono/fercal.png";
 import happyKitchen from "@/assets/logos-mono/happy-kitchen.png";
 import linhasDouro from "@/assets/logos-mono/linhas-douro.png";
 import michaelMachado from "@/assets/logos-mono/michael-machado.png";
-import wamiAsset from "@/assets/logo-wamikixima.jpg.asset.json";
-import mavisherAsset from "@/assets/logo-mavisher.jpg.asset.json";
+import wamikixima from "@/assets/logos-mono/wamikixima.png";
+import mavisher from "@/assets/logos-mono/mavisher.png";
 import sesalinAsset from "@/assets/logo-sesalin.webp.asset.json";
 
 type Logo = { name: string; src: string; mono: boolean };
 
 // mono: true = já monocromático (pré-processado); false = convertido no browser.
 const logos: Logo[] = [
-  { name: "WamiKixima Dental", src: wamiAsset.url, mono: false },
-  { name: "Mavisher", src: mavisherAsset.url, mono: false },
+  { name: "WamiKixima Clínica dentária", src: wamikixima, mono: true },
+  { name: "Mavisher", src: mavisher, mono: true },
   { name: "Linhas D'Ouro", src: linhasDouro, mono: true },
   { name: "Sesalin", src: sesalinAsset.url, mono: false },
   { name: "Happy Kitchen", src: happyKitchen, mono: true },
@@ -94,7 +94,7 @@ const LogoItem = ({ logo }: { logo: Logo }) => {
             if (w && h) setHeight(Math.round(Math.min(56, Math.max(24, Math.sqrt(4400 / (w / h))))));
           }}
           style={{ height }}
-          className="w-auto max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
+          className="invert w-auto max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
         />
       ) : (
         <span className="font-display text-lg font-medium text-muted-foreground whitespace-nowrap">{logo.name}</span>

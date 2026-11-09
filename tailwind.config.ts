@@ -75,9 +75,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        sans: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         marquee: {

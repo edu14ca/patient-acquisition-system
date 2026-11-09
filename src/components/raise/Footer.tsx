@@ -1,14 +1,13 @@
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import raiseLogo from "@/assets/raise-logo.png";
+import raiseLogo from "@/assets/logo-raise-white.png";
 
 const Footer = () => {
   return (
-    <footer className="pt-20 pb-12 bg-background">
+    <footer className="theme-dark pt-20 pb-12">
       <div className="container-tight grid md:grid-cols-3 gap-8 items-start">
         <div>
           <div className="flex items-center gap-2">
-            <img src={raiseLogo} alt="Raise" className="w-9 h-9 object-contain" />
-            <span className="font-display font-medium text-lg">Raise</span>
+            <img src={raiseLogo} alt="Raise" width={480} height={128} className="h-8 w-auto" />
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-xs">
             Raise — Assessoria de Marketing e Growth em Angola. Estratégia, execução e responsabilidade pelo facturamento.
@@ -33,7 +32,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
               <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-smooth">
-                WhatsApp · +244 939 636 042
+                WhatsApp +244 939 636 042
               </a>
             </li>
             <li>Luanda, Angola</li>

@@ -9,29 +9,29 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 20% 97%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
     /* Primary = vermelho (CTA dominante) */
     --primary: 357 91% 48%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 357 91% 48%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 18% 94%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65.5%;
+    --muted: 0 18% 94%;
+    --muted-foreground: 0 0% 36%;
 
     /* Accent = roxo neon */
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 18% 94%;
+    --accent-foreground: 0 0% 7%;
     --accent-glow: 0 0% 12%;
 
     --destructive: 357 91% 48%;
@@ -45,9 +45,9 @@
     --neon-foreground: 0 0% 4%;
     --neon-glow: 142 100% 60%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 27%;
-    --ring: 0 0% 100%;
+    --border: 0 8% 88%;
+    --input: 0 6% 78%;
+    --ring: 357 91% 48%;
 
     --radius: 0.5rem;
 
@@ -72,19 +72,75 @@
   }
 }
 
+/* Secções com as outras cores do manual (preto, vermelho #e90b15, vinho #75060b).
+   Redefinem os tokens, por isso os componentes dentro delas adaptam-se sozinhos. */
 @layer base {
+  .theme-dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 66%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 27%;
+    --ring: 0 0% 100%;
+  }
+  .theme-red, .theme-wine {
+    --foreground: 0 0% 100%;
+    --card-foreground: 0 0% 100%;
+    --secondary-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 357 91% 48%;
+    --ring: 0 0% 100%;
+  }
+  .theme-red {
+    --background: 357 91% 48%;
+    --muted-foreground: 0 100% 93%;
+    --border: 357 85% 62%;
+    --input: 357 85% 72%;
+    --card: 356 91% 36%;
+    --secondary: 356 91% 36%;
+    --muted: 356 91% 36%;
+    --accent: 356 91% 36%;
+  }
+  .theme-wine {
+    --background: 356 90% 24%;
+    --muted-foreground: 0 55% 88%;
+    --border: 356 55% 36%;
+    --input: 356 45% 50%;
+    --card: 356 85% 19%;
+    --secondary: 356 85% 19%;
+    --muted: 356 85% 19%;
+    --accent: 356 85% 19%;
+  }
+  .theme-dark, .theme-red, .theme-wine {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings: "cv11";
   }
 
+  /* Títulos em Archivo expandida e pesada: ecoa o logótipo RAISE. */
+  h1, h2, h3, h4, .font-display {
+    font-stretch: 125%;
+  }
   h1, h2, h3, h4 {
-    @apply font-display font-medium;
-    letter-spacing: -0.02em;
+    @apply font-display font-bold;
+    letter-spacing: -0.03em;
   }
 
   ::selection {
@@ -147,7 +203,7 @@
   }
 
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground;
+    @apply text-sm font-medium text-muted-foreground;
   }
 
   .marquee-mask {
@@ -172,22 +228,24 @@
   }
 
   .chip {
-    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground;
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-sm font-medium text-muted-foreground;
   }
 }
 
 /* ---------- Landing pages (estrutura CTRL+M, motion leve: só CSS + IntersectionObserver) ---------- */
 @layer components {
   .lp-display {
-    @apply font-sans font-extrabold uppercase;
-    letter-spacing: -0.035em;
-    line-height: 0.95;
+    @apply font-display font-extrabold;
+    font-stretch: 125%;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
   }
 
   /* Revelar ao entrar no ecrã */
+  /* Só o hero da LP usa data-reveal (um único momento orquestrado). */
   [data-reveal] {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
     transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
     transition-delay: var(--d, 0ms);
   }
@@ -215,27 +273,26 @@
 
   /* Botão com texto que rola (hover) */
   .lp-btn {
-    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-white font-semibold text-sm uppercase tracking-wide overflow-hidden;
+    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-base overflow-hidden;
     transition: background-color 0.3s ease;
   }
-  .lp-btn:hover { background-color: hsl(357 91% 42%); }
+  .lp-btn:hover { opacity: 0.9; }
   .lp-btn { @apply py-3 h-auto min-h-12 text-center leading-tight; }
   .lp-btn .roll { position: relative; display: inline-block; overflow: hidden; }
   .lp-btn .roll > span { display: block; transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .lp-btn .roll > span + span { position: absolute; left: 0; right: 0; top: 100%; }
   .lp-btn:hover .roll > span { transform: translateY(-100%); }
-  .lp-btn .arrow { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
-  .lp-btn:hover .arrow { transform: translateX(4px); }
 
   /* Fitas diagonais (CTRL+M) */
   .lp-tapes { position: relative; height: 180px; overflow: hidden; }
   .lp-tape {
     position: absolute; left: -5%; width: 110%; padding: 14px 0; white-space: nowrap; overflow: hidden;
-    @apply font-sans font-extrabold uppercase text-lg md:text-2xl;
+    @apply font-display font-extrabold text-lg md:text-2xl;
+    font-stretch: 125%;
     letter-spacing: -0.01em;
   }
   .lp-tape--red { top: 40px; background: hsl(var(--primary)); color: #fff; transform: rotate(-3deg); z-index: 2; }
-  .lp-tape--white { top: 70px; background: #f4f4f4; color: #0a0a0a; transform: rotate(2.5deg); }
+  .lp-tape--white { top: 70px; background: #000; color: #fff; transform: rotate(2.5deg); }
   .lp-tape__track { display: inline-flex; animation: marquee 35s linear infinite; }
   .lp-tape--white .lp-tape__track { animation-direction: reverse; }
 
@@ -281,3 +338,64 @@
     .lp-rule::after { transform: scaleX(1); transition: none; }
   }
 }
+
+/* ---------- Movimento ao fazer scroll (CSS scroll-driven, sem JavaScript) ----------
+   Só transform/opacity/clip-path, que o browser anima fora da thread principal.
+   Browsers sem suporte mostram tudo estático. Desligado com reduced-motion. */
+.dash-bar { transform-origin: bottom; animation: dash-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 45ms + 250ms); }
+@keyframes dash-up { from { transform: scaleY(0.05); } }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Hero: a imagem afasta-se e escurece ao sair do ecrã */
+    .sd-hero-bg {
+      animation: sd-hero-out linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+    @keyframes sd-hero-out { to { transform: scale(1.15) translateY(8%); opacity: 0.35; } }
+
+    /* Títulos de secção: sobem e acendem ao entrar */
+    .sd h2 {
+      animation: sd-title linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+    @keyframes sd-title { from { opacity: 0.12; transform: translateY(40px); } }
+
+    /* Imagens: abrem de dentro para fora */
+    .sd-img {
+      animation: sd-img linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    @keyframes sd-img { from { clip-path: inset(14% 10% 14% 10% round 12px); transform: scale(1.12); } to { clip-path: inset(0 0 0 0 round 0); transform: none; } }
+
+    /* Padrão da marca na faixa vermelha: cresce e roda com o scroll */
+    .sd-pattern {
+      animation: sd-pattern linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes sd-pattern { from { transform: translateY(-12%) scale(0.85) rotate(-6deg); } to { transform: translateY(10%) scale(1.2) rotate(4deg); } }
+
+    /* Palavras grandes que deslizam na horizontal com o scroll */
+    .sd-slide {
+      animation: sd-slide linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes sd-slide { from { transform: translateX(8%); } to { transform: translateX(-38%); } }
+    .sd-slide--rev { animation-name: sd-slide-rev; }
+    @keyframes sd-slide-rev { from { transform: translateX(-38%); } to { transform: translateX(8%); } }
+
+    /* Cartões: entram em sequência */
+    .sd-card {
+      animation: sd-card linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    @keyframes sd-card { from { opacity: 0; transform: translateY(60px); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .dash-bar { animation: none; } }

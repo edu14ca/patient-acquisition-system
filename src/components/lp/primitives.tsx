@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Fragment, type ReactNode } from "react";
 
 /** Título que sobe palavra a palavra. */
@@ -21,7 +20,6 @@ export const RollButton = ({ children, href = "#formulario", className = "" }: {
       <span>{children}</span>
       <span aria-hidden>{children}</span>
     </span>
-    <ArrowRight className="arrow h-4 w-4" aria-hidden />
   </a>
 );
 

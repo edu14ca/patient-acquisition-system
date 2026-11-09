@@ -13,8 +13,7 @@ const Solutions = () => {
     <section id="solucoes" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
-          <span className="eyebrow">01 · Soluções</span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Conheça as soluções da Raise
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -33,7 +32,7 @@ const Solutions = () => {
                   role="tab"
                   aria-selected={selected}
                   onClick={() => setActive(s.id)}
-                  className={`flex-1 min-w-[96px] flex flex-col items-center gap-2 px-3 py-4 font-mono text-xs uppercase tracking-[0.071em] border-b-2 transition-smooth ${
+                  className={`flex-1 min-w-[96px] flex flex-col items-center gap-2 px-3 py-4 text-sm font-medium border-b-2 transition-smooth ${
                     selected
                       ? "border-primary text-foreground bg-secondary"
                       : "border-transparent text-muted-foreground hover:text-foreground"
@@ -50,7 +49,7 @@ const Solutions = () => {
             <div className="max-w-2xl">
               <div className="flex items-center gap-3">
                 <Icon className="w-6 h-6 text-primary" />
-                <h3 className="font-display text-2xl md:text-3xl font-medium">{current.title}</h3>
+                <h3 className="font-display text-2xl md:text-3xl font-bold">{current.title}</h3>
               </div>
               <p className="mt-4 text-muted-foreground leading-relaxed md:text-lg">{current.desc}</p>
               <ul className="mt-6 space-y-3">
@@ -72,7 +71,7 @@ const Solutions = () => {
               height={600}
               loading="lazy"
               decoding="async"
-              className="w-full rounded-lg border border-border order-first md:order-none"
+              className="sd-img w-full rounded-lg border border-border order-first md:order-none"
             />
           </div>
         </div>

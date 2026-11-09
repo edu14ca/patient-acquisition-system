@@ -24,7 +24,7 @@ const columns = [
     ],
   },
   {
-    label: "Raise · Assessoria",
+    label: "Raise",
     tone: "primary",
     icon: Check,
     points: [
@@ -41,8 +41,7 @@ const Differentiation = () => {
     <section id="porque-raise" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
-          <span className="eyebrow">Diferenciação</span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold text-balance leading-[1.08]">
             Assessoria <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> Consultoria.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -71,7 +70,7 @@ const Differentiation = () => {
                 }`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className={`font-display text-2xl font-medium mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
+                <h3 className={`font-display text-2xl font-bold mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
                   {c.label}
                 </h3>
                 <ul className="space-y-3">

@@ -133,7 +133,7 @@ const QualifyForm = () => {
   };
 
   return (
-    <section id="diagnostico-form" className="py-20 md:py-24 relative border-t border-border">
+    <section id="diagnostico-form" className="theme-dark py-20 md:py-24 relative">
 
       <div className="container-tight relative">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
@@ -141,7 +141,7 @@ const QualifyForm = () => {
           <span className="eyebrow">
             Diagnóstico de crescimento
           </span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="mt-3 font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Isto não é para todos.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -157,7 +157,7 @@ const QualifyForm = () => {
         <div className="rounded-lg border border-border bg-card p-6 md:p-8">
           {/* Progress */}
           <div className="mb-8">
-            <div className="flex items-center justify-between mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            <div className="flex items-center justify-between mb-2 text-xs font-semibold text-muted-foreground">
               <span>Passo {step + 1} de {totalSteps}</span>
               <span>{Math.round(progress)}%</span>
             </div>
@@ -172,7 +172,7 @@ const QualifyForm = () => {
           <div className="min-h-[320px]">
             {step === 0 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-medium mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
                   Qual é o teu sector?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -187,7 +187,7 @@ const QualifyForm = () => {
 
             {step === 1 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
                   Quanto o teu negócio fatura por mês?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -205,7 +205,7 @@ const QualifyForm = () => {
 
             {step === 2 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
                   Quantos clientes novos tens por semana?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -223,7 +223,7 @@ const QualifyForm = () => {
 
             {step === 3 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-medium mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
                   Qual é o teu maior problema hoje?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -238,7 +238,7 @@ const QualifyForm = () => {
 
             {step === 4 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
                   Estás disposto a investir para estruturar crescimento?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -256,7 +256,7 @@ const QualifyForm = () => {
 
             {step === 5 && (
               <div className="animate-fade-up space-y-5">
-                <h3 className="font-display text-2xl md:text-3xl font-medium leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight">
                   Para onde enviamos o teu diagnóstico?
                 </h3>
                 <div className="space-y-2">

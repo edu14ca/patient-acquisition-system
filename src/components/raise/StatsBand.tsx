@@ -1,27 +1,17 @@
-import { Layers, Boxes, Grid2x2 } from "lucide-react";
-import { models, solutions } from "@/data/offer";
+import BrandPattern from "./BrandPattern";
 
-const stats = [
-  { icon: Layers, value: String(solutions.length), label: "Soluções", desc: "Da aquisição às vendas e à retenção." },
-  { icon: Boxes, value: String(models.length), label: "Modelos de entrega", desc: "Do projecto pontual à assessoria contínua." },
-  { icon: Grid2x2, value: String(solutions.length * models.length), label: "Combinações", desc: "Só contrata o que o seu negócio precisa." },
-];
-
+/** Faixa vermelha com a frase-mãe da marca: o momento forte da home. */
 const StatsBand = () => {
   return (
-    <section className="py-20 border-t border-border">
-      <div className="container-tight grid grid-cols-1 sm:grid-cols-3 gap-10">
-        {stats.map((s) => {
-          const Icon = s.icon;
-          return (
-            <div key={s.label} className="text-center">
-              <Icon className="w-5 h-5 text-primary mx-auto" strokeWidth={1.5} />
-              <p className="mt-4 font-display text-[40px] leading-none font-medium tracking-[-0.03em]">{s.value}</p>
-              <p className="mt-3 text-base">{s.label}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
-            </div>
-          );
-        })}
+    <section className="theme-red relative overflow-hidden py-24 md:py-32">
+      <BrandPattern className="sd-pattern invert -right-10 -top-16 h-[150%] w-auto" opacity={0.14} />
+      <div className="container-tight relative">
+        <p className="font-display font-extrabold text-[44px] leading-[0.98] sm:text-6xl lg:text-[88px] tracking-[-0.045em] max-w-[14ch]">
+          Crescer não é fazer mais. É acertar mais.
+        </p>
+        <p className="mt-8 max-w-xl text-lg text-muted-foreground">
+          Primeiro encontramos onde a sua empresa perde vendas. Só depois decidimos onde investir.
+        </p>
       </div>
     </section>
   );

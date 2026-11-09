@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { trackLead } from "@/lib/fbpixel";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
@@ -11,7 +11,7 @@ export const DIFICULDADES = [
 ];
 
 const inputCls =
-  "w-full h-12 rounded-lg bg-[#0a0a0a] border border-input px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:border-white transition-colors";
+  "w-full h-12 rounded-lg bg-background border border-input px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:border-white transition-colors";
 
 /** Número angolano: 9 dígitos a começar por 9, com ou sem +244. */
 const normalizarWhatsApp = (v: string) => {
@@ -89,7 +89,6 @@ const LeadForm = ({ id, titulo, texto, compacto = false }: Props) => {
               <span>Solicitar o meu teste de atendimento</span>
               <span aria-hidden>Solicitar o meu teste de atendimento</span>
             </span>
-            <ArrowRight className="arrow h-4 w-4" aria-hidden />
           </button>
           <p className="text-xs text-muted-foreground">
             Teste gratuito e sem compromisso. O envio do formulário não representa uma contratação.

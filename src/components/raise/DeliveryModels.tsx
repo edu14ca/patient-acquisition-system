@@ -10,8 +10,7 @@ const DeliveryModels = () => {
     <section id="modelos" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
-          <span className="eyebrow">02 · Modelos de entrega</span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Escolha como quer trabalhar connosco
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -35,7 +34,6 @@ const DeliveryModels = () => {
                       : "border-border text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  <span className="font-mono text-xs text-muted-foreground mr-3">0{i + 1}</span>
                   <span className="font-medium">{m.label}</span>
                 </button>
               );
@@ -44,7 +42,7 @@ const DeliveryModels = () => {
 
           <div key={current.id} role="tabpanel" className="rounded-lg border border-border bg-card p-6 md:p-10 animate-fade-up grid lg:grid-cols-[1fr_minmax(0,320px)] gap-8 items-start">
             <div>
-            <h3 className="font-display text-2xl md:text-3xl font-medium">{current.label}</h3>
+            <h3 className="font-display text-2xl md:text-3xl font-bold">{current.label}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed md:text-lg max-w-2xl">{current.desc}</p>
             <div className="mt-8 pt-6 border-t border-border">
               <p className="eyebrow mb-2">Ideal para</p>
@@ -58,7 +56,7 @@ const DeliveryModels = () => {
               height={533}
               loading="lazy"
               decoding="async"
-              className="w-full rounded-lg border border-border order-first lg:order-none"
+              className="sd-img w-full rounded-lg border border-border order-first lg:order-none"
             />
           </div>
         </div>

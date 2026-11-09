@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background">
+      <main className="sd min-h-screen bg-background">
         <Hero />
         <StatsBand />
         <Solutions />

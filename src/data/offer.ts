@@ -158,14 +158,14 @@ export type CombinationExample = {
 export const combinationExamples: CombinationExample[] = [
   {
     id: "wamikixima",
-    client: "WamiKixima Dental",
-    segment: "Clínica · Luanda",
+    client: "WamiKixima Clínica dentária",
+    segment: "Clínica, Luanda",
     picks: { gestao: "assessoria", midia: "assessoria", crm: "assessoria", vendas: "assessoria" },
   },
   {
     id: "mavisher",
     client: "Mavisher Tecnologia",
-    segment: "Revenda Apple · Luanda e Lubango",
+    segment: "Revenda Apple, Luanda e Lubango",
     picks: { midia: "assessoria", criativos: "assessoria", crm: "assessoria" },
   },
   {

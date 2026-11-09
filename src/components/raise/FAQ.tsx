@@ -39,8 +39,7 @@ const FAQ = ({ items = defaultFaqs }: { items?: FaqItem[] }) => {
     <section id="faq" className="py-20 md:py-24 relative">
       <div className="container-tight">
         <div className="mb-10 md:mb-14">
-          <span className="eyebrow">FAQ</span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Perguntas que ouvimos todos os dias.
           </h2>
         </div>
