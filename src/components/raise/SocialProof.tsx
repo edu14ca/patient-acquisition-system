@@ -22,7 +22,7 @@ import logoLinhas from "@/assets/logo-linhas-douro.jpg";
 import logoHappy from "@/assets/logo-happy-kitchen.jpg";
 import logoFercal from "@/assets/logo-fercal.jpg";
 import logoWami from "@/assets/logo-wamikixima.jpg";
-import logoSesalinAsset from "@/assets/logo-sesalin.webp.asset.json";
+import logoSesalin from "@/assets/logos-mono/sesalin.png";
 import logoMavisher from "@/assets/logo-mavisher.jpg";
 
 import proofMichael1 from "@/assets/proof-michael-1.jpg";
@@ -116,7 +116,7 @@ const brands: Brand[] = [
     id: "sesalin",
     name: "Sesalin",
     category: "Marketplace / Comércio digital",
-    logo: logoSesalinAsset.url,
+    logo: logoSesalin,
     logoFit: "contain",
     logoBg: "dark",
     summary:
@@ -196,7 +196,7 @@ const SocialProof = () => {
                 >
                   <div
                     className={`flex items-center justify-center rounded-lg overflow-hidden transition-smooth shrink-0 ${
-                      b.logoBg === "light" ? "bg-white" : "bg-secondary"
+                      b.logoBg === "light" ? "bg-white" : "bg-black"
                     } w-16 h-16 md:w-20 md:h-20`}
                   >
                     <img
@@ -235,7 +235,7 @@ const SocialProof = () => {
                 <div className="flex items-center gap-4 mb-2">
                   <div
                     className={`w-16 h-16 rounded-lg border border-border flex items-center justify-center overflow-hidden shrink-0 ${
-                      active.logoBg === "light" ? "bg-white" : "bg-secondary"
+                      active.logoBg === "light" ? "bg-white" : "bg-black"
                     }`}
                   >
                     <img

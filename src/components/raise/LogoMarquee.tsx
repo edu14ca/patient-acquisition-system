@@ -5,7 +5,7 @@ import linhasDouro from "@/assets/logos-mono/linhas-douro.png";
 import michaelMachado from "@/assets/logos-mono/michael-machado.png";
 import wamikixima from "@/assets/logos-mono/wamikixima.png";
 import mavisher from "@/assets/logos-mono/mavisher.png";
-import sesalinAsset from "@/assets/logo-sesalin.webp.asset.json";
+import sesalin from "@/assets/logos-mono/sesalin.png";
 
 type Logo = { name: string; src: string; mono: boolean };
 
@@ -14,7 +14,7 @@ const logos: Logo[] = [
   { name: "WamiKixima Clínica dentária", src: wamikixima, mono: true },
   { name: "Mavisher", src: mavisher, mono: true },
   { name: "Linhas D'Ouro", src: linhasDouro, mono: true },
-  { name: "Sesalin", src: sesalinAsset.url, mono: false },
+  { name: "Sesalin", src: sesalin, mono: true },
   { name: "Happy Kitchen", src: happyKitchen, mono: true },
   { name: "Complexo Escolar Fercal", src: fercal, mono: true },
   { name: "Michael Machado", src: michaelMachado, mono: true },
