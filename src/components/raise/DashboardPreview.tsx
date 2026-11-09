@@ -17,7 +17,7 @@ const DashboardPreview = () => {
     <div className="rounded-xl border border-white/15 bg-white/[0.06] backdrop-blur-md p-5 md:p-6 animate-fade-up w-full max-w-[460px] lg:justify-self-end" style={{ animationDelay: "120ms" }}>
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="eyebrow">Painel de crescimento</p>
+          <p className="eyebrow">Exemplo de painel de crescimento</p>
           <p className="mt-1 text-sm text-muted-foreground">Últimos 12 meses</p>
         </div>
         <div className="flex rounded-full border border-border p-0.5 text-xs font-medium">
@@ -65,7 +65,6 @@ const DashboardPreview = () => {
           ))}
         </tbody>
       </table>
-      <p className="mt-4 text-xs text-foreground/50">Exemplo ilustrativo do painel que entregamos.</p>
     </div>
   );
 };

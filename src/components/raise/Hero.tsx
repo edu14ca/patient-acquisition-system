@@ -51,10 +51,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="pt-12 pb-14 md:pt-14 md:pb-16 border-b border-border">
-        <div className="container-tight">
-          <p className="text-sm text-foreground mb-6">Empresas que já cresceram com a Raise:</p>
-        </div>
+      <section className="py-10 md:py-12 border-b border-border" aria-label="Clientes da Raise">
         <LogoMarquee />
       </section>
     </>
