@@ -28,8 +28,7 @@ const Diagnostico = () => {
     <section id="como-funciona" className="theme-wine py-20 md:py-24 relative">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
-          <span className="eyebrow">Como funciona</span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Antes de vender, diagnosticamos.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -52,7 +51,7 @@ const Diagnostico = () => {
                 <div className="inline-flex text-primary mb-5">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display text-xl font-medium mb-2">{s.title}</h3>
+                <h3 className="font-display text-xl font-bold mb-2">{s.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{s.desc}</p>
               </article>
             );

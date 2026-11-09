@@ -32,7 +32,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
               <a href={buildWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-smooth">
-                WhatsApp · +244 939 636 042
+                WhatsApp +244 939 636 042
               </a>
             </li>
             <li>Luanda, Angola</li>

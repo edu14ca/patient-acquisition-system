@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Check, Plus } from "lucide-react";
 import raiseLogo from "@/assets/logo-raise.png";
 import raiseLogoWhite from "@/assets/logo-raise-white.png";
-import BrandPattern from "@/components/raise/BrandPattern";
 import balde480 from "@/assets/balde-480.webp";
 import balde900 from "@/assets/balde-900.webp";
 import { useReveal } from "@/hooks/useReveal";
@@ -115,15 +114,12 @@ const Clinicas = () => {
       <main>
         {/* 1 · HERO */}
         <section className="relative overflow-hidden pt-12 md:pt-20 pb-16">
-          <BrandPattern className="-right-20 -top-10 h-[560px] w-auto hidden lg:block" opacity={0.04} />
           <div className="container-tight relative grid lg:grid-cols-[1.25fr_1fr] gap-10 lg:gap-14 items-start">
             <div>
               <Eyebrow>Para gestores de clínicas em Angola</Eyebrow>
-              <h1 className="lp-display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
+              <h1 className="lp-display mt-6 text-[2.4rem] sm:text-5xl lg:text-[3.7rem]">
                 <Words text="A sua clínica não precisa de mais pedidos." />{" "}
-                <span className="text-primary">
-                  <Words text="Precisa de parar de os perder." />
-                </span>
+                <Words text="Precisa de parar de os perder." />
               </h1>
               <p className="mt-8 text-lg text-muted-foreground max-w-xl" data-reveal style={{ ["--d" as string]: "500ms" }}>
                 Todos os dias, potenciais pacientes contactam clínicas para marcar consultas. Uma mensagem sem resposta,
@@ -147,7 +143,7 @@ const Clinicas = () => {
               </div>
             </div>
 
-            <div data-reveal style={{ ["--d" as string]: "350ms" }} className="lg:sticky lg:top-24">
+            <div className="lg:sticky lg:top-24">
               <LeadForm
                 id="formulario-topo"
                 titulo="Descubra onde pode estar a perder marcações."
@@ -166,9 +162,8 @@ const Clinicas = () => {
         {/* 2 · PROVA E CONFIANÇA: três clínicas */}
         <section className="py-20 md:py-28">
           <div className="container-tight">
-            <div className="max-w-3xl" data-reveal>
-              <Eyebrow>O mesmo paciente, três clínicas</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
+            <div className="max-w-3xl">
+              <h2 className="lp-display text-3xl md:text-5xl">
                 O paciente que não consegue marcar consigo pode acabar por marcar noutra clínica.
               </h2>
               <p className="mt-5 text-lg text-muted-foreground">
@@ -180,14 +175,12 @@ const Clinicas = () => {
               {clinicas.map((c, i) => (
                 <div
                   key={c.nome}
-                  data-reveal
-                  style={{ ["--d" as string]: `${i * 120}ms` }}
                   className={`rounded-xl border p-5 bg-card flex flex-col ${c.estado === "marcou" ? "border-primary" : "border-border"}`}
                 >
                   <div className="flex items-center justify-between">
-                    <p className="font-mono text-xs uppercase tracking-[0.071em]">{c.nome}</p>
+                    <p className="text-sm font-semibold">{c.nome}</p>
                     <span
-                      className={`font-mono text-[11px] uppercase tracking-[0.071em] ${c.estado === "marcou" ? "text-primary" : "text-muted-foreground"}`}
+                      className={`text-xs font-medium ${c.estado === "marcou" ? "text-primary" : "text-muted-foreground"}`}
                     >
                       {c.estado === "demora" ? "Sem resposta há 3 h" : c.estado === "incompleta" ? "Resposta incompleta" : "Consulta marcada"}
                     </span>
@@ -212,7 +205,7 @@ const Clinicas = () => {
             </div>
             <p className="mt-4 text-xs text-muted-foreground">Conversas ilustrativas.</p>
 
-            <div className="mt-12 grid md:grid-cols-2 gap-8 items-end" data-reveal>
+            <div className="mt-12 grid md:grid-cols-2 gap-8 items-end">
               <p className="text-2xl md:text-3xl font-medium tracking-tight">
                 Qual delas tem melhores condições para transformar aquele interesse numa consulta?
               </p>
@@ -225,10 +218,10 @@ const Clinicas = () => {
             {testemunhos.length > 0 && (
               <div className="mt-12 grid md:grid-cols-3 gap-4">
                 {testemunhos.map((t, i) => (
-                  <figure key={i} data-reveal style={{ ["--d" as string]: `${i * 120}ms` }} className="rounded-xl border border-border bg-card p-6">
+                  <figure key={i} className="rounded-xl border border-border bg-card p-6">
                     <blockquote className="text-sm">«{t.texto}»</blockquote>
-                    <figcaption className="mt-4 font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground">
-                      {t.nome} · {t.clinica}
+                    <figcaption className="mt-4 text-sm font-semibold text-muted-foreground">
+                      {t.nome}, {t.clinica}
                     </figcaption>
                   </figure>
                 ))}
@@ -242,11 +235,10 @@ const Clinicas = () => {
         {/* 3 · DOR + ALÍVIO */}
         <section className="py-20 md:py-28">
           <div className="container-tight">
-            <div className="max-w-4xl" data-reveal>
-              <Eyebrow>Onde o dinheiro escapa</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
+            <div className="max-w-4xl">
+              <h2 className="lp-display text-3xl md:text-5xl">
                 O dinheiro que a sua clínica investe para atrair pacientes pode estar a{" "}
-                <span className="text-primary">escapar pelo atendimento.</span>
+                escapar pelo atendimento.
               </h2>
               <p className="mt-5 text-lg text-muted-foreground">
                 De que adianta gerar mais interesse se parte dos pedidos nunca chega a transformar-se numa marcação?
@@ -254,17 +246,16 @@ const Clinicas = () => {
             </div>
 
             <ol className="mt-14">
-              {dores.map((d, i) => (
-                <li key={d.t} data-reveal style={{ ["--d" as string]: `${i * 100}ms` }} className="py-8">
+              {dores.map((d) => (
+                <li key={d.t} className="py-8">
                   <div className="lp-rule mb-8" />
-                  <div className="grid md:grid-cols-[120px_1fr_1fr] gap-4 md:gap-10">
-                    <span className="font-mono text-primary text-sm">/0{i + 1}</span>
+                  <div className="grid md:grid-cols-2 gap-4 md:gap-10">
                     <div>
                       <h3 className="text-2xl font-semibold tracking-tight">{d.t}</h3>
                       <p className="mt-3 text-muted-foreground">{d.d}</p>
                     </div>
                     <p className="text-foreground/90 md:pt-1">
-                      <span className="font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground block mb-2">Alívio</span>
+                      <span className="text-sm font-semibold text-muted-foreground block mb-2">Alívio</span>
                       {d.a}
                     </p>
                   </div>
@@ -272,7 +263,7 @@ const Clinicas = () => {
               ))}
             </ol>
 
-            <div className="mt-10 grid md:grid-cols-2 gap-10" data-reveal>
+            <div className="mt-10 grid md:grid-cols-2 gap-10">
               <div className="space-y-4 text-muted-foreground">
                 <p className="text-foreground text-xl font-medium">O problema é que estas falhas não fazem barulho.</p>
                 <p>
@@ -299,9 +290,8 @@ const Clinicas = () => {
         {/* 4 · BENEFÍCIOS */}
         <section className="theme-wine py-20 md:py-28">
           <div className="container-tight">
-            <div className="max-w-4xl" data-reveal>
-              <Eyebrow>O que o teste mostra</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
+            <div className="max-w-4xl">
+              <h2 className="lp-display text-3xl md:text-5xl">
                 Descubra o que impede a sua clínica de converter mais pedidos em marcações.
               </h2>
               <p className="mt-5 text-lg text-muted-foreground">
@@ -313,19 +303,15 @@ const Clinicas = () => {
               {beneficios.map((b, i) => (
                 <div
                   key={b.t}
-                  data-reveal
-                  style={{ ["--d" as string]: `${(i % 3) * 110}ms` }}
-                  className="group rounded-xl border border-border bg-background p-6 transition-colors hover:border-primary"
+                 
+                  className="rounded-xl border border-border bg-background p-6"
                 >
-                  <span className="font-mono text-xs text-muted-foreground group-hover:text-primary transition-colors">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-6 text-lg font-semibold tracking-tight">{b.t}</h3>
+                  <h3 className="text-lg font-semibold tracking-tight">{b.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{b.d}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-10 max-w-2xl text-muted-foreground" data-reveal>
+            <p className="mt-10 max-w-2xl text-muted-foreground">
               Uma clínica não cresce só com o número de pessoas que entram em contacto. Precisa de transformar esse interesse
               em marcações efectivas.
             </p>
@@ -335,16 +321,15 @@ const Clinicas = () => {
         {/* 5 · OFERTA */}
         <section className="py-20 md:py-28">
           <div className="container-tight">
-            <div className="max-w-4xl" data-reveal>
-              <Eyebrow>Assessoria Modular</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
+            <div className="max-w-4xl">
+              <h2 className="lp-display text-3xl md:text-5xl">
                 Antes de investir mais para atrair pacientes, descubra o que acontece com os pedidos que{" "}
-                <span className="text-primary">já recebe.</span>
+                já recebe.
               </h2>
             </div>
 
             <div className="mt-14 grid lg:grid-cols-2 gap-12">
-              <div className="space-y-10" data-reveal>
+              <div className="space-y-10">
                 <div>
                   <h3 className="text-xl font-semibold tracking-tight">O que é a Assessoria Modular?</h3>
                   <p className="mt-3 text-muted-foreground">
@@ -369,7 +354,7 @@ const Clinicas = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-border bg-card p-8" data-reveal style={{ ["--d" as string]: "150ms" }}>
+              <div className="rounded-xl border border-border bg-card p-8">
                 <h3 className="text-xl font-semibold tracking-tight">O que é observado no teste</h3>
                 <ul className="mt-6 space-y-4">
                   {observado.map((o) => (
@@ -393,9 +378,8 @@ const Clinicas = () => {
         {/* 6 · AUTORIDADE E SEGURANÇA */}
         <section className="py-20 md:py-28">
           <div className="container-tight">
-            <div className="max-w-4xl" data-reveal>
-              <Eyebrow>Segurança</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
+            <div className="max-w-4xl">
+              <h2 className="lp-display text-3xl md:text-5xl">
                 O seu atendimento deve estar à altura da qualidade dos serviços da sua clínica.
               </h2>
               <p className="mt-5 text-lg text-muted-foreground">
@@ -408,7 +392,7 @@ const Clinicas = () => {
             </div>
             <div className="mt-12 grid md:grid-cols-3 gap-4">
               {garantias.map((g, i) => (
-                <div key={g.t} data-reveal style={{ ["--d" as string]: `${i * 110}ms` }} className="border-t-2 border-primary pt-6">
+                <div key={g.t} className="border-t-2 border-primary pt-6">
                   <h3 className="text-lg font-semibold tracking-tight">{g.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{g.d}</p>
                 </div>
@@ -420,10 +404,9 @@ const Clinicas = () => {
         {/* 7 · CTA FINAL + FORMULÁRIO + FAQ */}
         <section className="theme-dark py-20 md:py-28" id="formulario">
           <div className="container-tight grid lg:grid-cols-2 gap-12 items-start">
-            <div data-reveal>
-              <Eyebrow>Último passo</Eyebrow>
-              <h2 className="lp-display mt-5 text-3xl md:text-5xl">
-                A sua clínica pode estar a perder marcações. <span className="text-primary">A questão é: sabe onde?</span>
+            <div>
+              <h2 className="lp-display text-3xl md:text-5xl">
+                A sua clínica pode estar a perder marcações. A questão é: sabe onde?
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 Não continue a investir em novos pedidos sem perceber o que acontece depois de um paciente contactar a sua
@@ -436,7 +419,7 @@ const Clinicas = () => {
               </p>
 
               <div className="mt-12">
-                <p className="eyebrow mb-4">Perguntas frequentes</p>
+                <h3 className="mb-4 text-xl">Perguntas frequentes</h3>
                 <div className="divide-y divide-border border-y border-border">
                   {faq.map((f) => (
                     <details key={f.q} className="lp-faq py-4">
@@ -451,7 +434,7 @@ const Clinicas = () => {
               </div>
             </div>
 
-            <div data-reveal style={{ ["--d" as string]: "150ms" }} className="lg:sticky lg:top-24">
+            <div className="lg:sticky lg:top-24">
               <LeadForm
                 titulo="Solicite o teste de atendimento da sua clínica."
                 texto="Preencha os seus dados para que a nossa equipa entre em contacto e apresente o funcionamento do teste."

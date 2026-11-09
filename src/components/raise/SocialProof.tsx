@@ -164,10 +164,7 @@ const SocialProof = () => {
     >
       <div className="container-tight relative">
         <div className="max-w-3xl mb-10">
-          <span className="eyebrow">
-            04 · Clientes
-          </span>
-          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+          <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
             Marcas que já confiaram na Raise
           </h2>
           <p className="mt-4 text-sm md:text-base text-muted-foreground">
@@ -216,7 +213,7 @@ const SocialProof = () => {
                   <p className="mt-4 font-display font-medium text-sm md:text-base leading-tight">
                     {b.name}
                   </p>
-                  <p className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+                  <p className="mt-1 text-xs text-muted-foreground">
                     {b.category}
                   </p>
                 </button>
@@ -253,7 +250,7 @@ const SocialProof = () => {
                     <DialogTitle className="font-display text-2xl">
                       {active.name}
                     </DialogTitle>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
+                    <p className="text-sm text-muted-foreground mt-1">
                       {active.category}
                     </p>
                   </div>
@@ -265,7 +262,7 @@ const SocialProof = () => {
 
               {active.proofs.length > 0 && (
                 <div className="mt-4">
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Prova real
                   </p>
                   <div className="grid grid-cols-2 gap-3">

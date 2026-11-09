@@ -76,9 +76,9 @@
    Redefinem os tokens, por isso os componentes dentro delas adaptam-se sozinhos. */
 @layer base {
   .theme-dark {
-    --background: 0 0% 4%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 8%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
@@ -132,12 +132,15 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings: "cv11";
   }
 
+  /* Títulos em Archivo expandida e pesada: ecoa o logótipo RAISE. */
+  h1, h2, h3, h4, .font-display {
+    font-stretch: 125%;
+  }
   h1, h2, h3, h4 {
-    @apply font-display font-medium;
-    letter-spacing: -0.02em;
+    @apply font-display font-bold;
+    letter-spacing: -0.03em;
   }
 
   ::selection {
@@ -200,7 +203,7 @@
   }
 
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground;
+    @apply text-sm font-medium text-muted-foreground;
   }
 
   .marquee-mask {
@@ -225,22 +228,24 @@
   }
 
   .chip {
-    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border font-mono text-xs uppercase tracking-[0.071em] text-muted-foreground;
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-sm font-medium text-muted-foreground;
   }
 }
 
 /* ---------- Landing pages (estrutura CTRL+M, motion leve: só CSS + IntersectionObserver) ---------- */
 @layer components {
   .lp-display {
-    @apply font-sans font-extrabold uppercase;
-    letter-spacing: -0.035em;
-    line-height: 0.95;
+    @apply font-display font-extrabold;
+    font-stretch: 125%;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
   }
 
   /* Revelar ao entrar no ecrã */
+  /* Só o hero da LP usa data-reveal (um único momento orquestrado). */
   [data-reveal] {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
     transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
     transition-delay: var(--d, 0ms);
   }
@@ -268,7 +273,7 @@
 
   /* Botão com texto que rola (hover) */
   .lp-btn {
-    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-sm uppercase tracking-wide overflow-hidden;
+    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-base overflow-hidden;
     transition: background-color 0.3s ease;
   }
   .lp-btn:hover { opacity: 0.9; }
@@ -277,18 +282,17 @@
   .lp-btn .roll > span { display: block; transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .lp-btn .roll > span + span { position: absolute; left: 0; right: 0; top: 100%; }
   .lp-btn:hover .roll > span { transform: translateY(-100%); }
-  .lp-btn .arrow { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
-  .lp-btn:hover .arrow { transform: translateX(4px); }
 
   /* Fitas diagonais (CTRL+M) */
   .lp-tapes { position: relative; height: 180px; overflow: hidden; }
   .lp-tape {
     position: absolute; left: -5%; width: 110%; padding: 14px 0; white-space: nowrap; overflow: hidden;
-    @apply font-sans font-extrabold uppercase text-lg md:text-2xl;
+    @apply font-display font-extrabold text-lg md:text-2xl;
+    font-stretch: 125%;
     letter-spacing: -0.01em;
   }
   .lp-tape--red { top: 40px; background: hsl(var(--primary)); color: #fff; transform: rotate(-3deg); z-index: 2; }
-  .lp-tape--white { top: 70px; background: #0a0a0a; color: #fff; transform: rotate(2.5deg); }
+  .lp-tape--white { top: 70px; background: #000; color: #fff; transform: rotate(2.5deg); }
   .lp-tape__track { display: inline-flex; animation: marquee 35s linear infinite; }
   .lp-tape--white .lp-tape__track { animation-direction: reverse; }
 

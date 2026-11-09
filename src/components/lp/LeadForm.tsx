@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { trackLead } from "@/lib/fbpixel";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
@@ -89,7 +89,6 @@ const LeadForm = ({ id, titulo, texto, compacto = false }: Props) => {
               <span>Solicitar o meu teste de atendimento</span>
               <span aria-hidden>Solicitar o meu teste de atendimento</span>
             </span>
-            <ArrowRight className="arrow h-4 w-4" aria-hidden />
           </button>
           <p className="text-xs text-muted-foreground">
             Teste gratuito e sem compromisso. O envio do formulário não representa uma contratação.
