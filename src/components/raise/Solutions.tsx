@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { solutions } from "@/data/offer";
+import { solutionImages } from "@/assets/site";
 
 const Solutions = () => {
   const [active, setActive] = useState(solutions[0].id);
@@ -45,7 +46,7 @@ const Solutions = () => {
             })}
           </div>
 
-          <div key={current.id} role="tabpanel" className="p-6 md:p-10 grid md:grid-cols-[1fr_auto] gap-8 items-end animate-fade-up">
+          <div key={current.id} role="tabpanel" className="p-6 md:p-10 grid md:grid-cols-[1fr_minmax(0,420px)] gap-8 md:gap-12 items-center animate-fade-up">
             <div className="max-w-2xl">
               <div className="flex items-center gap-3">
                 <Icon className="w-6 h-6 text-primary" />
@@ -60,10 +61,19 @@ const Solutions = () => {
                   </li>
                 ))}
               </ul>
+              <Button asChild variant="hero" size="lg" className="mt-8">
+                <a href="#diagnostico-form">Quero esta solução</a>
+              </Button>
             </div>
-            <Button asChild variant="hero" size="lg">
-              <a href="#diagnostico-form">Quero esta solução</a>
-            </Button>
+            <img
+              src={solutionImages[current.id]}
+              alt=""
+              width={800}
+              height={600}
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-lg border border-border order-first md:order-none"
+            />
           </div>
         </div>
       </div>

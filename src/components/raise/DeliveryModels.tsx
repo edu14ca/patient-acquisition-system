@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { models } from "@/data/offer";
+import { modelImages } from "@/assets/site";
 
 const DeliveryModels = () => {
   const [active, setActive] = useState(models[0].id);
@@ -41,13 +42,24 @@ const DeliveryModels = () => {
             })}
           </div>
 
-          <div key={current.id} role="tabpanel" className="rounded-lg border border-border bg-card p-6 md:p-10 animate-fade-up">
+          <div key={current.id} role="tabpanel" className="rounded-lg border border-border bg-card p-6 md:p-10 animate-fade-up grid lg:grid-cols-[1fr_minmax(0,320px)] gap-8 items-start">
+            <div>
             <h3 className="font-display text-2xl md:text-3xl font-medium">{current.label}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed md:text-lg max-w-2xl">{current.desc}</p>
             <div className="mt-8 pt-6 border-t border-border">
               <p className="eyebrow mb-2">Ideal para</p>
               <p className="text-foreground/90">{current.idealFor}</p>
             </div>
+            </div>
+            <img
+              src={modelImages[current.id]}
+              alt=""
+              width={800}
+              height={533}
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-lg border border-border order-first lg:order-none"
+            />
           </div>
         </div>
       </div>
