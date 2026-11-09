@@ -38,14 +38,14 @@ const columns = [
 
 const Differentiation = () => {
   return (
-    <section className="py-24 md:py-32 bg-gradient-fade-b border-y border-border">
+    <section id="porque-raise" className="py-20 md:py-24 border-t border-border">
       <div className="container-tight">
-        <div className="max-w-3xl mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">Diferenciação</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 text-balance leading-[1.05]">
-            Assessoria <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> <span className="text-primary">Consultoria</span>.
+        <div className="max-w-3xl mb-10 md:mb-14">
+          <span className="eyebrow">Diferenciação</span>
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
+            Assessoria <span className="text-muted-foreground">vs</span> Agência <span className="text-muted-foreground">vs</span> Consultoria.
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
             A diferença não está no nome. Está em quem assume responsabilidade pelo crescimento da sua empresa.
           </p>
         </div>
@@ -57,21 +57,21 @@ const Differentiation = () => {
             return (
               <article
                 key={c.label}
-                className={`p-7 rounded-2xl border transition-smooth animate-fade-up ${
+                className={`p-7 rounded-lg border transition-smooth animate-fade-up ${
                   isPrimary
-                    ? "bg-card border-primary shadow-glow-red md:scale-105"
+                    ? "bg-card border-primary"
                     : "bg-card/60 border-border"
                 }`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <div className={`inline-flex p-3 rounded-xl mb-5 ${
+                <div className={`inline-flex p-3 rounded-lg mb-5 ${
                   isPrimary
                     ? "bg-primary text-primary-foreground"
                     : "bg-secondary text-muted-foreground"
                 }`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className={`font-display text-2xl font-bold mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
+                <h3 className={`font-display text-2xl font-medium mb-5 ${isPrimary ? "text-foreground" : "text-muted-foreground"}`}>
                   {c.label}
                 </h3>
                 <ul className="space-y-3">
@@ -89,9 +89,9 @@ const Differentiation = () => {
           })}
         </div>
 
-        <div className="mt-12 p-8 md:p-10 rounded-3xl border border-primary/30 bg-gradient-red text-primary-foreground shadow-glow-red text-center">
-          <p className="font-display text-2xl md:text-4xl font-bold leading-tight text-balance">
-            Não somos consultores. Somos <span className="italic">responsáveis</span> pelo crescimento.
+        <div className="mt-10 p-6 md:p-8 rounded-lg border border-border bg-card">
+          <p className="font-display text-2xl md:text-4xl font-medium leading-tight text-balance">
+            Não somos consultores. Somos responsáveis pelo crescimento.
           </p>
         </div>
       </div>

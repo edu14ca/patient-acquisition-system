@@ -68,10 +68,10 @@ const Pill = ({
   <button
     type="button"
     onClick={onClick}
-    className={`text-left p-4 rounded-xl border transition-smooth font-medium ${
+    className={`text-left p-4 rounded-lg border transition-smooth font-medium ${
       active
         ? "border-primary bg-primary/10 text-foreground shadow-glow-red"
-        : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
+        : "border-border bg-card text-muted-foreground hover:text-foreground"
     }`}
   >
     <span className="flex items-center justify-between gap-3">
@@ -133,20 +133,18 @@ const QualifyForm = () => {
   };
 
   return (
-    <section id="diagnostico-form" className="py-24 md:py-32 relative overflow-hidden border-y border-border">
-      <div className="absolute inset-0 bg-gradient-mesh opacity-70" />
-      <div className="absolute inset-0 grid-bg opacity-30" />
-      <div className="absolute top-1/2 -left-40 w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+    <section id="diagnostico-form" className="py-20 md:py-24 relative border-t border-border">
 
       <div className="container-tight relative">
-        <div className="max-w-2xl mx-auto text-center mb-10">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">
+        <div>
+          <span className="eyebrow">
             Diagnóstico de crescimento
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05] text-balance">
-            Isto <span className="text-primary italic">não é</span> para todos.
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 leading-[1.08] text-balance">
+            Isto não é para todos.
           </h2>
-          <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
             Só analisamos negócios que querem crescer com <span className="text-foreground font-semibold">processo</span>, não com tentativa.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground">
@@ -155,7 +153,8 @@ const QualifyForm = () => {
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto rounded-3xl border border-border bg-card/80 backdrop-blur-md p-6 md:p-10 shadow-elegant">
+        
+        <div className="rounded-lg border border-border bg-card p-6 md:p-8">
           {/* Progress */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -173,7 +172,7 @@ const QualifyForm = () => {
           <div className="min-h-[320px]">
             {step === 0 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium mb-6 leading-tight">
                   Qual é o teu sector?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -188,7 +187,7 @@ const QualifyForm = () => {
 
             {step === 1 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
                   Quanto o teu negócio fatura por mês?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -206,7 +205,7 @@ const QualifyForm = () => {
 
             {step === 2 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
                   Quantos clientes novos tens por semana?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -224,7 +223,7 @@ const QualifyForm = () => {
 
             {step === 3 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium mb-6 leading-tight">
                   Qual é o teu maior problema hoje?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -239,7 +238,7 @@ const QualifyForm = () => {
 
             {step === 4 && (
               <div className="animate-fade-up">
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2 leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium mb-2 leading-tight">
                   Estás disposto a investir para estruturar crescimento?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -257,7 +256,7 @@ const QualifyForm = () => {
 
             {step === 5 && (
               <div className="animate-fade-up space-y-5">
-                <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight">
+                <h3 className="font-display text-2xl md:text-3xl font-medium leading-tight">
                   Para onde enviamos o teu diagnóstico?
                 </h3>
                 <div className="space-y-2">
@@ -333,17 +332,19 @@ const QualifyForm = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
           <span className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-success" />
+            <ShieldCheck className="w-4 h-4 text-muted-foreground" />
             Diagnóstico gratuito
           </span>
           <span className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-success" />
+            <CheckCircle2 className="w-4 h-4 text-muted-foreground" />
             Sem compromisso
           </span>
           <span className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-success" />
+            <Clock className="w-4 h-4 text-muted-foreground" />
             Resposta em 24h úteis
           </span>
         </div>

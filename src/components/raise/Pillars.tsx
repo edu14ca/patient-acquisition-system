@@ -26,13 +26,12 @@ const pillars = [
 
 const Pillars = () => {
   return (
-    <section id="pilares" className="py-16 md:py-24 bg-gradient-fade-b border-y border-border relative overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-20" />
+    <section id="pilares" className="py-20 md:py-24 border-t border-border relative overflow-hidden">
 
       <div className="container-tight relative">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-          <span className="text-primary font-semibold uppercase tracking-wider text-xs">A Solução</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 text-balance leading-[1.08]">
+          <span className="eyebrow">A Solução</span>
+          <h2 className="font-display text-3xl md:text-[40px] font-medium mt-4 text-balance leading-[1.08]">
             Crescimento real é construído sobre 4 pilares
           </h2>
         </div>
@@ -43,14 +42,14 @@ const Pillars = () => {
             return (
               <article
                 key={p.title}
-                className={`group p-5 md:p-6 rounded-xl bg-card border transition-smooth animate-fade-up ${
+                className={`group p-5 md:p-6 rounded-lg bg-card border transition-smooth animate-fade-up ${
                   p.highlight ? "border-primary/60" : "border-border hover:border-primary/40"
                 }`}
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-center gap-3">
                   <Icon className="w-5 h-5 text-primary" />
-                  <h3 className="font-display text-lg md:text-xl font-bold">{p.title}</h3>
+                  <h3 className="font-display text-lg md:text-xl font-medium">{p.title}</h3>
                 </div>
                 <p className="mt-3 text-xs md:text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </article>
