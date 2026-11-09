@@ -21,9 +21,9 @@ import logoMichael from "@/assets/logo-michael-machado.jpg";
 import logoLinhas from "@/assets/logo-linhas-douro.jpg";
 import logoHappy from "@/assets/logo-happy-kitchen.jpg";
 import logoFercal from "@/assets/logo-fercal.jpg";
-import logoWamiAsset from "@/assets/logo-wamikixima.jpg.asset.json";
+import logoWami from "@/assets/logo-wamikixima.jpg";
 import logoSesalinAsset from "@/assets/logo-sesalin.webp.asset.json";
-import logoMavisherAsset from "@/assets/logo-mavisher.jpg.asset.json";
+import logoMavisher from "@/assets/logo-mavisher.jpg";
 
 import proofMichael1 from "@/assets/proof-michael-1.jpg";
 import proofMichael2 from "@/assets/proof-michael-2.jpg";
@@ -102,13 +102,13 @@ const brands: Brand[] = [
   },
   {
     id: "wamikixima",
-    name: "Clínica WamiKixima Dental",
-    category: "Clínica odontológica / Luanda",
-    logo: logoWamiAsset.url,
+    name: "WamiKixima Clínica dentária",
+    category: "Clínica dentária / Luanda",
+    logo: logoWami,
     logoFit: "contain",
     logoBg: "light",
     summary:
-      "A Raise trabalha com a Clínica WamiKixima Dental, em Luanda, na estruturação da aquisição de pacientes e da comunicação da clínica.",
+      "A Raise trabalha com a WamiKixima Clínica dentária, em Luanda, na estruturação da aquisição de pacientes e da comunicação da clínica.",
     caseUrl: "",
     proofs: [],
   },
@@ -128,8 +128,8 @@ const brands: Brand[] = [
     id: "mavisher",
     name: "Mavisher",
     category: "Logística / E-commerce",
-    logo: logoMavisherAsset.url,
-    logoFit: "contain",
+    logo: logoMavisher,
+    logoFit: "cover",
     logoBg: "dark",
     summary:
       "A Raise acompanha a Mavisher na estruturação de crescimento na área de logística e e-commerce.",
