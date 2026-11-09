@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Check, Plus } from "lucide-react";
-import raiseLogo from "@/assets/raise-logo.png";
+import raiseLogo from "@/assets/logo-raise.png";
+import raiseLogoWhite from "@/assets/logo-raise-white.png";
+import BrandPattern from "@/components/raise/BrandPattern";
 import balde480 from "@/assets/balde-480.webp";
 import balde900 from "@/assets/balde-900.webp";
 import { useReveal } from "@/hooks/useReveal";
@@ -99,8 +101,7 @@ const Clinicas = () => {
       <header className="sticky top-0 z-40 bg-background/85 backdrop-blur border-b border-border">
         <div className="container-tight h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <img src={raiseLogo} alt="Raise" className="w-8 h-8 object-contain" />
-            <span className="font-medium">Raise</span>
+            <img src={raiseLogo} alt="Raise" width={480} height={128} className="h-7 w-auto" />
           </a>
           <a href="#formulario" className="lp-btn h-10 px-4 text-xs">
             <span className="roll">
@@ -113,8 +114,9 @@ const Clinicas = () => {
 
       <main>
         {/* 1 · HERO */}
-        <section className="pt-12 md:pt-20 pb-16">
-          <div className="container-tight grid lg:grid-cols-[1.25fr_1fr] gap-10 lg:gap-14 items-start">
+        <section className="relative overflow-hidden pt-12 md:pt-20 pb-16">
+          <BrandPattern className="-right-20 -top-10 h-[560px] w-auto hidden lg:block" opacity={0.04} />
+          <div className="container-tight relative grid lg:grid-cols-[1.25fr_1fr] gap-10 lg:gap-14 items-start">
             <div>
               <Eyebrow>Para gestores de clínicas em Angola</Eyebrow>
               <h1 className="lp-display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
@@ -194,13 +196,13 @@ const Clinicas = () => {
                     {c.linhas.map((l, k) => (
                       <p
                         key={k}
-                        className={`max-w-[85%] rounded-lg px-3 py-2 ${k % 2 === 0 ? "bg-[#1f1f1f]" : "ml-auto bg-white text-black"}`}
+                        className={`max-w-[85%] rounded-lg px-3 py-2 ${k % 2 === 0 ? "bg-muted" : "ml-auto bg-foreground text-background"}`}
                       >
                         {l}
                       </p>
                     ))}
                     {c.estado === "demora" && (
-                      <p className="lp-typing ml-auto w-fit rounded-lg bg-[#1f1f1f] px-3 py-3 flex gap-1 text-muted-foreground" aria-label="À espera de resposta">
+                      <p className="lp-typing ml-auto w-fit rounded-lg bg-muted px-3 py-3 flex gap-1 text-muted-foreground" aria-label="À espera de resposta">
                         <span /> <span /> <span />
                       </p>
                     )}
@@ -295,7 +297,7 @@ const Clinicas = () => {
         </section>
 
         {/* 4 · BENEFÍCIOS */}
-        <section className="py-20 md:py-28 bg-[#111]">
+        <section className="theme-wine py-20 md:py-28">
           <div className="container-tight">
             <div className="max-w-4xl" data-reveal>
               <Eyebrow>O que o teste mostra</Eyebrow>
@@ -416,7 +418,7 @@ const Clinicas = () => {
         </section>
 
         {/* 7 · CTA FINAL + FORMULÁRIO + FAQ */}
-        <section className="py-20 md:py-28 bg-[#111]" id="formulario">
+        <section className="theme-dark py-20 md:py-28" id="formulario">
           <div className="container-tight grid lg:grid-cols-2 gap-12 items-start">
             <div data-reveal>
               <Eyebrow>Último passo</Eyebrow>
@@ -460,10 +462,10 @@ const Clinicas = () => {
       </main>
 
       {/* 8 · RODAPÉ */}
-      <footer className="py-12 border-t border-border">
+      <footer className="theme-dark py-12">
         <div className="container-tight flex flex-col md:flex-row gap-6 md:items-center justify-between text-sm text-muted-foreground">
           <div>
-            <p className="text-foreground font-medium">Raise · Assessoria Modular</p>
+            <img src={raiseLogoWhite} alt="Raise" width={480} height={128} className="h-7 w-auto" />
             <p className="mt-1">Melhoria dos processos de atendimento para clínicas em Angola.</p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2">

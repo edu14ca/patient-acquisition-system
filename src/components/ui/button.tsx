@@ -11,11 +11,11 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-[#454545] bg-transparent hover:bg-secondary text-foreground",
+        outline: "border border-input bg-transparent hover:bg-secondary text-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border",
         ghost: "hover:bg-secondary text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-white text-black hover:bg-white/90 transition-smooth",
+        hero: "bg-primary text-primary-foreground hover:opacity-90 transition-smooth",
         cta: "bg-primary text-primary-foreground shadow-glow-red hover:bg-primary/95 hover:-translate-y-0.5 transition-smooth",
         whatsapp: "bg-success text-success-foreground hover:bg-success/90 hover:-translate-y-0.5 transition-smooth",
         neon: "bg-neon text-neon-foreground shadow-glow-neon hover:bg-neon-glow hover:-translate-y-0.5 transition-smooth font-bold",

@@ -133,7 +133,7 @@ const QualifyForm = () => {
   };
 
   return (
-    <section id="diagnostico-form" className="py-20 md:py-24 relative border-t border-border">
+    <section id="diagnostico-form" className="theme-dark py-20 md:py-24 relative">
 
       <div className="container-tight relative">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-start">

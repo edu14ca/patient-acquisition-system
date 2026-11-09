@@ -8,7 +8,7 @@ const Combinations = () => {
   const example = combinationExamples.find((e) => e.id === active) ?? combinationExamples[0];
 
   return (
-    <section id="combinacoes" className="py-20 md:py-24 border-t border-border">
+    <section id="combinacoes" className="theme-dark py-20 md:py-24">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-12">
           <span className="eyebrow">03 · Assessoria modular</span>

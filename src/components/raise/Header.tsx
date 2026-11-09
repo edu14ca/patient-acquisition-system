@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import raiseLogo from "@/assets/raise-logo.png";
+import raiseLogo from "@/assets/logo-raise.png";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -18,12 +18,7 @@ const Header = () => {
     <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="container-tight h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
-          <img
-            src={raiseLogo}
-            alt="Raise"
-            className="w-9 h-9 object-contain transition-smooth group-hover:scale-105"
-          />
-          <span className="font-display font-medium text-lg tracking-tight">Raise</span>
+          <img src={raiseLogo} alt="Raise" width={480} height={128} className="h-7 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-1 text-sm font-medium">

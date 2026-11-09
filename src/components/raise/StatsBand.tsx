@@ -1,5 +1,6 @@
 import { Layers, Boxes, Grid2x2 } from "lucide-react";
 import { models, solutions } from "@/data/offer";
+import BrandPattern from "./BrandPattern";
 
 const stats = [
   { icon: Layers, value: String(solutions.length), label: "Soluções", desc: "Da aquisição às vendas e à retenção." },
@@ -9,8 +10,9 @@ const stats = [
 
 const StatsBand = () => {
   return (
-    <section className="py-20 border-t border-border">
-      <div className="container-tight grid grid-cols-1 sm:grid-cols-3 gap-10">
+    <section className="theme-red relative overflow-hidden py-20">
+      <BrandPattern className="invert -right-16 -top-24 h-[140%] w-auto" opacity={0.12} />
+      <div className="container-tight relative grid grid-cols-1 sm:grid-cols-3 gap-10">
         {stats.map((s) => {
           const Icon = s.icon;
           return (

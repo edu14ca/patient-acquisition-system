@@ -94,7 +94,7 @@ const LogoItem = ({ logo }: { logo: Logo }) => {
             if (w && h) setHeight(Math.round(Math.min(56, Math.max(24, Math.sqrt(4400 / (w / h))))));
           }}
           style={{ height }}
-          className="w-auto max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
+          className="invert w-auto max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
         />
       ) : (
         <span className="font-display text-lg font-medium text-muted-foreground whitespace-nowrap">{logo.name}</span>

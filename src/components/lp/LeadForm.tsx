@@ -11,7 +11,7 @@ export const DIFICULDADES = [
 ];
 
 const inputCls =
-  "w-full h-12 rounded-lg bg-[#0a0a0a] border border-input px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:border-white transition-colors";
+  "w-full h-12 rounded-lg bg-background border border-input px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:border-white transition-colors";
 
 /** Número angolano: 9 dígitos a começar por 9, com ou sem +244. */
 const normalizarWhatsApp = (v: string) => {

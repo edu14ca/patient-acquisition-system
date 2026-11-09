@@ -25,7 +25,7 @@ const steps = [
 
 const Diagnostico = () => {
   return (
-    <section id="como-funciona" className="py-20 md:py-24 relative">
+    <section id="como-funciona" className="theme-wine py-20 md:py-24 relative">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <span className="eyebrow">Como funciona</span>

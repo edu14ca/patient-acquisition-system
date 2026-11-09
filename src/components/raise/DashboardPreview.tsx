@@ -14,7 +14,7 @@ const DashboardPreview = () => {
   const [tab, setTab] = useState<"leads" | "vendas">("leads");
 
   return (
-    <div className="rounded-lg border border-border bg-card p-5 md:p-6 animate-fade-up" style={{ animationDelay: "120ms" }}>
+    <div className="theme-dark rounded-lg border border-border bg-card p-5 md:p-6 animate-fade-up" style={{ animationDelay: "120ms" }}>
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="eyebrow">Painel de crescimento</p>

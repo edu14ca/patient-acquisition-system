@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import DashboardPreview from "@/components/raise/DashboardPreview";
 import LogoMarquee from "@/components/raise/LogoMarquee";
+import BrandPattern from "@/components/raise/BrandPattern";
 
 const Hero = () => {
   return (
-    <section className="relative pt-28 md:pt-36 pb-16 md:pb-20">
-      <div className="container-tight grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+    <section className="relative overflow-hidden pt-28 md:pt-36 pb-16 md:pb-20">
+      <BrandPattern className="-left-24 top-10 h-[520px] w-auto hidden md:block" opacity={0.04} />
+      <div className="container-tight relative grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
         <div className="animate-fade-up">
           <span className="eyebrow">Assessoria de Marketing e Growth · Angola</span>
 

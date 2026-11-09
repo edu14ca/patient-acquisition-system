@@ -9,29 +9,29 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 20% 97%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
     /* Primary = vermelho (CTA dominante) */
     --primary: 357 91% 48%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 357 91% 48%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 18% 94%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65.5%;
+    --muted: 0 18% 94%;
+    --muted-foreground: 0 0% 36%;
 
     /* Accent = roxo neon */
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 18% 94%;
+    --accent-foreground: 0 0% 7%;
     --accent-glow: 0 0% 12%;
 
     --destructive: 357 91% 48%;
@@ -45,9 +45,9 @@
     --neon-foreground: 0 0% 4%;
     --neon-glow: 142 100% 60%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 27%;
-    --ring: 0 0% 100%;
+    --border: 0 8% 88%;
+    --input: 0 6% 78%;
+    --ring: 357 91% 48%;
 
     --radius: 0.5rem;
 
@@ -72,7 +72,60 @@
   }
 }
 
+/* Secções com as outras cores do manual (preto, vermelho #e90b15, vinho #75060b).
+   Redefinem os tokens, por isso os componentes dentro delas adaptam-se sozinhos. */
 @layer base {
+  .theme-dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 66%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 27%;
+    --ring: 0 0% 100%;
+  }
+  .theme-red, .theme-wine {
+    --foreground: 0 0% 100%;
+    --card-foreground: 0 0% 100%;
+    --secondary-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 357 91% 48%;
+    --ring: 0 0% 100%;
+  }
+  .theme-red {
+    --background: 357 91% 48%;
+    --muted-foreground: 0 100% 93%;
+    --border: 357 85% 62%;
+    --input: 357 85% 72%;
+    --card: 356 91% 36%;
+    --secondary: 356 91% 36%;
+    --muted: 356 91% 36%;
+    --accent: 356 91% 36%;
+  }
+  .theme-wine {
+    --background: 356 90% 24%;
+    --muted-foreground: 0 55% 88%;
+    --border: 356 55% 36%;
+    --input: 356 45% 50%;
+    --card: 356 85% 19%;
+    --secondary: 356 85% 19%;
+    --muted: 356 85% 19%;
+    --accent: 356 85% 19%;
+  }
+  .theme-dark, .theme-red, .theme-wine {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
   * {
     @apply border-border;
   }
@@ -215,10 +268,10 @@
 
   /* Botão com texto que rola (hover) */
   .lp-btn {
-    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-white font-semibold text-sm uppercase tracking-wide overflow-hidden;
+    @apply relative inline-flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-primary text-primary-foreground font-semibold text-sm uppercase tracking-wide overflow-hidden;
     transition: background-color 0.3s ease;
   }
-  .lp-btn:hover { background-color: hsl(357 91% 42%); }
+  .lp-btn:hover { opacity: 0.9; }
   .lp-btn { @apply py-3 h-auto min-h-12 text-center leading-tight; }
   .lp-btn .roll { position: relative; display: inline-block; overflow: hidden; }
   .lp-btn .roll > span { display: block; transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
@@ -235,7 +288,7 @@
     letter-spacing: -0.01em;
   }
   .lp-tape--red { top: 40px; background: hsl(var(--primary)); color: #fff; transform: rotate(-3deg); z-index: 2; }
-  .lp-tape--white { top: 70px; background: #f4f4f4; color: #0a0a0a; transform: rotate(2.5deg); }
+  .lp-tape--white { top: 70px; background: #0a0a0a; color: #fff; transform: rotate(2.5deg); }
   .lp-tape__track { display: inline-flex; animation: marquee 35s linear infinite; }
   .lp-tape--white .lp-tape__track { animation-direction: reverse; }
 
