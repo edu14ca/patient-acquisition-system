@@ -1,25 +1,25 @@
-import { Search, ClipboardList, Target, Rocket } from "lucide-react";
+import { Megaphone, MessageCircle, Banknote, Repeat } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
-    title: "Auditoria",
-    desc: "Analisamos canais, criativos, funil e números actuais. Sem suposições.",
+    icon: Megaphone,
+    title: "Tráfego",
+    desc: "Quantas pessoas certas chegam até si, por que canal e a que custo.",
   },
   {
-    icon: ClipboardList,
-    title: "Diagnóstico",
-    desc: "Identificamos o gargalo real: aquisição, conversão, ticket ou retenção.",
+    icon: MessageCircle,
+    title: "Engajamento",
+    desc: "Quantas respondem, perguntam e avançam. Aqui medimos o atendimento e o tempo de resposta.",
   },
   {
-    icon: Target,
-    title: "Plano",
-    desc: "Metas mensais, prioridades semanais e responsáveis por cada métrica.",
+    icon: Banknote,
+    title: "Monetização",
+    desc: "Quantas compram, por que valor e com que frequência. Oferta, preço e fecho.",
   },
   {
-    icon: Rocket,
-    title: "Execução",
-    desc: "A equipa Raise entra na operação e começa a executar na mesma semana.",
+    icon: Repeat,
+    title: "Retenção",
+    desc: "Quantas voltam e recomendam. Um cliente que regressa custa menos do que um novo.",
   },
 ];
 
@@ -32,7 +32,7 @@ const Diagnostico = () => {
             Antes de vender, diagnosticamos.
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-            Não propomos pacotes prontos. Olhamos para os seus números e definimos o que precisa de ser executado para crescer.
+            Olhamos para as quatro etapas do crescimento, encontramos onde a sua empresa perde vendas e só depois definimos o que executar.
           </p>
         </div>
 
@@ -42,8 +42,7 @@ const Diagnostico = () => {
             return (
               <article
                 key={s.title}
-                className="relative p-7 rounded-lg bg-card border border-border transition-smooth animate-fade-up"
-                style={{ animationDelay: `${i * 90}ms` }}
+                className="relative p-7 rounded-lg bg-card border border-border"
               >
                 <span className="absolute top-4 right-5 text-sm font-display font-medium text-muted-foreground/50">
                   0{i + 1}
