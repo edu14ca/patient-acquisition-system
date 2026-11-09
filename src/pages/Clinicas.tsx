@@ -111,7 +111,7 @@ const Clinicas = () => {
         </div>
       </header>
 
-      <main>
+      <main className="sd">
         {/* 1 · HERO */}
         <section className="relative overflow-hidden pt-12 md:pt-20 pb-16">
           <div className="container-tight relative grid lg:grid-cols-[1.25fr_1fr] gap-10 lg:gap-14 items-start">
@@ -304,7 +304,7 @@ const Clinicas = () => {
                 <div
                   key={b.t}
                  
-                  className="rounded-xl border border-border bg-background p-6"
+                  className="sd-card rounded-xl border border-border bg-background p-6"
                 >
                   <h3 className="text-lg font-semibold tracking-tight">{b.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{b.d}</p>
@@ -392,7 +392,7 @@ const Clinicas = () => {
             </div>
             <div className="mt-12 grid md:grid-cols-3 gap-4">
               {garantias.map((g, i) => (
-                <div key={g.t} className="border-t-2 border-primary pt-6">
+                <div key={g.t} className="sd-card border-t-2 border-primary pt-6">
                   <h3 className="text-lg font-semibold tracking-tight">{g.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{g.d}</p>
                 </div>

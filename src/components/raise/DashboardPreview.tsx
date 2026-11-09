@@ -14,7 +14,7 @@ const DashboardPreview = () => {
   const [tab, setTab] = useState<"leads" | "vendas">("leads");
 
   return (
-    <div className="theme-dark rounded-lg border border-border bg-card p-5 md:p-6 animate-fade-up" style={{ animationDelay: "120ms" }}>
+    <div className="rounded-xl border border-white/15 bg-white/[0.06] backdrop-blur-md p-5 md:p-6 animate-fade-up w-full max-w-[460px] lg:justify-self-end" style={{ animationDelay: "120ms" }}>
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="eyebrow">Painel de crescimento</p>
@@ -35,12 +35,12 @@ const DashboardPreview = () => {
         </div>
       </div>
 
-      <div className="mt-6 h-36 flex items-end gap-1.5 border-b border-border">
+      <div className="mt-6 h-32 flex items-end gap-1.5 border-b border-white/15">
         {bars.map((h, i) => (
           <span
             key={i}
-            className={`flex-1 rounded-t-sm transition-all duration-500 ${i === bars.length - 1 ? "bg-primary" : "bg-[#313131]"}`}
-            style={{ height: `${tab === "leads" ? h : Math.max(12, h - 18 + (i % 3) * 6)}%` }}
+            className={`dash-bar flex-1 rounded-t-sm transition-all duration-500 ${i === bars.length - 1 ? "bg-primary" : "bg-white/20"}`}
+            style={{ height: `${tab === "leads" ? h : Math.max(12, h - 18 + (i % 3) * 6)}%`, ["--i" as string]: i }}
           />
         ))}
       </div>
@@ -56,7 +56,7 @@ const DashboardPreview = () => {
         </thead>
         <tbody>
           {rows.map((r) => (
-            <tr key={r.channel} className="border-t border-border">
+            <tr key={r.channel} className="border-t border-white/10">
               <td className="py-2.5">{r.channel}</td>
               <td className="py-2.5 text-right tabular-nums">{r.leads}</td>
               <td className="py-2.5 text-right tabular-nums text-muted-foreground">{r.cpl}</td>
@@ -65,7 +65,7 @@ const DashboardPreview = () => {
           ))}
         </tbody>
       </table>
-      <p className="mt-4 text-xs text-[#7c7c7c]">Exemplo ilustrativo do painel que entregamos.</p>
+      <p className="mt-4 text-xs text-foreground/50">Exemplo ilustrativo do painel que entregamos.</p>
     </div>
   );
 };

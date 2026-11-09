@@ -71,7 +71,7 @@ const Solutions = () => {
               height={600}
               loading="lazy"
               decoding="async"
-              className="w-full rounded-lg border border-border order-first md:order-none"
+              className="sd-img w-full rounded-lg border border-border order-first md:order-none"
             />
           </div>
         </div>

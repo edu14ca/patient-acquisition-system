@@ -25,7 +25,7 @@ const steps = [
 
 const Diagnostico = () => {
   return (
-    <section id="como-funciona" className="theme-wine py-20 md:py-24 relative">
+    <section id="como-funciona" className="theme-wine py-20 md:py-24 relative overflow-hidden">
       <div className="container-tight">
         <div className="max-w-3xl mb-10 md:mb-14">
           <h2 className="font-display text-3xl md:text-[40px] font-bold leading-[1.08] text-balance">
@@ -42,7 +42,7 @@ const Diagnostico = () => {
             return (
               <article
                 key={s.title}
-                className="relative p-7 rounded-lg bg-card border border-border"
+                className="sd-card relative p-7 rounded-lg bg-card border border-border"
               >
                 <span className="absolute top-4 right-5 text-sm font-display font-medium text-muted-foreground/50">
                   0{i + 1}
@@ -56,6 +56,16 @@ const Diagnostico = () => {
             );
           })}
         </div>
+      </div>
+
+      {/* Palavras das quatro etapas a deslizar com o scroll */}
+      <div className="mt-16 md:mt-24 select-none" aria-hidden>
+        <p className="sd-slide whitespace-nowrap font-display font-extrabold text-[64px] md:text-[128px] leading-none tracking-[-0.04em] text-white/10">
+          Tráfego Engajamento Monetização Retenção Tráfego
+        </p>
+        <p className="sd-slide sd-slide--rev mt-2 whitespace-nowrap font-display font-extrabold text-[64px] md:text-[128px] leading-none tracking-[-0.04em] text-primary">
+          Retenção Monetização Engajamento Tráfego Retenção
+        </p>
       </div>
     </section>
   );

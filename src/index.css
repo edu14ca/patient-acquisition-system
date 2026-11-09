@@ -338,3 +338,64 @@
     .lp-rule::after { transform: scaleX(1); transition: none; }
   }
 }
+
+/* ---------- Movimento ao fazer scroll (CSS scroll-driven, sem JavaScript) ----------
+   Só transform/opacity/clip-path, que o browser anima fora da thread principal.
+   Browsers sem suporte mostram tudo estático. Desligado com reduced-motion. */
+.dash-bar { transform-origin: bottom; animation: dash-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 45ms + 250ms); }
+@keyframes dash-up { from { transform: scaleY(0.05); } }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Hero: a imagem afasta-se e escurece ao sair do ecrã */
+    .sd-hero-bg {
+      animation: sd-hero-out linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+    @keyframes sd-hero-out { to { transform: scale(1.15) translateY(8%); opacity: 0.35; } }
+
+    /* Títulos de secção: sobem e acendem ao entrar */
+    .sd h2 {
+      animation: sd-title linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+    @keyframes sd-title { from { opacity: 0.12; transform: translateY(40px); } }
+
+    /* Imagens: abrem de dentro para fora */
+    .sd-img {
+      animation: sd-img linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    @keyframes sd-img { from { clip-path: inset(14% 10% 14% 10% round 12px); transform: scale(1.12); } to { clip-path: inset(0 0 0 0 round 0); transform: none; } }
+
+    /* Padrão da marca na faixa vermelha: cresce e roda com o scroll */
+    .sd-pattern {
+      animation: sd-pattern linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes sd-pattern { from { transform: translateY(-12%) scale(0.85) rotate(-6deg); } to { transform: translateY(10%) scale(1.2) rotate(4deg); } }
+
+    /* Palavras grandes que deslizam na horizontal com o scroll */
+    .sd-slide {
+      animation: sd-slide linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes sd-slide { from { transform: translateX(8%); } to { transform: translateX(-38%); } }
+    .sd-slide--rev { animation-name: sd-slide-rev; }
+    @keyframes sd-slide-rev { from { transform: translateX(-38%); } to { transform: translateX(8%); } }
+
+    /* Cartões: entram em sequência */
+    .sd-card {
+      animation: sd-card linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    @keyframes sd-card { from { opacity: 0; transform: translateY(60px); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .dash-bar { animation: none; } }

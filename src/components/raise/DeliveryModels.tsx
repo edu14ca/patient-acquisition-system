@@ -56,7 +56,7 @@ const DeliveryModels = () => {
               height={533}
               loading="lazy"
               decoding="async"
-              className="w-full rounded-lg border border-border order-first lg:order-none"
+              className="sd-img w-full rounded-lg border border-border order-first lg:order-none"
             />
           </div>
         </div>
