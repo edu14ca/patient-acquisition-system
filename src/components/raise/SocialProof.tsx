@@ -127,12 +127,12 @@ const brands: Brand[] = [
   {
     id: "mavisher",
     name: "Mavisher",
-    category: "Revenda Apple / Luanda e Lubango",
+    category: "Entregas / Revenda de electrónicos",
     logo: logoMavisher,
     logoFit: "cover",
     logoBg: "dark",
     summary:
-      "A Raise acompanha a Mavisher na estruturação do crescimento da revenda de produtos Apple.",
+      "A Raise acompanha a Mavisher, que tem duas áreas: a Mavis Entregas e a Mavisher Tecnologia, de revenda de electrónicos, sobretudo iPhones.",
     caseUrl: "",
     proofs: [],
   },
