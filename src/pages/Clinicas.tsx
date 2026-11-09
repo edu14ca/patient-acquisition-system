@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Check, Plus } from "lucide-react";
 import raiseLogo from "@/assets/logo-raise.png";
 import raiseLogoWhite from "@/assets/logo-raise-white.png";
-import balde480 from "@/assets/balde-480.webp";
-import balde900 from "@/assets/balde-900.webp";
+import baldeHero1000 from "@/assets/balde-hero-1000.webp";
+import baldeHero2000 from "@/assets/balde-hero-2000.webp";
 import { useReveal } from "@/hooks/useReveal";
 import { Eyebrow, RollButton, Tapes, Words } from "@/components/lp/primitives";
 import LeadForm from "@/components/lp/LeadForm";
@@ -113,7 +113,22 @@ const Clinicas = () => {
 
       <main className="sd">
         {/* 1 · HERO */}
-        <section className="relative overflow-hidden pt-12 md:pt-20 pb-16">
+        <section className="theme-dark relative overflow-hidden pt-12 md:pt-20 pb-16 lg:min-h-[86vh]">
+          {/* Fundo: o balde furado de kwanzas. Afasta-se ao fazer scroll. */}
+          <div className="absolute inset-0 sd-hero-bg" aria-hidden>
+            <img
+              src={baldeHero2000}
+              srcSet={`${baldeHero1000} 1000w, ${baldeHero2000} 2000w`}
+              sizes="100vw"
+              width={2000}
+              height={1125}
+              {...{ fetchpriority: "high" }}
+              alt=""
+              className="h-full w-full object-cover object-[78%_center] opacity-70 lg:opacity-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/0" />
+          </div>
+
           <div className="container-tight relative grid lg:grid-cols-[1.25fr_1fr] gap-10 lg:gap-14 items-start">
             <div>
               <Eyebrow>Para gestores de clínicas em Angola</Eyebrow>
@@ -121,29 +136,21 @@ const Clinicas = () => {
                 <Words text="A sua clínica não precisa de mais pedidos." />{" "}
                 <Words text="Precisa de parar de os perder." />
               </h1>
-              <p className="mt-8 text-lg text-muted-foreground max-w-xl" data-reveal style={{ ["--d" as string]: "500ms" }}>
+              <p className="mt-8 text-lg text-foreground/80 max-w-xl" data-reveal style={{ ["--d" as string]: "500ms" }}>
                 Todos os dias, potenciais pacientes contactam clínicas para marcar consultas. Uma mensagem sem resposta,
                 uma chamada perdida ou uma marcação sem acompanhamento chega para os levar à concorrência.
               </p>
-              <div className="mt-8 grid sm:grid-cols-[260px_1fr] gap-6 items-center" data-reveal style={{ ["--d" as string]: "650ms" }}>
-                <img
-                  src={balde480}
-                  srcSet={`${balde480} 480w, ${balde900} 900w`}
-                  sizes="(min-width: 640px) 260px, 100vw"
-                  width={480}
-                  height={600}
-                  {...{ fetchpriority: "high" }}
-                  alt="Balde furado a deixar escapar notas e moedas de kwanza"
-                  className="w-full max-w-[340px] sm:max-w-none rounded-xl border border-border"
-                />
-                <p className="text-foreground/90 border-l-2 border-primary pl-4">
-                  Antes de investir mais dinheiro para atrair novos pacientes, descubra se o atendimento da sua clínica está
-                  preparado para aproveitar os pedidos que já recebe.
-                </p>
-              </div>
+              <p
+                className="mt-8 max-w-xl text-foreground border-l-2 border-primary pl-4"
+                data-reveal
+                style={{ ["--d" as string]: "650ms" }}
+              >
+                Antes de investir mais dinheiro para atrair novos pacientes, descubra se o atendimento da sua clínica está
+                preparado para aproveitar os pedidos que já recebe.
+              </p>
             </div>
 
-            <div className="lg:sticky lg:top-24">
+            <div className="lg:sticky lg:top-24 [&>div]:bg-black/55 [&>div]:backdrop-blur-md [&>div]:border-white/15">
               <LeadForm
                 id="formulario-topo"
                 titulo="Descubra onde pode estar a perder marcações."
